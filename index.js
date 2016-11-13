@@ -39,11 +39,28 @@ app.get('/contact', function(req, res){
   res.render('contact');
 });
 
+var fs = require("fs");
+
+app.get('/readFile', function(req, res,next){
+  fs.readFile('./public/data/skills.txt', function(err, data){
+    if (err){
+      return console.error(err);
+    }
+    res.send("Skills.txt: " + data.toString());
+  });
+});
+
 app.use(function(req, res){
   res.type('text/html');
   res.status('404');
   res.render('404');
 })
+
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500);
+  res.render('500');
+});
 
 
 // -----------------------------------------------------------------------------
