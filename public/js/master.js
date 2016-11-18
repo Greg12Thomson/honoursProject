@@ -16,5 +16,8 @@ $(document).ready(function(){
             $( "#btn-group" ).append( '<button type="button" class="btn btn-primary">' + skills[i] + ' <span class="badge">-</span></button>');
           }
         }
+        $('textarea').highlightTextarea({
+          words: skills
+        });
     });
 });
