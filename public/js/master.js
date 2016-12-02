@@ -268,18 +268,17 @@ $(document).ready(function(){
     $("#clear").hide();
 
     $("#submit").click(function(){
-        $( ".list-group" ).show();
+        $(".list-group").show();
         $("#clear").show();
         var description = $('#jobDescription').val();
-        $( ".list-group" ).append('<h3>Skills</h3>');
-        $( ".list-group" ).append('<p>Click <a href="#">(?)</a> to find out more about the skill</p>');
+        $(".list-group").append('<h3>Skills</h3>');
+        $(".list-group").append('<p>Click <a href="#">(?)</a> to find out more about the skill</p>');
         for (var i = 0;i < skills.length;i++){
           // add list of skills
           if (description.includes(skills[i])){
-            $( ".list-group" ).append('<button type="button" class="list-group-item">' + skills[i] +'<a href="#">(?)</a> <span class="badge badge-success">add</span></button>');
+            $(".list-group").append('<button type="button" class="list-group-item">' + skills[i] +'<a href="#">(?)</a> <span class="badge badge-success">add</span></button>');
           }
         }
-        // add clear button after list of skills
         $('textarea').highlightTextarea({
           words: skills
         });
