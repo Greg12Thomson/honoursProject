@@ -1,7 +1,18 @@
 var express = require('express');
-var mongo = require('mongodb');
-
 var app = express();
+var MongoClient = require('mongodb').MongoClient;
+
+// Connect to the db
+// MongoClient.connect("mongodb://localhost:27017/jobSKills", function(err, db) {
+//   if(!err) {
+//     console.log("Connected to DB");
+//   }
+//   else {
+//     console.log("Failed to connect to server: ", err)
+//   }
+//
+//   var skills = db.collection('skills');
+// });
 
 app.disable('x-powered-by');
 
