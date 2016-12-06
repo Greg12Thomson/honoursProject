@@ -2,18 +2,6 @@ var express = require('express');
 var app = express();
 var MongoClient = require('mongodb').MongoClient;
 
-// Connect to the db
-// MongoClient.connect("mongodb://localhost:27017/jobSKills", function(err, db) {
-//   if(!err) {
-//     console.log("Connected to DB");
-//   }
-//   else {
-//     console.log("Failed to connect to server: ", err)
-//   }
-//
-//   var skills = db.collection('skills');
-// });
-
 app.disable('x-powered-by');
 
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
@@ -51,16 +39,39 @@ app.get('/contact', function(req, res){
   res.render('contact');
 });
 
-var fs = require("fs");
 
-app.get('/readFile', function(req, res,next){
-  fs.readFile('./public/data/skills.txt', function(err, data){
-    if (err){
-      return console.error(err);
+// show data
+app.get('/getData', function(req, res,next){
+  MongoClient
+  var url = "mongodb://localhost:27017/testJobs"
+  // Connect to the db
+  MongoClient.connect(url, function(err, db) {
+    if(err) {
+      console.log("Failed to connect to server: ", err)
     }
-    res.send("Skills.txt: " + data.toString());
+    else {
+      console.log("Connected to DB");
+      var collection = db.collection('skills');
+      collection.find({}).toArray(function (err, result) {
+        if (err) {
+          res.send(err);
+        } else if (result.length) {
+          res.render('data',{
+            // Pass the returned database documents
+            "skills" : result
+          });
+        } else {
+          res.send('No documents found');
+        }
+        //Close connection
+        db.close();
+      });
+    }
   });
 });
+
+//TODO app.post for submit button
+// var description = req.body.desription; <- get job description
 
 app.use(function(req, res){
   res.type('text/html');

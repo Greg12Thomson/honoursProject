@@ -1,0 +1,11 @@
+<div class="page-header">
+  <h3>Skills</h3>
+</div><!-- ./page-header-->
+
+<div class="col-md-12">
+  {{#each skills}}
+    <li><b>{{this.skill}}</b> has score: {{this.score}}</li>
+  {{else}}
+    <p>No skills</p>
+  {{/each}}
+</div>
