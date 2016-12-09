@@ -42,8 +42,7 @@ app.get('/contact', function(req, res){
 
 // show data
 app.get('/getData', function(req, res,next){
-  MongoClient
-  var url = "mongodb://localhost:27017/testJobs"
+  var url = "mongodb://localhost:27017/honoursProject"
   // Connect to the db
   MongoClient.connect(url, function(err, db) {
     if(err) {
