@@ -1,21 +1,23 @@
 <div class="row" >
   <div class="col-md-12">
-    <form>
+    <form role="form" action="/process" method="POST">
+
       <div class="form-group">
-        <label for="comment">Description:</label>
-        <textarea class="form-control" rows="6" id="jobDescription" placeholder="Enter job description here" name="desription"></textarea>
-        <span class="help-block">Enter job description above and click submit once done.</span>
+        <label for="jobDescription" class="col-sm-2 control-label">Description:</label>
+        <div class="col-md-12">
+            <textarea type="text" class="form-control" rows="6" id="jobDescription" placeholder="Enter job description here" name="description"></textarea>
+          <span class="help-block">Enter job description above and click submit once done.</span>
+        </div> <!-- ./col-md-12 -->
       </div><!-- ./form-group -->
-    </form>
-    <button class="btn btn-default" id="submit">Submit</button>
-    <hr></hr>
+
+      <div class="form-group">
+        <div class="col-md-12">
+          <button class="btn btn-default" id="submit">Submit</button>
+        </div> <!-- ./col-md-12 -->
+      </div> <!-- ./form-group -->
+
+    </form> <!-- /-->
   </div><!-- ./col-md-12 -->
 </div><!-- ./row -->
 
-
-<!-- Skills -->
-<div class="col-md-4">
-  <div class="list-group">
-  </div><!-- ./list-group -->
-  <button class="btn btn-default" id="clear">Clear</button>
-</div><!-- ./col-md-4 -->
+<hr></hr>

@@ -4,12 +4,11 @@ IBM Operating System,\
 Linux,\
 Windows Operating System,\
 UNIX operating system".split(',');
+var submit = false;
 
 $(document).ready(function(){
     $(".list-group").hide();
     $("#clear").hide();
-    var submit = false;
-
     $("#submit").click(function(){
       if (!submit){
         submit = true;
@@ -31,6 +30,7 @@ $(document).ready(function(){
     });
 
     $("#clear").click(function(){
+      submit = false;
       $(".list-group").hide();
       $("#clear").hide();
       $('.list-group').empty();

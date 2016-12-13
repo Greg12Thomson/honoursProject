@@ -1,6 +1,14 @@
+/*
+ * Gregor Thomson - 2029108
+ *
+ * Honours Project: test sight
+ */
+
+
+// server init
 var express = require('express');
 var app = express();
-var MongoClient = require('mongodb').MongoClient;
+var async = require('async');
 
 app.disable('x-powered-by');
 
@@ -9,11 +17,21 @@ var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
-// More imports here
+app.use(require('body-parser').urlencoded({
+  extended: true
+}));
+
 app.set('port', process.env.PORT || 3000);
 
 // set static to /public
 app.use(express.static(__dirname + '/public'));
+
+// -----------------------------------------------------------------------------
+// database init -
+var MongoClient = require('mongodb').MongoClient;
+var string = require('string');
+var url = 'mongodb://localhost:27017/honoursProject';
+
 
 // -----------------------------------------------------------------------------
 // base directory
@@ -21,15 +39,84 @@ app.get('/', function(req, res){
   res.render('home');
 });
 
+app.post('/process', function(req, res){
+  var description = req.body.description;
+  // remove punctuation
+  var jobDescription = string(description).stripPunctuation().s;
+  // split on space
+  jobDescription = jobDescription.split(" ");
+  var skills = [];
+  var words = [];
+  var skillList = [];
+  var skillMap = new Map();
+
+
+  // Connect to the db
+  MongoClient.connect(url, function(err, db) {
+    if(err) {
+      console.log("Failed to connect to server: ", err)
+    }
+    else {
+      console.log("Connected to DB");
+      var collection = db.collection('skills');
+
+      async.eachSeries(jobDescription,function(w, callback) {
+        collection.findOne({word: w}, function(err, result) {
+          if (result){
+            // add to matched words
+            words.push(w);
+            // add to skills
+            result.skills.split(";").forEach(function(s){
+              s = s.replace(/[\[\]{()}]/g, '');
+              skills.push(s.trim());
+            });
+
+          }
+          callback(err);
+        });
+      },function(err) {
+          if (err){
+            console.log("Error: ", err);
+          }
+          else {
+            var i = 0;
+            skillList = [];
+            // make map of skills with scores
+            while (i < skills.length){
+              if (skillMap.get(skills[i])) {
+                skillMap.set(skills[i], skillMap.get(skills[i]) + parseFloat(skills[i+1]));
+              }
+              else {
+                skillMap.set(skills[i],parseFloat(skills[i+1]));
+              }
+              i += 2;
+            }
+
+            // create return list
+            for (var key of skillMap.keys()) {
+              skillList.push({skill: key,
+                              score: skillMap.get(key)
+                            });
+            }
+
+            // TODO return top ten
+
+            res.render('overview',{
+              "skills" : skillList,
+              "words" : words,
+              "description" : description
+            });
+          }
+      });
+    }
+  });
+});
+
+
 app.use(function(req, res, next){
   console.log("Looking for URL " + req.url);
   next();
 });
-
-//app.use(function(err, req, res, next){
-//  console.log('Error: ' + err.message);
-//  next();
-//})
 
 app.get('/about', function(req, res){
   res.render('about');
@@ -39,10 +126,13 @@ app.get('/contact', function(req, res){
   res.render('contact');
 });
 
+app.get('/overview', function(req, res){
+  res.render('overview');
+});
+
 
 // show data
 app.get('/getData', function(req, res,next){
-  var url = "mongodb://localhost:27017/honoursProject"
   // Connect to the db
   MongoClient.connect(url, function(err, db) {
     if(err) {
@@ -69,8 +159,6 @@ app.get('/getData', function(req, res,next){
   });
 });
 
-//TODO app.post for submit button
-// var description = req.body.desription; <- get job description
 
 app.use(function(req, res){
   res.type('text/html');

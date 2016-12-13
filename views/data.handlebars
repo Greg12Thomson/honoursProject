@@ -3,9 +3,12 @@
 </div><!-- ./page-header-->
 
 <div class="col-md-12">
-  {{#each skills}}
-    <li><b>{{this.word}}</b> has score: {{this.skills}}</li>
+  <!-- <ul> -->
+  {{#each match}}
+    <!-- <li><b>{{this.word}}</b> has score: {{this.skills}}</li> -->
+    <p>skill: <b>{{this}}</b></p>
   {{else}}
     <p>No skills</p>
   {{/each}}
+  <!-- </ul> -->
 </div>

@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3>Overview</h3>
+  </div><!-- ./col-md-12-->
+</div><!-- ./page-header-->
+
+<div class="row" >
+  <div class="col-md-12">
+    <form role="form" action="/process" method="POST">
+      <div class="form-group">
+        <label for="jobDescription" class="col-md-4 control-label">Inputed Description:</label>
+        <div class="col-md-12">
+            <textarea type="text" class="form-control" rows="6" id="jobDescription" placeholder="Error: No job description found." name="description">{{description}}</textarea>
+        </div> <!-- ./col-md-12 -->
+      </div><!-- ./form-group -->
+    </form> <!-- /-->
+  </div><!-- ./col-md-12 -->
+</div><!-- ./row -->
+
+<hr></hr>
+<!-- Skills -->
+<div class="row" >
+  <div class="col-md-8">
+    {{#if skills}}
+      <h3>Skills</h3>
+      <p>Click <a href="#">(?)</a> to find out more about the skill</p>
+      <!-- <div class="list-group"> -->
+      <ul>
+        {{#each skills}}
+          <!-- <button type="button" class="list-group-item">{{this}}<a href="#">(?)</a> <span class="badge badge-success">add</span></button> -->
+          <li><b>{{this.skill}}</b>: {{this.score}}</li>
+        {{/each}}
+      </ul>
+      <!-- </div>--><!-- ./list-group -->
+    {{/if}}
+  </div><!-- ./col-md-4 -->
+</div><!-- ./row -->
+
+{{#if words}}
+  <h3>Words</h3>
+  <ul>
+  {{#each words}}
+    <li>{{this}}</li>
+  {{/each}}
+</ul>
+{{/if}}
+<script>
+$('textarea').highlightTextarea({
+  words: {{words}}
+});
+</script>
