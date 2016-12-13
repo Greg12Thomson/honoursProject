@@ -91,7 +91,6 @@ app.post('/process', function(req, res){
               }
               i += 2;
             }
-
             // create return list
             for (var key of skillMap.keys()) {
               skillList.push({skill: key,
@@ -100,9 +99,32 @@ app.post('/process', function(req, res){
             }
 
             // TODO return top ten
+            var score = [];
+            var topTen = [];
+            skillList.forEach(function(skill) {
+              score.push(skill.score);
+            });
+
+            var max = score[0];
+            var maxIndex = 0;
+            for (var i = 0; i < 10; i ++){
+              for (var j = 1; j < score.length; j++) {
+                  if (score[j] > max) {
+                      maxIndex = j;
+                      max = score[j];
+                  }
+              }
+              topTen.push(skillList[maxIndex]);
+              // set score to min
+              score[maxIndex] = -1;
+              max = score[0];
+              maxIndex = 0;
+            }
+
+            console.log(topTen);
 
             res.render('overview',{
-              "skills" : skillList,
+              "skills" : topTen,
               "words" : words,
               "description" : description
             });
