@@ -38,9 +38,18 @@
 
 {{#if words}}
   <h3>Words Used</h3>
+  <p>Words used to determine the skills needed</p>
   <ul>
   {{#each words}}
     <li>{{this}}</li>
   {{/each}}
 </ul>
 {{/if}}
+
+<script>
+  var words = "{{words}}";
+  words = words.split(",");
+  $('textarea').highlightTextarea({
+    words: words
+  });
+</script>

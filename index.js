@@ -98,7 +98,7 @@ app.post('/process', function(req, res){
                             });
             }
 
-            // TODO return top ten
+            // get top ten skills
             var score = [];
             var topTen = [];
             skillList.forEach(function(skill) {
@@ -120,8 +120,6 @@ app.post('/process', function(req, res){
               max = score[0];
               maxIndex = 0;
             }
-
-            console.log(topTen);
 
             res.render('overview',{
               "skills" : topTen,
