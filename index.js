@@ -10,6 +10,7 @@ var express = require('express');
 var app = express();
 var async = require('async');
 
+
 app.disable('x-powered-by');
 
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
@@ -41,15 +42,17 @@ app.get('/', function(req, res){
 
 app.post('/process', function(req, res){
   var description = req.body.description;
-  // remove punctuation
-  var jobDescription = string(description).stripPunctuation().s;
-  // split on space
-  jobDescription = jobDescription.split(" ");
   var skills = [];
-  var words = [];
+  var words = new Set();
   var skillList = [];
   var skillMap = new Map();
 
+  // replace punctuation with space
+  var jobDescription = description.replace(/['";:,.\/?\\-]/g, ' ');
+  // strip the rest of the punctuation
+  jobDescription = string(jobDescription).stripPunctuation().s;
+  // split on space
+  jobDescription = jobDescription.split(" ");
 
   // Connect to the db
   MongoClient.connect(url, function(err, db) {
@@ -61,10 +64,11 @@ app.post('/process', function(req, res){
       var collection = db.collection('skills');
 
       async.eachSeries(jobDescription,function(w, callback) {
+        w = w.toLowerCase();
         collection.findOne({word: w}, function(err, result) {
           if (result){
             // add to matched words
-            words.push(w);
+            words.add(w);
             // add to skills
             result.skills.split(";").forEach(function(s){
               s = s.replace(/[\[\]{()}]/g, '');
@@ -107,7 +111,7 @@ app.post('/process', function(req, res){
 
             var max = score[0];
             var maxIndex = 0;
-            for (var i = 0; i < 10; i ++){
+            for (var i = 0; i < 10 && i < score.length; i ++){
               for (var j = 1; j < score.length; j++) {
                   if (score[j] > max) {
                       maxIndex = j;
@@ -120,6 +124,10 @@ app.post('/process', function(req, res){
               max = score[0];
               maxIndex = 0;
             }
+
+            //TODO fix textbox highlight to only show words
+            words.delete("c");
+            words = Array.from(words).sort();
 
             res.render('overview',{
               "skills" : topTen,
