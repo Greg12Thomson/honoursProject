@@ -19,19 +19,21 @@
 
 <hr></hr>
 <a href="/"><button class="btn btn-default">Try Again</button></a>
+
+
 <!-- Skills -->
 <div class="row" >
-  <div class="col-md-8">
+  <div class="col-md-12">
     {{#if skills}}
       <h3>Top 10 Skills</h3>
       <p>Click <a href="#">(?)</a> to find out more about the skill</p>
       <!-- <div class="list-group"> -->
-      <ul>
+      <ol>
         {{#each skills}}
           <!-- <button type="button" class="list-group-item">{{this}}<a href="#">(?)</a> <span class="badge badge-success">add</span></button> -->
-          <li><b>{{this.skill}}</b><a href="#">(?)</a>: {{this.score}}</li>
+          <li><b>{{this.skill}}</b><a href="#">(?)</a>({{this.score}}): </br>Words used to destiguish skill: <i>{{#each this.words}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}</i></li>
         {{/each}}
-      </ul>
+      </ol>
       <!-- </div>--><!-- ./list-group -->
     {{/if}}
   </div><!-- ./col-md-4 -->

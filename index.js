@@ -44,6 +44,7 @@ app.post('/process', function(req, res){
   var description = req.body.description;
   var skills = [];
   var words = new Set();
+  var skillWordsMap = new Map();
   var skillList = [];
   var skillMap = new Map();
 
@@ -71,8 +72,17 @@ app.post('/process', function(req, res){
             words.add(w);
             // add to skills
             result.skills.split(";").forEach(function(s){
-              s = s.replace(/[\[\]{()}]/g, '');
-              skills.push(s.trim());
+              s = s.replace(/[\[\]{()}]/g, '').trim();
+              skills.push(s);
+
+              // add words to skill words
+              if (skillWordsMap.has(s)) {
+                skillWordsMap.set(s, skillWordsMap.get(s).add(w));
+              }
+              else {
+                skillWordsMap.set(s,new Set().add(w));
+              }
+
             });
 
           }
@@ -87,7 +97,7 @@ app.post('/process', function(req, res){
             skillList = [];
             // make map of skills with scores
             while (i < skills.length){
-              if (skillMap.get(skills[i])) {
+              if (skillMap.has(skills[i])) {
                 skillMap.set(skills[i], skillMap.get(skills[i]) + parseFloat(skills[i+1]));
               }
               else {
@@ -98,7 +108,8 @@ app.post('/process', function(req, res){
             // create return list
             for (var key of skillMap.keys()) {
               skillList.push({skill: key,
-                              score: skillMap.get(key)
+                              score: skillMap.get(key),
+                              words: Array.from(skillWordsMap.get(key))
                             });
             }
 
