@@ -4,9 +4,8 @@
 
 <div class="col-md-12">
   <!-- <ul> -->
-  {{#each match}}
-    <!-- <li><b>{{this.word}}</b> has score: {{this.skills}}</li> -->
-    <p>skill: <b>{{this}}</b></p>
+  {{#each skills}}
+    <li><b>{{this.word}}</b> has skills: {{this.skills}}</li>
   {{else}}
     <p>No skills</p>
   {{/each}}
