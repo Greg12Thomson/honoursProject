@@ -1,21 +1,70 @@
 <div class="row" >
   <div class="col-md-12">
-    <form role="form" action="/process" method="POST">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#alg1" aria-controls="home" role="tab" data-toggle="tab">Algorithm 1</a></li>
+      <li role="presentation"><a href="#alg2" aria-controls="profile" role="tab" data-toggle="tab">Algorithm 2</a></li>
+      <li role="presentation"><a href="#alg3" aria-controls="messages" role="tab" data-toggle="tab">Algorithm 3</a></li>
+    </ul>
 
-      <div class="form-group">
-        <label for="jobDescription" class="col-sm-2 control-label">Description:</label>
-        <div class="col-md-12">
-            <textarea type="text" class="form-control" rows="6" id="jobDescription" placeholder="Enter job description here" name="description"></textarea>
-          <span class="help-block">Enter job description above and click submit once done.</span>
-        </div> <!-- ./col-md-12 -->
-      </div><!-- ./form-group -->
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="alg1">
+        <h6>Algorithm 1: Word Embedding words</h3>
+        <form role="form" action="/process" method="POST">
+          <div class="form-group">
+            <label for="jobDescription" class="col-sm-2 control-label">Description:</label>
+            <div class="col-md-12">
+                <textarea type="text" class="form-control" rows="6" id="jobDescription" placeholder="Enter job description here" name="description"></textarea>
+              <span class="help-block">Enter job description above and click submit once done.</span>
+            </div> <!-- ./col-md-12 -->
+          </div><!-- ./form-group -->
 
-      <div class="form-group">
-        <div class="col-md-12">
-          <button class="btn btn-default" id="submit">Submit</button>
-        </div> <!-- ./col-md-12 -->
-      </div> <!-- ./form-group -->
-    </form> <!-- /-->
+          <div class="form-group">
+            <div class="col-md-12">
+              <button class="btn btn-default" id="submit">Submit</button>
+            </div> <!-- ./col-md-12 -->
+          </div> <!-- ./form-group -->
+        </form> <!-- ./form -->
+      </div> <!-- ./alg1 tab -->
+      <div role="tabpanel" class="tab-pane" id="alg2">
+        <form role="form" action="/process2" method="POST">
+          <h6>Algorithm 2: Word Embedding vectors</h3>
+          <div class="form-group">
+            <label for="jobDescription" class="col-sm-2 control-label">Description:</label>
+            <div class="col-md-12">
+                <textarea type="text" class="form-control" rows="6" id="jobDescription" placeholder="Enter job description here" name="description"></textarea>
+              <span class="help-block">Enter job description above and click submit once done.</span>
+            </div> <!-- ./col-md-12 -->
+          </div><!-- ./form-group -->
+
+          <div class="form-group">
+            <div class="col-md-12">
+              <button class="btn btn-default" id="submit">Submit</button>
+            </div> <!-- ./col-md-12 -->
+          </div> <!-- ./form-group -->
+        </form> <!-- ./form -->
+      </div> <!-- ./alg2 tab -->
+      <div role="tabpanel" class="tab-pane" id="alg3">
+        <h6>Algorithm 3: Tree structure</h3>
+        <form role="form" action="/process3" method="POST">
+          <div class="form-group">
+            <label for="jobDescription" class="col-sm-2 control-label">Description:</label>
+            <div class="col-md-12">
+                <textarea type="text" class="form-control" rows="6" id="jobDescription" placeholder="Enter job description here" name="description"></textarea>
+              <span class="help-block">Enter job description above and click submit once done.</span>
+            </div> <!-- ./col-md-12 -->
+          </div><!-- ./form-group -->
+
+          <div class="form-group">
+            <div class="col-md-12">
+              <button class="btn btn-default" id="submit">Submit</button>
+            </div> <!-- ./col-md-12 -->
+          </div> <!-- ./form-group -->
+        </form> <!-- ./form -->
+      </div> <!-- ./alg3 tab -->
+    </div>
+
   </div><!-- ./col-md-12 -->
 </div><!-- ./row -->
 

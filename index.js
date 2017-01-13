@@ -40,6 +40,12 @@ app.get('/', function(req, res){
   res.render('home');
 });
 
+
+/*
+ * Algorithm for alg1
+ * word embedding words
+ *
+ */
 app.post('/process', function(req, res){
   var description = req.body.description;
   var skills = [];
@@ -150,6 +156,22 @@ app.post('/process', function(req, res){
     }
   });
 });
+
+/*
+ * Algorithm for alg2
+ * Uses word embedding vectors
+ *
+ */
+app.post('/process2', function(req, res){
+)};
+
+/*
+ * Algorithm for alg3
+ * Make use of the tree structure
+ *
+ */
+app.post('/process3', function(req, res){
+)};
 
 
 app.use(function(req, res, next){
