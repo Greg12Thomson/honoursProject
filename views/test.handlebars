@@ -1,0 +1,15 @@
+<div class="page-header">
+  <h3>Skill Vectors</h3>
+</div><!-- ./page-header-->
+
+<div class="col-md-12">
+  {{description}}
+</div><!-- ./row -->
+
+<div class="col-md-12">
+  {{#each skills}}
+    <li><b>{{this.skill}}</b> has vector: {{this.vector}}</li>
+  {{else}}
+    <p>No skills</p>
+  {{/each}}
+</div><!-- ./row -->

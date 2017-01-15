@@ -163,7 +163,33 @@ app.post('/process', function(req, res){
  *
  */
 app.post('/process2', function(req, res){
-)};
+  var description = req.body.description;
+  // Connect to the db
+  MongoClient.connect(url, function(err, db) {
+    if(err) {
+      console.log("Failed to connect to server: ", err)
+    }
+    else {
+      console.log("Connected to DB");
+      var collection = db.collection('skillVec');
+      collection.find({}).toArray(function (err, result) {
+        if (err) {
+          res.send(err);
+        } else if (result.length) {
+          res.render('test',{
+            // Pass the returned database documents
+            "skills" : result,
+            "description" : description
+          });
+        } else {
+          res.send('No documents found');
+        }
+        //Close connection
+        db.close();
+      });
+    }
+  });
+});
 
 /*
  * Algorithm for alg3
@@ -171,7 +197,7 @@ app.post('/process2', function(req, res){
  *
  */
 app.post('/process3', function(req, res){
-)};
+});
 
 
 app.use(function(req, res, next){
@@ -225,7 +251,7 @@ app.use(function(req, res){
   res.type('text/html');
   res.status('404');
   res.render('404');
-})
+});
 
 app.use(function(err, req, res, next) {
   console.error(err.stack);
