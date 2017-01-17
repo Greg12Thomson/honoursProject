@@ -148,7 +148,7 @@ app.post('/process', function(req, res){
             words.delete("c");
             words = Array.from(words).sort();
 
-            res.render('overview',{
+            res.render('alg1',{
               "skills" : topTen,
               "words" : words,
               "description" : description
@@ -218,7 +218,7 @@ app.post('/process2', function(req, res){
           res.send(err);
         } else if (result.length) {
           // get 10 closest skills vectors to description vector
-          var simSkills = getNClosestMatches(10, descriptVec, result);
+          var simSkills = getNClosestMatches(20, descriptVec, result);
           // only get skill
           var skills = [];
           var words = [];
@@ -230,7 +230,7 @@ app.post('/process2', function(req, res){
             words.push(simSkills[j][0]);
           }
           console.log(words)
-          res.render('test',{
+          res.render('alg2',{
             // Pass the returned database documents
             "skills" : skills,
             "description" : OriginalDescript,
@@ -268,9 +268,13 @@ app.get('/contact', function(req, res){
   res.render('contact');
 });
 
-app.get('/overview', function(req, res){
-  res.render('overview');
-});
+// app.get('/alg1', function(req, res){
+//   res.render('alg1');
+// });
+//
+// app.get('/alg2', function(req, res){
+//   res.render('alg2');
+// });
 
 
 // show data

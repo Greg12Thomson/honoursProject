@@ -1,19 +1,26 @@
-<div class="page-header">
-  <h3>Skill Vectors</h3>
-</div><!-- ./page-header-->
+<div class="row">
+  <div class="col s12">
+    <h3>Overview</h3>
+  </div><!-- ./col s12-->
+</div><!-- ./row-->
+<h6>Algorithm 2: Word Embedding vectors</h3>
+
 
 <div class="row" >
-  <div class="col-md-12">
+  <div class="col s12">
     <form role="form" action="/process" method="POST">
       <div class="form-group">
-        <label for="jobDescription" class="col-md-4 control-label">Inputed Description:</label>
-        <div class="col-md-12">
+        <label for="jobDescription" class="col s4 control-label">Inputed Description:</label>
+        <div class="col s12">
             <textarea type="text" class="form-control" rows="6" id="jobDescription" placeholder="Error: No job description found." name="description">{{description}}</textarea>
-        </div> <!-- ./col-md-12 -->
+        </div> <!-- ./col s12 -->
       </div><!-- ./form-group -->
     </form> <!-- /-->
-  </div><!-- ./col-md-12 -->
+  </div><!-- ./col s12 -->
 </div><!-- ./row -->
+
+<hr></hr>
+<a href="/"><button class="btn btn-default">Try Again</button></a>
 
 <!-- Skills -->
 <div class="row" >
