@@ -2,14 +2,42 @@
   <h3>Skill Vectors</h3>
 </div><!-- ./page-header-->
 
-<div class="col-md-12">
-  {{description}}
+<div class="row" >
+  <div class="col-md-12">
+    <form role="form" action="/process" method="POST">
+      <div class="form-group">
+        <label for="jobDescription" class="col-md-4 control-label">Inputed Description:</label>
+        <div class="col-md-12">
+            <textarea type="text" class="form-control" rows="6" id="jobDescription" placeholder="Error: No job description found." name="description">{{description}}</textarea>
+        </div> <!-- ./col-md-12 -->
+      </div><!-- ./form-group -->
+    </form> <!-- /-->
+  </div><!-- ./col-md-12 -->
 </div><!-- ./row -->
 
-<div class="col-md-12">
-  {{#each skills}}
-    <li><b>{{this.skill}}</b> has vector: {{this.vector}}</li>
-  {{else}}
-    <p>No skills</p>
-  {{/each}}
+<!-- Skills -->
+<div class="row" >
+  <div class="col-md-12">
+    {{#if skills}}
+      <h3>Top 10 Skills</h3>
+      <p>Click <a href="#">(?)</a> to find out more about the skill</p>
+      <!-- <div class="list-group"> -->
+      <ol>
+        {{#each skills}}
+          <!-- <button type="button" class="list-group-item">{{this}}<a href="#">(?)</a> <span class="badge badge-success">add</span></button> -->
+          <li><b>{{this.skill}}</b> has score: {{this.score}}</li>
+        {{/each}}
+      </ol>
+      <!-- </div>--><!-- ./list-group -->
+    {{/if}}
+  </div><!-- ./col-md-4 -->
 </div><!-- ./row -->
+
+<script>
+  var words = "{{words}}";
+  words = words.split(",");
+  $('textarea').highlightTextarea({
+    words: words,
+    caseSensitive: false
+  });
+</script>

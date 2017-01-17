@@ -1,14 +1,16 @@
+'use strict';
 /*
  * Gregor Thomson - 2029108
  *
  * Honours Project: test sight
  */
 
-
 // server init
 var express = require('express');
 var app = express();
 var async = require('async');
+var wordVecs = require('./data/wordvecs25000.js').wordVecs;
+var stopWords = require('./data/words.js').stopWords;
 
 
 app.disable('x-powered-by');
@@ -163,7 +165,46 @@ app.post('/process', function(req, res){
  *
  */
 app.post('/process2', function(req, res){
-  var description = req.body.description;
+  var OriginalDescript = req.body.description;
+  var descriptVec = [];
+  // create description vector
+  var description = string(OriginalDescript).stripPunctuation().s;
+  var description = description.split(/[ ,]+/);
+  var matched = 0;  // number of words matched to a vector
+
+  // init description vector
+  for (var i = 0; i < 300; i++){
+    descriptVec[i] = 0;
+  }
+
+  // for each word in description
+  var word = "";
+  var currentVec = [];
+  for (var i = 0; i < description.length; i++) {
+    word = description[i].toLowerCase();
+    if (stopWords.indexOf(word) == -1){   // isn't a stop word
+      // add to description vector
+      currentVec = wordVecs[word];
+      if (currentVec !== undefined){
+        matched++;
+        for (var j = 0; j < currentVec.length; j++){
+          descriptVec[j] += currentVec[j];
+        }
+      }
+    }
+  }
+
+  // get average vector
+  if (matched != 0){
+    for (var x = 0; x < descriptVec.length; x++){
+      descriptVec[x] = descriptVec[x]/matched;
+    }
+  }
+  else {  // no word in description matched.
+    skillVector = null;
+  }
+
+
   // Connect to the db
   MongoClient.connect(url, function(err, db) {
     if(err) {
@@ -176,10 +217,24 @@ app.post('/process2', function(req, res){
         if (err) {
           res.send(err);
         } else if (result.length) {
+          // get 10 closest skills vectors to description vector
+          var simSkills = getNClosestMatches(10, descriptVec, result);
+          // only get skill
+          var skills = [];
+          var words = [];
+          for (var j = 0; j < simSkills.length; j++){
+            skills.push({
+              "skill": simSkills[j][0],
+              "score": simSkills[j][1]
+            });
+            words.push(simSkills[j][0]);
+          }
+          console.log(words)
           res.render('test',{
             // Pass the returned database documents
-            "skills" : result,
-            "description" : description
+            "skills" : skills,
+            "description" : OriginalDescript,
+            "words" : words
           });
         } else {
           res.send('No documents found');
@@ -264,3 +319,34 @@ app.use(function(err, req, res, next) {
 app.listen(app.get('port'), function(){
     console.log('Express started press Ctrl-C to terminate')
 });
+
+// word2Vec --------------------------------------------------------------------
+function getNClosestMatches(n, vec, skills) {
+  var sims = [];
+  var sim;
+  var curentskillVec = [];
+  for (var i = 0; i < skills.length; i++) {
+    // Convert string to array. "[vec1; vec2]" -> Array[vec1, vec2]
+    curentskillVec = skills[i].vector;
+    curentskillVec = curentskillVec.substring(1, curentskillVec.length - 1).split(";");
+    sim = getCosSim(vec, curentskillVec);
+    sims.push([skills[i].skill, sim]);
+  }
+  sims.sort(function(a, b) {
+    return b[1] - a[1];
+  });
+  return sims.slice(0, n);
+}
+
+// helper functions ------------------------------------------------------------
+function getCosSim(f1, f2) {
+  return Math.abs(f1.reduce(function(sum, a, idx) {
+    return sum + a*f2[idx];
+  }, 0)/(mag(f1)*mag(f2))); //magnitude is 1 for all feature vectors
+}
+
+function mag(a) {
+  return Math.sqrt(a.reduce(function(sum, val) {
+    return sum + val*val;
+  }, 0));
+}
