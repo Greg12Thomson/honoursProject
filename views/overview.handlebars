@@ -4,25 +4,36 @@
   </div><!-- ./col s12-->
 </div><!-- ./row-->
 
-<h6>Algorithm 1: Word Embedding words</h3>
-<div class="row" >
+{{#if alg1}}
+  <h6>Algorithm 1: Word Embedding words</h3>
+  {{else if alg2}}
+    <h6>Algorithm 2: Word Embedding vectors</h3>
+    {{else if alg3}}
+      <h6>Algorithm 3: Word Embedding vectors with TF-IDF</h3>
+      {{else}}
+        <h6>Algorithm 4: Tree structure</h3>
+{{/if}}
+
+<div class="row" id="textAreaRow">
   <div class="col s12">
     <form role="form">
       <div class="form-group">
         <label for="jobDescription" class="col s4 control-label">Inputed Description:</label>
         <div class="col s12">
-          <textarea type="text" id="jobDescription" name="description" class="materialize-textarea" placeholder="Enter job description here">{{description}}</textarea>
+          <textarea type="text" id="description" rows="20" name="description" class="textarea" placeholder="Enter job description here">{{description}}</textarea>
         </div> <!-- ./col s12 -->
       </div><!-- ./form-group -->
-      <div class="form-group">
-        <div class="col-md-12">
-          <button href="/" class="waves-effect waves-light btn" id="submit">Try Again</button>
-        </div> <!-- ./col-md-12 -->
-      </div> <!-- ./form-group -->
     </form> <!-- /form -->
   </div><!-- ./col s12 -->
 </div><!-- ./row -->
 
+<div class="row">
+  <div class="form-group">
+    <div class="col s12">
+      <button href="/" class="waves-effect waves-light btn" id="submit">Try Again</button>
+    </div> <!-- ./col-md-12 -->
+  </div> <!-- ./form-group -->
+</div><!-- ./row -->
 
 <!-- Skills -->
 <div class="row" >
@@ -32,7 +43,6 @@
       <p class="grey-text">Click <a href="#">(?)</a> to find out more about the skill</p>
       <ol>
         {{#each skills}}
-          <!-- <button type="button" class="list-group-item">{{this}}<a href="#">(?)</a> <span class="badge badge-success">add</span></button> -->
           <li><b>{{this.skill}}</b><a href="#">(?)</a>({{this.score}}): </br>Words used to destiguish skill: <i>{{#each this.words}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}</i></li>
         {{/each}}
       </ol>
@@ -40,14 +50,17 @@
   </div><!-- ./col s12 -->
 </div><!-- ./row -->
 
-{{#if words}}
-  <h3>Words Used</h3>
-  <pclass="grey-text">Words used to determine the skills needed</p>
-  <ul>
-  {{#each words}}
-    <li>{{this}}</li>
-  {{/each}}
-</ul>
+<!-- only show words for alg1 -->
+{{#if alg1}}
+  {{#if words}}
+    <h3>Words Used</h3>
+    <p class="grey-text">Words used to determine the skills needed</p>
+    <ul>
+    {{#each words}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+  {{/if}}
 {{/if}}
 
 <script>

@@ -148,10 +148,11 @@ app.post('/process', function(req, res){
             words.delete("c");
             words = Array.from(words).sort();
 
-            res.render('alg1',{
+            res.render('overview',{
               "skills" : topTen,
               "words" : words,
-              "description" : description
+              "description" : description,
+              "alg1": 1
             });
           }
       });
@@ -230,11 +231,12 @@ app.post('/process2', function(req, res){
             words.push(simSkills[j][0]);
           }
           console.log(words)
-          res.render('alg2',{
+          res.render('overview',{
             // Pass the returned database documents
             "skills" : skills,
             "description" : OriginalDescript,
-            "words" : words
+            "words" : words,
+            "alg2": 1
           });
         } else {
           res.send('No documents found');
@@ -248,11 +250,36 @@ app.post('/process2', function(req, res){
 
 /*
  * Algorithm for alg3
- * Make use of the tree structure
  *
  */
 app.post('/process3', function(req, res){
+  var OriginalDescript = req.body.description;
+
+  res.render('overview',{
+    "skills" : [],
+    "description" : OriginalDescript,
+    "words" : [],
+    "alg3": 1
+  });
 });
+
+
+/*
+ * Algorithm for alg3
+ * Make use of the tree structure
+ *
+ */
+app.post('/process4', function(req, res){
+  var OriginalDescript = req.body.description;
+
+  res.render('overview',{
+    "skills" : [],
+    "description" : OriginalDescript,
+    "words" : [],
+    "alg4": 1
+  });
+});
+
 
 
 app.use(function(req, res, next){
