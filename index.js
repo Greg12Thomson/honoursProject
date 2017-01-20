@@ -18,8 +18,8 @@ app.disable('x-powered-by');
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 
 app.engine('handlebars', handlebars.engine);
-app.set('view engine', 'handlebars');
 
+app.set('view engine', 'handlebars');
 app.use(require('body-parser').urlencoded({
   extended: true
 }));
@@ -44,9 +44,10 @@ app.get('/', function(req, res){
 
 
 /*
- * Algorithm for alg1
- * word embedding words
- *
+ * Process algorithm 1: word embedding words
+ * uses word embeddings on each word in the description
+ * to find related words. Then uses thoughs words to
+ * match to skills.
  */
 app.post('/process', function(req, res){
   var description = req.body.description;
@@ -173,9 +174,10 @@ app.post('/process', function(req, res){
 });
 
 /*
- * Algorithm for alg2
- * Uses word embedding vectors
- *
+ * Process algorithm 2: word embedding vectors
+ * uses word embeddings to create a word embedding
+ * vector for the job description. Compare this
+ * vector to the skill vectors.
  */
 app.post('/process2', function(req, res){
   var OriginalDescript = req.body.description;
@@ -299,58 +301,33 @@ app.use(function(req, res, next){
   next();
 });
 
+/*
+ * render about page
+ */
 app.get('/about', function(req, res){
   res.render('about');
 });
 
+/*
+ * render contact page
+ */
 app.get('/contact', function(req, res){
   res.render('contact');
 });
 
-// app.get('/alg1', function(req, res){
-//   res.render('alg1');
-// });
-//
-// app.get('/alg2', function(req, res){
-//   res.render('alg2');
-// });
 
-
-// show data
-app.get('/getData', function(req, res,next){
-  // Connect to the db
-  MongoClient.connect(url, function(err, db) {
-    if(err) {
-      console.log("Failed to connect to server: ", err)
-    }
-    else {
-      console.log("Connected to DB");
-      var collection = db.collection('skills');
-      collection.find({}).toArray(function (err, result) {
-        if (err) {
-          res.send(err);
-        } else if (result.length) {
-          res.render('data',{
-            // Pass the returned database documents
-            "skills" : result
-          });
-        } else {
-          res.send('No documents found');
-        }
-        //Close connection
-        db.close();
-      });
-    }
-  });
-});
-
-
+/*
+ * page not found: 404
+ */
 app.use(function(req, res){
   res.type('text/html');
   res.status('404');
   res.render('404');
 });
 
+/*
+ * server error: 500
+ */
 app.use(function(err, req, res, next) {
   console.error(err.stack);
   res.status(500);
@@ -360,8 +337,10 @@ app.use(function(err, req, res, next) {
 
 // -----------------------------------------------------------------------------
 app.listen(app.get('port'), function(){
-    console.log('Express started press Ctrl-C to terminate')
+    console.log('Express started press Ctrl-C to terminate');
 });
+
+module.exports = app;
 
 // word2Vec --------------------------------------------------------------------
 function getNClosestMatches(n, vec, skills) {
@@ -392,4 +371,24 @@ function mag(a) {
   return Math.sqrt(a.reduce(function(sum, val) {
     return sum + val*val;
   }, 0));
+}
+
+// helper functions ------------------------------------------------------------
+
+/*
+ * conect to database
+ * returns null if error
+ */
+function connectToDB(){
+  // Connect to the db
+  MongoClient.connect(url, function(err, db) {
+    if(err) {
+      console.log("Failed to connect to server: ", err)
+      return null;
+    }
+    else {
+      console.log("Connected to DB");
+      return db;
+    }
+  });
 }
