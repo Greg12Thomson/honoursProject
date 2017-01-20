@@ -72,6 +72,7 @@ app.post('/process', function(req, res){
       console.log("Connected to DB");
       var collection = db.collection('skills');
 
+      // for each word in description
       async.eachSeries(jobDescription,function(w, callback) {
         w = w.toLowerCase();
         collection.findOne({word: w}, function(err, result) {
@@ -113,6 +114,17 @@ app.post('/process', function(req, res){
               }
               i += 2;
             }
+
+            // set score to score/skill length
+            var skillLength = 0;
+            i = 0;
+            while (i < skills.length){
+              skillLength = skills[i].split(" ").length;
+              skillMap.set(skills[i], skillMap.get(skills[i])/skillLength);
+              i++;
+            }
+
+
             // create return list
             for (var key of skillMap.keys()) {
               skillList.push({skill: key,
@@ -219,7 +231,7 @@ app.post('/process2', function(req, res){
           res.send(err);
         } else if (result.length) {
           // get 10 closest skills vectors to description vector
-          var simSkills = getNClosestMatches(20, descriptVec, result);
+          var simSkills = getNClosestMatches(10, descriptVec, result);
           // only get skill
           var skills = [];
           var words = [];
@@ -265,7 +277,7 @@ app.post('/process3', function(req, res){
 
 
 /*
- * Algorithm for alg3
+ * Algorithm for alg4
  * Make use of the tree structure
  *
  */

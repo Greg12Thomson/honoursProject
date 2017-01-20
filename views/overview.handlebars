@@ -30,7 +30,7 @@
 <div class="row">
   <div class="form-group">
     <div class="col s12">
-      <button href="/" class="waves-effect waves-light btn" id="submit">Try Again</button>
+      <a href="/" class="waves-effect waves-light btn" id="submit">Try Again</a>
     </div> <!-- ./col-md-12 -->
   </div> <!-- ./form-group -->
 </div><!-- ./row -->
@@ -43,7 +43,7 @@
       <p class="grey-text">Click <a href="#">(?)</a> to find out more about the skill</p>
       <ol>
         {{#each skills}}
-          <li><b>{{this.skill}}</b><a href="#">(?)</a>({{this.score}}): </br>Words used to destiguish skill: <i>{{#each this.words}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}</i></li>
+          <li><b>{{this.skill}}</b><a href="#">(?)</a>({{this.score}}): {{#if alg1}}</br>Words used to destiguish skill: <i>{{#each this.words}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}</i>{{/if}}</li>
         {{/each}}
       </ol>
     {{/if}}
