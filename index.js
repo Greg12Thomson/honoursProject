@@ -33,7 +33,7 @@ app.use(express.static(__dirname + '/public'));
 // database init -
 var MongoClient = require('mongodb').MongoClient;
 var string = require('string');
-var url = 'mongodb://localhost:27017/honoursProject';
+const url = 'mongodb://localhost:27017/honoursProject';
 
 
 // -----------------------------------------------------------------------------
@@ -340,7 +340,10 @@ app.listen(app.get('port'), function(){
     console.log('Express started press Ctrl-C to terminate');
 });
 
-module.exports = app;
+module.exports = {"app": app,
+                  "MongoClient": MongoClient
+                  };
+
 
 // word2Vec --------------------------------------------------------------------
 function getNClosestMatches(n, vec, skills) {

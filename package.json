@@ -5,7 +5,7 @@
   "description": "Honours project: web application which takes job descriptions and returns the skills needed for this job.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Greg Thomson",
   "license": "ISC",
