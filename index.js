@@ -375,23 +375,3 @@ function mag(a) {
     return sum + val*val;
   }, 0));
 }
-
-// helper functions ------------------------------------------------------------
-
-/*
- * conect to database
- * returns null if error
- */
-function connectToDB(){
-  // Connect to the db
-  MongoClient.connect(url, function(err, db) {
-    if(err) {
-      console.log("Failed to connect to server: ", err)
-      return null;
-    }
-    else {
-      console.log("Connected to DB");
-      return db;
-    }
-  });
-}
