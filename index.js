@@ -10,7 +10,10 @@ var express = require('express');
 var app = express();
 var async = require('async');
 var wordVecs = require('./data/wordvecs25000.js').wordVecs;
+var word2Vec = require('./word2Vec.js');
 var stopWords = require('./data/words.js').stopWords;
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var xhr = new XMLHttpRequest();
 
 
 app.disable('x-powered-by');
@@ -81,18 +84,24 @@ app.post('/process', function(req, res){
             // add to matched words
             words.add(w);
             // add to skills
+            var i = 0;
             result.skills.split(";").forEach(function(s){
               s = s.replace(/[\[\]{()}]/g, '').trim();
+              // add skill and score
+              // array [skill1,score1, skill2, score2, ... , skilln, scoren]
               skills.push(s);
 
-              // add words to skill words
-              if (skillWordsMap.has(s)) {
-                skillWordsMap.set(s, skillWordsMap.get(s).add(w));
+              // create Map<skill, words used>
+              // used to find which words mapped to a skill
+              if (i%2 == 0){  // for skills, not scores
+                if (skillWordsMap.has(s)) {
+                  skillWordsMap.set(s, skillWordsMap.get(s).add(w));
+                }
+                else {
+                  skillWordsMap.set(s,new Set().add(w));
+                }
               }
-              else {
-                skillWordsMap.set(s,new Set().add(w));
-              }
-
+              i++;
             });
 
           }
@@ -119,12 +128,12 @@ app.post('/process', function(req, res){
             // set score to score/skill length
             var skillLength = 0;
             i = 0;
-            while (i < skills.length){
-              skillLength = skills[i].split(" ").length;
-              skillMap.set(skills[i], skillMap.get(skills[i])/skillLength);
+            var skillsInDescription = Array.from(skillWordsMap.keys())
+            while (i < skillsInDescription.length){
+              skillLength = skillsInDescription[i].split(" ").length;
+              skillMap.set(skillsInDescription[i], skillMap.get(skillsInDescription[i])/skillLength);
               i++;
             }
-
 
             // create return list
             for (var key of skillMap.keys()) {
@@ -233,7 +242,7 @@ app.post('/process2', function(req, res){
           res.send(err);
         } else if (result.length) {
           // get 10 closest skills vectors to description vector
-          var simSkills = getNClosestMatches(10, descriptVec, result);
+          var simSkills = word2Vec.getNClosestMatches(10, descriptVec, result);
           // only get skill
           var skills = [];
           var words = [];
@@ -244,7 +253,6 @@ app.post('/process2', function(req, res){
             });
             words.push(simSkills[j][0]);
           }
-          console.log(words)
           res.render('overview',{
             // Pass the returned database documents
             "skills" : skills,
@@ -267,13 +275,172 @@ app.post('/process2', function(req, res){
  *
  */
 app.post('/process3', function(req, res){
-  var OriginalDescript = req.body.description;
+  var description = req.body.description;
+  var skills = [];
+  var words = new Set();
+  var skillWordsMap = new Map();
+  var skillList = [];
+  var skillMap = new Map();
 
-  res.render('overview',{
-    "skills" : [],
-    "description" : OriginalDescript,
-    "words" : [],
-    "alg3": 1
+  // replace punctuation with space
+  var jobDescription = description.replace(/['";:,.\/?\\-]/g, ' ');
+  // strip the rest of the punctuation
+  jobDescription = string(jobDescription).stripPunctuation().s;
+  // split on space
+  jobDescription = jobDescription.split(" ");
+
+  // Connect to the db
+  MongoClient.connect(url, function(err, db) {
+    if(err) {
+      console.log("Failed to connect to server: ", err)
+    }
+    else {
+      console.log("Connected to DB");
+      var collection = db.collection('skills');
+
+      // for each word in description
+      async.eachSeries(jobDescription,function(w, callback) {
+        w = w.toLowerCase();
+        collection.findOne({word: w}, function(err, result) {
+          if (result){
+            // add to matched words
+            words.add(w);
+            // add to skills
+            var i = 0;
+            result.skills.split(";").forEach(function(s){
+              s = s.replace(/[\[\]{()}]/g, '').trim();
+              // add skill and score
+              // array [skill1,score1, skill2, score2, ... , skilln, scoren]
+              skills.push(s);
+
+              // create Map<skill, words used>
+              // used to find which words mapped to a skill
+              if (i%2 == 0){  // for skills, not scores
+                if (skillWordsMap.has(s)) {
+                  skillWordsMap.set(s.toLowerCase(), skillWordsMap.get(s).add(w));
+                }
+                else {
+                  skillWordsMap.set(s.toLowerCase(),new Set().add(w));
+                }
+              }
+              i++;
+            });
+
+          }
+          callback(err);
+        });
+      },function(err) {
+          if (err){
+            console.log("Error: ", err);
+          }
+          else {
+            var i = 0;
+            skillList = [];
+            // make map of skills with scores
+            while (i < skills.length){
+              if (skillMap.has(skills[i])) {
+                skillMap.set(skills[i].toLowerCase(), skillMap.get(skills[i]) + parseFloat(skills[i+1]));
+              }
+              else {
+                skillMap.set(skills[i].toLowerCase(),parseFloat(skills[i+1]));
+              }
+              i += 2;
+            }
+
+            // set score to score/skill length
+            var skillLength = 0;
+            i = 0;
+            var skillsInDescription = Array.from(skillWordsMap.keys())
+            while (i < skillsInDescription.length){
+              skillLength = skillsInDescription[i].split(" ").length;
+              skillMap.set(skillsInDescription[i], skillMap.get(skillsInDescription[i])/skillLength);
+              i++;
+            }
+
+            // add wiki popularity to score to upweight more relevent skills
+            //TODO add promise
+            var p1 = new Promise(function(resolve, reject) {
+              MongoClient.connect(url, function(err, db) {
+                if(err) {
+                  console.log("Failed to connect to server: ", err)
+                }
+                else {
+                  console.log("Connected to DB");
+                  var collection = db.collection('skillWiki');
+                  var s;
+                  for (var i = 0; i < skillsInDescription.length; i++) {
+                    s = skillsInDescription[i].toLowerCase();
+                    collection.findOne({skill: s}, function(err, result) {
+                      if (err) {
+                        res.send(err);
+                      }
+                      else if (result !== null) {
+                        skillMap.set(result.skill, parseFloat(skillMap.get(result.skill)) + parseFloat(result.average_views));
+                        console.log(parseFloat(skillMap.get(result.skill)) + parseFloat(result.average_views));
+                      }
+                    });
+                  }
+                  resolve(skillMap);
+                }
+              });
+            });
+            p1.then(function(val) {
+
+                console.log(val);
+
+                // create return list
+                for (var i= 0; i < skillsInDescription.length; i++) {
+                  skillList.push({skill: skillsInDescription[i],
+                                  score: val.get(skillsInDescription[i]),
+                                  words: Array.from(skillWordsMap.get(skillsInDescription[i]))
+                                });
+                }
+
+              // get top ten skills
+              var score = [];
+              var topTen = [];
+              for (var i = 0; i < skillList.length; i++){
+                score.push(skillList[i].score);
+              }
+              // skillList.forEach(function(skill) {
+              //   console.log(skill);
+              //   score.push(skill.score);
+              // });
+
+              var max = score[0];
+              var maxIndex = 0;
+              for (var i = 0; i < 10 && i < score.length; i ++){
+                for (var j = 1; j < score.length; j++) {
+                    if (score[j] > max) {
+                        maxIndex = j;
+                        max = score[j];
+                    }
+                }
+                topTen.push(skillList[maxIndex]);
+                // set score to min
+                score[maxIndex] = -1;
+                max = score[0];
+                maxIndex = 0;
+              }
+
+              //TODO fix textbox highlight to only show words
+              words.delete("c");
+              words = Array.from(words).sort();
+
+              res.render('overview',{
+                "skills" : topTen,
+                "words" : words,
+                "description" : description,
+                "alg3": 1
+              });
+            })
+            .catch(
+              function(reason) {
+                console.log('Error: ', reason);
+            });
+        }
+      });
+    }
   });
 });
 
@@ -343,35 +510,3 @@ app.listen(app.get('port'), function(){
 module.exports = {"app": app,
                   "MongoClient": MongoClient
                   };
-
-
-// word2Vec --------------------------------------------------------------------
-function getNClosestMatches(n, vec, skills) {
-  var sims = [];
-  var sim;
-  var curentskillVec = [];
-  for (var i = 0; i < skills.length; i++) {
-    // Convert string to array. "[vec1; vec2]" -> Array[vec1, vec2]
-    curentskillVec = skills[i].vector;
-    curentskillVec = curentskillVec.substring(1, curentskillVec.length - 1).split(";");
-    sim = getCosSim(vec, curentskillVec);
-    sims.push([skills[i].skill, sim]);
-  }
-  sims.sort(function(a, b) {
-    return b[1] - a[1];
-  });
-  return sims.slice(0, n);
-}
-
-// helper functions ------------------------------------------------------------
-function getCosSim(f1, f2) {
-  return Math.abs(f1.reduce(function(sum, a, idx) {
-    return sum + a*f2[idx];
-  }, 0)/(mag(f1)*mag(f2))); //magnitude is 1 for all feature vectors
-}
-
-function mag(a) {
-  return Math.sqrt(a.reduce(function(sum, val) {
-    return sum + val*val;
-  }, 0));
-}

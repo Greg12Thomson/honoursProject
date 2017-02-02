@@ -1,4 +1,4 @@
-var chai = require('chai');
+var chai = require('chai'); //assertion library
 var chaiHttp = require('chai-http');
 var server = require('../index').app;
 var should = chai.should();
@@ -34,4 +34,17 @@ describe('home', function() {
         done();
       });
   });
+
+  /*
+   * GET /junk should fail as it is not a url
+   */
+  it('should fail on /junk GET', function(done) {
+    chai.request(server)
+      .get('/junk')
+      .end(function(err, res){
+        res.should.have.status(404);
+        done();
+      });
+  });
+
 });

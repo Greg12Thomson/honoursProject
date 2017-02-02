@@ -1,4 +1,4 @@
-var chai = require('chai');
+var chai = require('chai'); //assertion library
 var chaiHttp = require('chai-http');
 var server = require('../index').app;
 var should = chai.should();

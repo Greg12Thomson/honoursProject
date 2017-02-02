@@ -25,6 +25,10 @@
     "mongodb": "~2.0.33",
     "request": "^2.79.0",
     "socket.io": "^1.7.2",
-    "string": "^3.3.3"
+    "string": "^3.3.3",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "node-mocks-http": "^1.5.6"
   }
 }
