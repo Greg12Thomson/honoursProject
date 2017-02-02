@@ -182,6 +182,9 @@ app.post('/process', function(req, res){
   });
 });
 
+function processFile(file, processFileCallback) {
+}
+
 /*
  * Process algorithm 2: word embedding vectors
  * uses word embeddings to create a word embedding
@@ -227,7 +230,6 @@ app.post('/process2', function(req, res){
   else {  // no word in description matched.
     skillVector = null;
   }
-
 
   // Connect to the db
   MongoClient.connect(url, function(err, db) {
@@ -358,90 +360,84 @@ app.post('/process3', function(req, res){
             }
 
             // add wiki popularity to score to upweight more relevent skills
-            //TODO add promise
-            var p1 = new Promise(function(resolve, reject) {
-              MongoClient.connect(url, function(err, db) {
-                if(err) {
-                  console.log("Failed to connect to server: ", err)
-                }
-                else {
-                  console.log("Connected to DB");
-                  var collection = db.collection('skillWiki');
-                  var s;
-                  for (var i = 0; i < skillsInDescription.length; i++) {
-                    s = skillsInDescription[i].toLowerCase();
-                    collection.findOne({skill: s}, function(err, result) {
-                      if (err) {
-                        res.send(err);
+            MongoClient.connect(url, function(err, db) {
+              if(err) {
+                console.log("Failed to connect to server: ", err)
+              }
+              else {
+                console.log("Connected to DB");
+                var collection = db.collection('skillWiki');
+                // for (var i = 0; i < skillsInDescription.length; i++) {
+                async.each(skillsInDescription,function(s, callback) {
+                  s = s.toLowerCase();
+                  collection.findOne({skill: s}, function(err, result) {
+                    if (err) {
+                      res.send(err);
+                      callback(err);
+                    }
+                    else if (result !== null) {
+                      skillMap.set(result.skill, parseFloat(skillMap.get(result.skill)) + parseFloat(result.average_views));
+                    }
+                    callback();
+                  });
+
+
+                }, function(err, result) {
+                  if (err){
+                    console.log("Error: ", err);
+                  }
+                  else {
+
+                    // create return list {skill:x, score:y, words:z}
+                    for (var i= 0; i < skillsInDescription.length; i++) {
+                      skillList.push({skill: skillsInDescription[i],
+                                      score: skillMap.get(skillsInDescription[i]),
+                                      words: Array.from(skillWordsMap.get(skillsInDescription[i]))
+                      });
+                    }
+
+                    // get top ten skills
+                    var score = [];
+                    var topTen = [];
+                    for (var i = 0; i < skillList.length; i++){
+                      score.push(skillList[i].score);
+                    }
+
+                    var max = score[0]; //initial max
+                    var maxIndex = 0;
+                    // find max score
+                    for (var i = 0; i < 10 && i < score.length; i ++){
+                      for (var j = 1; j < score.length; j++) {
+                          if (score[j] > max) {
+                              maxIndex = j;
+                              max = score[j];
+                          }
                       }
-                      else if (result !== null) {
-                        skillMap.set(result.skill, parseFloat(skillMap.get(result.skill)) + parseFloat(result.average_views));
-                        console.log(parseFloat(skillMap.get(result.skill)) + parseFloat(result.average_views));
-                      }
+                      topTen.push(skillList[maxIndex]);
+                      // set score to min
+                      score[maxIndex] = -1;
+                      max = score[0];
+                      maxIndex = 0;
+                    }
+
+                    //TODO fix textbox highlight to only show words
+                    words.delete("c");
+                    words = Array.from(words).sort();
+
+                    res.render('overview',{
+                      "skills" : topTen,
+                      "words" : words,
+                      "description" : description,
+                      "alg3": 1
                     });
                   }
-                  resolve(skillMap);
-                }
-              });
-            });
-            p1.then(function(val) {
-
-                console.log(val);
-
-                // create return list
-                for (var i= 0; i < skillsInDescription.length; i++) {
-                  skillList.push({skill: skillsInDescription[i],
-                                  score: val.get(skillsInDescription[i]),
-                                  words: Array.from(skillWordsMap.get(skillsInDescription[i]))
-                                });
-                }
-
-              // get top ten skills
-              var score = [];
-              var topTen = [];
-              for (var i = 0; i < skillList.length; i++){
-                score.push(skillList[i].score);
+                }); // ./async.eachSeries
               }
-              // skillList.forEach(function(skill) {
-              //   console.log(skill);
-              //   score.push(skill.score);
-              // });
-
-              var max = score[0];
-              var maxIndex = 0;
-              for (var i = 0; i < 10 && i < score.length; i ++){
-                for (var j = 1; j < score.length; j++) {
-                    if (score[j] > max) {
-                        maxIndex = j;
-                        max = score[j];
-                    }
-                }
-                topTen.push(skillList[maxIndex]);
-                // set score to min
-                score[maxIndex] = -1;
-                max = score[0];
-                maxIndex = 0;
-              }
-
-              //TODO fix textbox highlight to only show words
-              words.delete("c");
-              words = Array.from(words).sort();
-
-              res.render('overview',{
-                "skills" : topTen,
-                "words" : words,
-                "description" : description,
-                "alg3": 1
-              });
-            })
-            .catch(
-              function(reason) {
-                console.log('Error: ', reason);
-            });
+          }); // ./mongodbClient
         }
-      });
+      }); // ./async.eachSeries
     }
-  });
+  }); // ./mongodbClient
 });
 
 
