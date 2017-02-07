@@ -1,4 +1,8 @@
-
+/*
+ * Gregor Thomson - 2029108
+ *
+ * Honours Project
+ */
 var getNClosestMatches = function(n, vec, skills) {
   var sims = [];
   var sim;

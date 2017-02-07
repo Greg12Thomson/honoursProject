@@ -2,7 +2,7 @@
 /*
  * Gregor Thomson - 2029108
  *
- * Honours Project: test sight
+ * Honours Project
  */
 
 // server init
@@ -46,6 +46,37 @@ app.get('/', function(req, res){
 });
 
 
+//TODO add normilisation
+/*
+ * generates word relavence score for description and normilises
+ * d = job descripton, s = skill
+ * skillMap = Map({skill, score})
+ */
+function generateScore(skillMap, d, s){
+  var sLen = s.split(" ").length;
+  return (1/d.length) * (skillMap.get(s)/sLen);
+}
+
+/*
+ * generates a skill map Map({skill, score})
+ * skills = Array(skill1, score1, skill2, score2, ..., skillN, scoreN)
+ */
+function generateSkillMap(skills){
+  var i = 0;
+  var map = new Map();
+  while (i < skills.length){
+    if (map.has(skills[i])) {
+      map.set(skills[i], map.get(skills[i]) + parseFloat(skills[i+1]));
+    }
+    else {
+      map.set(skills[i],parseFloat(skills[i+1]));
+    }
+    i += 2;
+  }
+  return map;
+}
+
+
 /*
  * Process algorithm 1: word embedding words
  * uses word embeddings on each word in the description
@@ -59,6 +90,7 @@ app.post('/process', function(req, res){
   var skillWordsMap = new Map();
   var skillList = [];
   var skillMap = new Map();
+  var originalSkillMap = new Map();
 
   // replace punctuation with space
   var jobDescription = description.replace(/['";:,.\/?\\-]/g, ' ');
@@ -85,8 +117,11 @@ app.post('/process', function(req, res){
             words.add(w);
             // add to skills
             var i = 0;
+            var originalSkill;
             result.skills.split(";").forEach(function(s){
               s = s.replace(/[\[\]{()}]/g, '').trim();
+              originalSkill = s;
+              s = s.toLowerCase()
               // add skill and score
               // array [skill1,score1, skill2, score2, ... , skilln, scoren]
               skills.push(s);
@@ -99,6 +134,7 @@ app.post('/process', function(req, res){
                 }
                 else {
                   skillWordsMap.set(s,new Set().add(w));
+                  originalSkillMap.set(s, originalSkill); // for display purposes
                 }
               }
               i++;
@@ -112,32 +148,18 @@ app.post('/process', function(req, res){
             console.log("Error: ", err);
           }
           else {
-            var i = 0;
-            skillList = [];
-            // make map of skills with scores
-            while (i < skills.length){
-              if (skillMap.has(skills[i])) {
-                skillMap.set(skills[i], skillMap.get(skills[i]) + parseFloat(skills[i+1]));
-              }
-              else {
-                skillMap.set(skills[i],parseFloat(skills[i+1]));
-              }
-              i += 2;
+            skillMap = generateSkillMap(skills);
+            skills = Array.from(skillWordsMap.keys())
+
+            // normilise score
+            for (var i = 0; i < skills.length; i++){
+              skillMap.set(skills[i], generateScore(skillMap, jobDescription, skills[i]));
             }
 
-            // set score to score/skill length
-            var skillLength = 0;
-            i = 0;
-            var skillsInDescription = Array.from(skillWordsMap.keys())
-            while (i < skillsInDescription.length){
-              skillLength = skillsInDescription[i].split(" ").length;
-              skillMap.set(skillsInDescription[i], skillMap.get(skillsInDescription[i])/skillLength);
-              i++;
-            }
-
+            console.log(originalSkillMap);
             // create return list
-            for (var key of skillMap.keys()) {
-              skillList.push({skill: key,
+            for (var key of skillWordsMap.keys()) {
+              skillList.push({skill: originalSkillMap.get(key),
                               score: skillMap.get(key),
                               words: Array.from(skillWordsMap.get(key))
                             });

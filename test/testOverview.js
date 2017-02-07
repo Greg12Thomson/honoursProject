@@ -1,3 +1,8 @@
+/*
+ * Gregor Thomson - 2029108
+ *
+ * Honours Project: tests for overview page
+ */
 var chai = require('chai'); //assertion library
 var chaiHttp = require('chai-http');
 var httpMocks = require('node-mocks-http');

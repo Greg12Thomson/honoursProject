@@ -1,3 +1,8 @@
+/*
+ * Gregor Thomson - 2029108
+ *
+ * Honours Project: tests for contact page
+ */
 var chai = require('chai');
 var chaiHttp = require('chai-http');
 var server = require('../index').app;
