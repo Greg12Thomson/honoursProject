@@ -76,6 +76,16 @@ function generateSkillMap(skills){
   return map;
 }
 
+function stripStopWords(d){
+  var newDescription = [];
+  for (var i = 0; i < d.length; i ++){
+    if (stopWords.indexOf(d[i]) == -1){   // isn't a stop word
+      newDescription.push(d[i])
+    }
+  }
+  return newDescription;
+}
+
 
 /*
  * Process algorithm 1: word embedding words
@@ -93,11 +103,13 @@ app.post('/process', function(req, res){
   var originalSkillMap = new Map();
 
   // replace punctuation with space
-  var jobDescription = description.replace(/['";:,.\/?\\-]/g, ' ');
+  var originalDescription = description.replace(/['";:,.\/?\\-]/g, ' ');
   // strip the rest of the punctuation
-  jobDescription = string(jobDescription).stripPunctuation().s;
+  originalDescription = string(originalDescription).stripPunctuation().s;
   // split on space
-  jobDescription = jobDescription.split(" ");
+  originalDescription = originalDescription.split(" ");
+  // remove stop words
+  var jobDescription = stripStopWords(originalDescription);
 
   // Connect to the db
   MongoClient.connect(url, function(err, db) {
@@ -216,9 +228,14 @@ function processFile(file, processFileCallback) {
 app.post('/process2', function(req, res){
   var OriginalDescript = req.body.description;
   var descriptVec = [];
-  // create description vector
-  var description = string(OriginalDescript).stripPunctuation().s;
-  var description = description.split(/[ ,]+/);
+  // replace punctuation with space
+  var jobDescription = OriginalDescript.replace(/['";:,.\/?\\-]/g, ' ');
+  // strip the rest of the punctuation
+  jobDescription = string(jobDescription).stripPunctuation().s;
+  // split on space
+  jobDescription = jobDescription.split(" ");
+  // remove stop words
+  var description = stripStopWords(jobDescription);
   var matched = 0;  // number of words matched to a vector
 
   // init description vector
@@ -231,16 +248,15 @@ app.post('/process2', function(req, res){
   var currentVec = [];
   for (var i = 0; i < description.length; i++) {
     word = description[i].toLowerCase();
-    if (stopWords.indexOf(word) == -1){   // isn't a stop word
-      // add to description vector
-      currentVec = wordVecs[word];
-      if (currentVec !== undefined){
-        matched++;
-        for (var j = 0; j < currentVec.length; j++){
-          descriptVec[j] += currentVec[j];
-        }
+    // add to description vector
+    currentVec = wordVecs[word];
+    if (currentVec !== undefined){
+      matched++;
+      for (var j = 0; j < currentVec.length; j++){
+        descriptVec[j] += currentVec[j];
       }
     }
+
   }
 
   // get average vector
@@ -307,11 +323,13 @@ app.post('/process3', function(req, res){
   var skillMap = new Map();
 
   // replace punctuation with space
-  var jobDescription = description.replace(/['";:,.\/?\\-]/g, ' ');
+  var originalDescription = description.replace(/['";:,.\/?\\-]/g, ' ');
   // strip the rest of the punctuation
-  jobDescription = string(jobDescription).stripPunctuation().s;
+  originalDescription = string(originalDescription).stripPunctuation().s;
   // split on space
-  jobDescription = jobDescription.split(" ");
+  originalDescription = originalDescription.split(" ");
+  // remove stop words
+  var jobDescription = stripStopWords(originalDescription);
 
   // Connect to the db
   MongoClient.connect(url, function(err, db) {
