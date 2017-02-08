@@ -46,7 +46,6 @@ app.get('/', function(req, res){
 });
 
 
-//TODO add normilisation
 /*
  * generates word relavence score for description and normilises
  * d = job descripton, s = skill
@@ -76,6 +75,9 @@ function generateSkillMap(skills){
   return map;
 }
 
+/*
+ * strips out stop words in job description
+ */
 function stripStopWords(d){
   var newDescription = [];
   for (var i = 0; i < d.length; i ++){
@@ -163,17 +165,14 @@ app.post('/process', function(req, res){
             skillMap = generateSkillMap(skills);
             skills = Array.from(skillWordsMap.keys())
 
-            // normilise score
             for (var i = 0; i < skills.length; i++){
+              // normilise score
               skillMap.set(skills[i], generateScore(skillMap, jobDescription, skills[i]));
-            }
 
-            console.log(originalSkillMap);
-            // create return list
-            for (var key of skillWordsMap.keys()) {
-              skillList.push({skill: originalSkillMap.get(key),
-                              score: skillMap.get(key),
-                              words: Array.from(skillWordsMap.get(key))
+              // create return list
+              skillList.push({skill: originalSkillMap.get(skills[i]),
+                              score: skillMap.get(skills[i]),
+                              words: Array.from(skillWordsMap.get(skills[i]))
                             });
             }
 
@@ -321,6 +320,10 @@ app.post('/process3', function(req, res){
   var skillWordsMap = new Map();
   var skillList = [];
   var skillMap = new Map();
+  var originalSkillMap = new Map();
+  const MAX_WIKI_VIEWS = 40175; // used to normilise wiki score
+  const LAMBDA = 0.5; // used weight scoring. >0.5 similarity is weighted more <0.5 wiki_popularity is weighted more
+
 
   // replace punctuation with space
   var originalDescription = description.replace(/['";:,.\/?\\-]/g, ' ');
@@ -349,8 +352,11 @@ app.post('/process3', function(req, res){
             words.add(w);
             // add to skills
             var i = 0;
+            var originalSkill;
             result.skills.split(";").forEach(function(s){
               s = s.replace(/[\[\]{()}]/g, '').trim();
+              originalSkill = s;
+              s = s.toLowerCase()
               // add skill and score
               // array [skill1,score1, skill2, score2, ... , skilln, scoren]
               skills.push(s);
@@ -359,10 +365,11 @@ app.post('/process3', function(req, res){
               // used to find which words mapped to a skill
               if (i%2 == 0){  // for skills, not scores
                 if (skillWordsMap.has(s)) {
-                  skillWordsMap.set(s.toLowerCase(), skillWordsMap.get(s).add(w));
+                  skillWordsMap.set(s, skillWordsMap.get(s).add(w));
                 }
                 else {
-                  skillWordsMap.set(s.toLowerCase(),new Set().add(w));
+                  skillWordsMap.set(s,new Set().add(w));
+                  originalSkillMap.set(s, originalSkill); // for display purposes
                 }
               }
               i++;
@@ -376,27 +383,12 @@ app.post('/process3', function(req, res){
             console.log("Error: ", err);
           }
           else {
-            var i = 0;
-            skillList = [];
-            // make map of skills with scores
-            while (i < skills.length){
-              if (skillMap.has(skills[i])) {
-                skillMap.set(skills[i].toLowerCase(), skillMap.get(skills[i]) + parseFloat(skills[i+1]));
-              }
-              else {
-                skillMap.set(skills[i].toLowerCase(),parseFloat(skills[i+1]));
-              }
-              i += 2;
-            }
+            skillMap = generateSkillMap(skills);
+            skills = Array.from(skillWordsMap.keys())
 
-            // set score to score/skill length
-            var skillLength = 0;
-            i = 0;
-            var skillsInDescription = Array.from(skillWordsMap.keys())
-            while (i < skillsInDescription.length){
-              skillLength = skillsInDescription[i].split(" ").length;
-              skillMap.set(skillsInDescription[i], skillMap.get(skillsInDescription[i])/skillLength);
-              i++;
+            // normilise score
+            for (var i = 0; i < skills.length; i++){
+              skillMap.set(skills[i], generateScore(skillMap, jobDescription, skills[i]));
             }
 
             // add wiki popularity to score to upweight more relevent skills
@@ -408,7 +400,7 @@ app.post('/process3', function(req, res){
                 console.log("Connected to DB");
                 var collection = db.collection('skillWiki');
                 // for (var i = 0; i < skillsInDescription.length; i++) {
-                async.each(skillsInDescription,function(s, callback) {
+                async.each(skills,function(s, callback) {
                   s = s.toLowerCase();
                   collection.findOne({skill: s}, function(err, result) {
                     if (err) {
@@ -416,7 +408,8 @@ app.post('/process3', function(req, res){
                       callback(err);
                     }
                     else if (result !== null) {
-                      skillMap.set(result.skill, parseFloat(skillMap.get(result.skill)) + parseFloat(result.average_views));
+                      // score = (1-lambda)score * (lambda)average_views
+                      skillMap.set(result.skill, (1 - LAMBDA)* parseFloat(skillMap.get(result.skill)) * (LAMBDA * (parseFloat(result.average_views) / MAX_WIKI_VIEWS) ));
                     }
                     callback();
                   });
@@ -428,12 +421,14 @@ app.post('/process3', function(req, res){
                   }
                   else {
 
+                    console.log(skillMap);
+
                     // create return list {skill:x, score:y, words:z}
-                    for (var i= 0; i < skillsInDescription.length; i++) {
-                      skillList.push({skill: skillsInDescription[i],
-                                      score: skillMap.get(skillsInDescription[i]),
-                                      words: Array.from(skillWordsMap.get(skillsInDescription[i]))
-                      });
+                    for (var i = 0; i < skills.length; i++){
+                      skillList.push({skill: originalSkillMap.get(skills[i]),
+                                      score: skillMap.get(skills[i]),
+                                      words: Array.from(skillWordsMap.get(skills[i]))
+                                    });
                     }
 
                     // get top ten skills

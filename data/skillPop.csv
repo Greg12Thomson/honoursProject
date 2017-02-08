@@ -383,6 +383,230 @@ single instruction multiple data,  SIMD,  502
 systolic arrays,  Systolic_array,  65
 multicore architectures,  Multi-core_processor,  1140
 distributed architectures,  Distributed_computing,  1164
+client-server architectures,  Client–server_model,  0
+n-tier architectures,  Multitier_architecture,  848
+peer-to-peer architectures,  Peer-to-peer,  1613
+grid computing,  Grid_computing,  566
+other architectures,  Architecture,  2462
+neural networks,  Biological_neural_network,  226
+reconfigurable computing,  Reconfigurable_computing,  78
+analog computers,  Analog_computer,  697
+data flow architectures,  Dataflow_architecture,  92
+heterogeneous (hybrid) systems,  Heterogeneous_computing,  131
+self-organizing autonomic computing,  Autonomic_computing,  90
+optical computing,  Optical_computing,  190
+quantum computing,  Quantum_computing,  2668
+molecular computing,  DNA_computing,  263
+high-level language architectures,  High-level_language_computer_architecture,  24
+special purpose systems,  Category:Free_special-purpose_file_systems,  1
+embedded and cyber-physical systems,  Cyber-physical_system,  344
+sensor networks,  Wireless_sensor_network,  649
+robotics,  Outline_of_robotics,  72
+robotic components,  Robotics,  1836
+robotic control,  Robot_control,  37
+robotic autonomy,  Autonomous_robot,  199
+external interfaces for robotics,  Robotics_suite,  31
+sensors and actuators,  Actuator,  1064
+system on a chip,  System_on_a_chip,  776
+embedded systems,  Embedded_system,  1899
+firmware,  Firmware,  1450
+embedded hardware,  Embedded_system,  1899
+embedded software,  Embedded_software,  252
+real-time systems,  Real-time_computing,  590
+real-time operating systems,  Real-time_operating_system,  969
+real-time languages,  Real-time_Programming_Language,  8
+real-time system specification,  Real_time_Java,  43
+real-time system architecture,  Real-time_operating_system,  969
+dependable and fault-tolerant systems and networks,  Fault-tolerant_computer_system,  85
+reliability,  Reliability_(statistics),  389
+availability,  Availability,  413
+maintainability and maintenance,  Maintainability,  145
+processors and memory architectures,  Harvard_architecture,  416
+secondary storage organization,  Auxiliary_memory,  198
+redundancy,  Redundancy_(engineering),  402
+fault-tolerant network topologies,  Network_topology,  2203
+networks,  Computer_network,  4354
+network architectures,  Network_architecture,  288
+network design principles,  Network_planning_and_design,  154
+layering,  Network_layer,  763
+naming and addressing,  Domain_name,  2203
+programming interfaces,  Application_programming_interface,  4534
+network protocols,  Lists_of_network_protocols,  660
+network protocol design,  Communications_protocol,  1142
+protocol correctness,  Concurrency_control,  306
+protocol testing and verification,  Verification_and_validation,  876
+formal specifications,  Formal_specification,  108
+link-layer protocols,  Link_layer,  233
+network layer protocols,  Transport_layer,  802
+routing protocols,  Routing_protocol,  479
+signaling protocols,  Signaling_protocol,  27
+transport protocols,  Transport_layer,  802
+session protocols,  Session_layer,  277
+presentation protocols,  Presentation_layer,  284
+application layer protocols,  Application_layer,  814
+peer-to-peer protocols,  Peer-to-Peer_Protocol_(P2PP),  33
+oam protocols,  IEEE_802.1ag,  98
+time synchronization protocols,  Network_Time_Protocol,  1552
+network policy,  Network_Policy_Server,  30
+cross-layer protocols,  Cross-layer_optimization,  29
+network file system (nfs) protocol,  Network_File_System,  667
+network components,  Networking_hardware,  603
+intermediate nodes,  Node_(networking),  662
+routers,  Router_(computing),  1860
+bridges and switches,  Bridging_(networking),  595
+physical links,  Physical_layer,  585
+repeaters,  Repeater,  402
+middle boxes / network appliances,  Middlebox,  32
+end nodes,  End_node_problem,  7
+network adapters,  Network_interface_controller,  958
+network servers,  Server_(computing),  2354
+wireless access points base stations and infrastructure,  Wireless_access_point,  1024
+cognitive radios,  Cognitive_radio,  196
+logical nodes,  IEC_61850,  297
+network domains,  Network_domain,  41
+web server,  Web_server,  1301
+network algorithms,  Category:Networking_algorithms,  13
+data path algorithms,  Shortest_path_problem,  773
+packet classification,  Traffic_classification,  56
+deep packet inspection,  Deep_packet_inspection,  397
+packet scheduling,  Network_scheduler,  98
+control path algorithms,  Control_flow,  387
+network resources allocation,  Resource_allocation_(computer),  29
+network control algorithms,  Network_congestion,  339
+traffic engineering algorithms,  Traffic_optimization,  24
+network design and planning algorithms,  Pathfinding,  247
+network economics,  Network_economics,  22
+network performance evaluation,  Network_performance,  197
+network performance modeling,  Network_performance,  197
+network simulations,  Network_simulation,  164
+network experimentation,  Small-world_experiment,  219
+network performance analysis,  Network_performance,  197
+network measurement,  Network_traffic_measurement,  74
+network properties,  Network_science,  208
+network security,  Network_security,  768
+security protocols,  Cryptographic_protocol,  168
+web protocol security,  Internet_security,  515
+mobile and wireless security,  Wireless_security,  448
+denial-of-service attacks,  Denial-of-service_attack,  5537
+firewalls,  Firewall_(computing),  1940
+network range,  Private_network,  2001
+short-range networks,  Dedicated_short-range_communications,  105
+local area networks,  Local_area_network,  1523
+metropolitan area networks,  Metropolitan_area_network,  364
+wide area networks,  Wide_area_network,  1333
+very long-range networks,  Long-range_Wi-Fi,  397
+network structure,  Network_model,  267
+topology analysis and generation,  Mesh_generation,  97
+physical topologies,  Network_topology,  2203
+logical / virtual topologies,  Logical_topology,  71
+network topology types,  Network_topology,  2203
+point-to-point networks,  Point-to-point_(telecommunications),  277
+bus networks,  Bus_network,  289
+star networks,  Star_network,  371
+ring networks,  Ring_network,  280
+token ring networks,  Token_ring,  429
+fiber distributed data interface,  Fiber_Distributed_Data_Interface,  238
+mesh networks,  Wireless_mesh_network,  425
+wireless mesh networks,  Wireless_mesh_network,  425
+hybrid networks,  Network_topology,  2203
+network dynamics,  Network_dynamics,  12
+network reliability,  Reliability_(computer_networking),  100
+error detection and error correction,  Error_detection_and_correction,  755
+network mobility,  Mobile_IP,  203
+network manageability,  Network_management,  257
+network privacy and anonymity,  Tor_(anonymity_network),  4730
+network services,  Network_service,  219
+naming and addressing,  Domain_name,  2203
+cloud computing,  Cloud_computing,  7622
+location based services,  Location-based_service,  366
+programmable networks,  Software-defined_networking,  1004
+in-network processing,  Wireless_sensor_network,  649
+network management,  Network_management,  257
+network monitoring,  Network_monitoring,  247
+network types,  Computer_network,  4354
+network on chip,  Network_on_a_chip,  88
+home networks,  Home_network,  214
+storage area networks,  Storage_area_network,  1234
+data center networks,  Data_center_network_architectures,  72
+wired access networks,  Open-access_network,  38
+cyber-physical networks,  Cyber-physical_system,  344
+sensor networks,  Wireless_sensor_network,  649
+mobile networks,  Cellular_network,  1223
+overlay and other logical network structures,  Overlay_network,  210
+peer-to-peer networks,  Peer-to-peer,  1613
+world wide web,  World_Wide_Web,  4801
+social media networks,  Social_networking_service,  2473
+online social networks,  List_of_social_networking_websites,  4450
+wireless access networks,  Wireless_network,  900
+wireless local area networks,  Wireless_LAN,  1026
+wireless personal area networks,  Personal_area_network,  500
+ad hoc networks,  Wireless_ad_hoc_network,  530
+mobile ad hoc networks,  Mobile_ad_hoc_network,  329
+public internet,  Internet,  10606
+packet-switching networks,  Packet_switching,  813
+software and its engineering,  Software_engineering,  1987
+software development,  Software_development,  933
+software organization and properties,  Property_management,  548
+contextual software domains,  Domain-driven_design,  807
+e-commerce infrastructure,  Center_for_E-Commerce_Infrastructure_Development,  2
+software infrastructure,  Software-defined_infrastructure,  33
+interpreters,  Interpreter_(computing),  740
+middleware,  Middleware_(distributed_applications),  169
+message oriented middleware,  Message-oriented_middleware,  189
+reflective middleware,  Distributed_operating_system,  258
+embedded middleware,  Middleware_(distributed_applications),  169
+virtual machines,  Virtual_machine,  1461
+operating systems,  Operating_system,  6451
+file systems management,  File_system,  1198
+memory management,  Memory_management,  470
+virtual memory,  Virtual_memory,  1001
+main memory,  Computer_data_storage,  1448
+allocation / deallocation strategies,  Memory_management,  470
+garbage collection,  Garbage_collection_(computer_science),  675
+distributed memory,  Distributed_memory,  61
+secondary storage,  Auxiliary_memory,  198
+process management,  Process_management,  287
+scheduling,  Scheduling_(production_processes),  311
+deadlocks,  Deadlock,  961
+multithreading,  Multithreading_(computer_architecture),  488
+multiprocessing / multiprogramming / multitasking,  Computer_multitasking,  460
+monitors,  Computer_monitor,  1474
+mutual exclusion,  Mutual_exclusion,  429
+concurrency control,  Concurrency_control,  306
+power management,  Power_management,  128
+process synchronization,  Synchronization_(computer_science),  368
+communications management,  Communications_management,  168
+buffering,  Buffering_agent,  122
+input / output, Input/output,  0
+message passing,  Message_passing,  295
+virtual worlds software,  Virtual_world,  349
+interactive games,  List_of_Paradox_Interactive_games,  319
+virtual worlds training simulations,  Corporate_use_of_Second_Life,  4
+software system structures,  Software_architecture,  737
+embedded software,  Embedded_software,  252
+software architectures,  Software_architecture,  737
+n-tier architectures,  Multitier_architecture,  848
+peer-to-peer architectures,  Peer-to-peer,  1613
+data flow architectures,  Dataflow_architecture,  92
+cooperating communicating processes,  Communicating_sequential_processes,  264
+layered systems,  Layered_system,  14
+publish-subscribe / event-based architectures,  Publish–subscribe_pattern,  0
+electronic blackboards,  Interactive_whiteboard,  301
+simulator / interpreter,  Emulator,  783
+object oriented architectures,  Object-oriented_analysis_and_design,  440
+tightly coupled architectures,  Loose_coupling,  252
+space-based architectures,  Space-based_architecture,  26
+3-tier architectures,  Multitier_architecture,  848
+software system models,  Systems_modeling,  170
+petri nets,  Petri_net,  342
+state systems,  State_variable,  146
+entity relationship modeling,  Entity–relationship_model,  0
+model-driven software engineering,  Model-driven_engineering,  110
+feature interaction,  Feature_interaction_problem,  8
+massively parallel systems,  Massively_parallel_(computing),  117
+ultra-large-scale systems,  Ultra-large-scale_systems,  23
+distributed systems,  Distributed_computing,  1164
+distributed systems organizing principles,  Distributed_operating_system,  258
 cloud computing,  Cloud_computing_architecture,  178
 client-server architectures,  Client–server_model,  0
 grid computing,  Grid_computing,  566
@@ -487,9 +711,8 @@ software configuration management and version control systems,  List_of_version_
 software libraries and repositories,  Institutional_repository,  101
 software maintenance tools,  Software_maintenance,  473
 software creation and management,  Software_project_management,  321
-ddesigning software,  Software_design,  703
+designing software,  Software_design,  703
 requirements analysis,  Requirements_analysis,  717
-gregs-mbp:jobskills greg$ python testscrape.py,  undefined,  405
 designing software,  Software_design,  703
 requirements analysis,  Requirements_analysis,  717
 software design engineering,  Software_design,  703
