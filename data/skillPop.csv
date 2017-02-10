@@ -2059,8 +2059,6 @@ multi / mixed media creation,  Multimedia,  1660
 image composition,  Composition_(visual_arts),  777
 hypertext / hypermedia creation,  Hypertext,  722
 document scripting languages,  Scripting_language,  1169
-proper nouns: people technologies and companies,  Proper_noun,  557
-technologies,  Technology,  4346
 actionscript,  ActionScript,  366
 activex,  ActiveX,  479
 ada language,  Ada_(programming_language),  960
@@ -2070,7 +2068,6 @@ ajax,  Ajax_(programming),  1577
 applescript,  AppleScript,  214
 autocad,  AutoCAD,  1816
 basic,  BASIC,  1206
-bluetooth,  Bluetooth,  7179
 business process execution language,  Business_Process_Execution_Language,  153
 c,  C_(programming_language),  7266
 c#,  C_Sharp_(programming_language),  2813
@@ -2088,39 +2085,21 @@ dos,  DOS,  1350
 dreamweaver,  Adobe_Dreamweaver,  905
 dsl,  Digital_subscriber_line,  822
 dsm,  Delta-sigma_modulation,  305
-dvds,  DVD,  2306
 eclipse,  Eclipse_(software),  1790
-ethernet,  Ethernet,  2475
 excel,  Microsoft_Excel,  3550
-cd-roms,  CD-ROM,  901
-facebook,  Facebook,  40175
-internet explorer,  Internet_Explorer,  2765
-chrome,  Google_Chrome,  10588
-firefox,  Firefox,  6046
-flickr,  Flickr,  1096
 fortran,  Fortran,  1558
 freebsd,  FreeBSD,  965
-gmail,  Gmail,  17558
 go,  Go_(programming_language),  2170
-google earth,  Google_Earth,  2461
-google,  Google,  35237
-google maps,  Google_Maps,  6955
-google scholar,  Google_Scholar,  2092
 gsm,  GSM,  2657
 haskell,  Haskell_(programming_language),  1090
 hdtv,  High-definition_television,  1258
 hp-ux,  HP-UX,  311
 infiniband,  InfiniBand,  494
 ip multimedia subsystem,  IP_Multimedia_Subsystem,  1172
-ipad,  IPad,  4244
-iphone,  IPhone,  8497
-ipod,  IPod,  2023
 iptv,  IPTV,  16091
-ipv6,  IPv6,  2728
 java,  Java_(programming_language),  34761
-java me,  Java_(programming_language),  34761
+java me,  Location_API_for_Java_ME,  7
 javascript,  JavaScript,  4605
-jpeg,  JPEG,  1980
 jquery,  JQuery,  1098
 jsp,  Jackson_structured_programming,  46
 lapack,  LAPACK,  132
@@ -2141,13 +2120,9 @@ microsoft project,  Microsoft_Project,  1152
 microsoft publisher,  Microsoft_Publisher,  933
 microsoft visio,  Microsoft_Visio,  1187
 microsoft word,  Microsoft_Word,  3318
-mobile ip,  Mobile_IP,  203
 wimax,  WiMAX,  955
 modis,  Moderate-resolution_imaging_spectroradiometer,  89
-mp3,  MP3,  2341
 ms-dos,  MS-DOS,  1535
-msn,  MSN,  1304
-myspace,  Myspace,  2382
 mysql,  MySQL,  2301
 netware,  NetWare,  232
 objective-c,  Objective-C,  1020
@@ -2156,7 +2131,6 @@ office,  Office,  571
 openmp,  OpenMP,  445
 oracle database,  Oracle_Database,  1482
 outlook,  Microsoft_Outlook,  1445
-pdf,  Portable_Document_Format,  2146
 pentium,  Pentium,  800
 perl,  Perl,  1382
 photoshop,  Adobe_Photoshop,  3351
@@ -2190,12 +2164,10 @@ sparc,  SPARC,  454
 sql server,  Microsoft_SQL_Server,  2478
 sql,  SQL,  3748
 secure sockets layer,  Transport_Layer_Security,  4698
-skype,  Skype,  5058
 swift,  Swift_(programming_language),  1545
 tms320c,  Texas_Instruments_TMS320,  101
 transport layer security,  Transport_Layer_Security,  4698
 trec,  Text_Retrieval_Conference,  30
-twitter,  Twitter,  10036
 umts,  UMTS_(telecommunication),  471
 unicode,  Unicode,  2328
 usenet,  Usenet,  1130
@@ -2207,15 +2179,11 @@ visual basic,  Visual_Basic,  1936
 vmware,  VMware,  1947
 voicexml,  VoiceXML,  108
 vrml,  VRML,  230
-wifi,  Wi-Fi,  6451
-wikipedia,  Wikipedia,  27423
 windows environment,  Environment_variable,  705
 wordnet,  WordNet,  219
 x-window,  X_Window_System,  990
 x3d,  X3D,  206
 xilinx,  Xilinx,  373
-yahoo!,  Yahoo!,  4362
-youtube,  YouTube,  29738
 zigbee,  ZigBee,  1306
 operating systems,  Operating_system,  6451
 apple operating system,  Macintosh_operating_systems,  367
@@ -2223,3 +2191,4 @@ ibm operating system,  Category:IBM_operating_systems,  19
 linux,  Linux,  6154
 windows operating system,  Microsoft_Windows,  6453
 unix operating system,  Unix,  2759
+web development, Front-end_web_development, 350

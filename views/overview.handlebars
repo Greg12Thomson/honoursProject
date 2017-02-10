@@ -43,7 +43,7 @@
       <p class="grey-text">Click <a href="#">(?)</a> to find out more about the skill</p>
       <ol>
         {{#each skills}}
-          <li><b>{{this.skill}}</b><a href="#">(?)</a>({{this.score}}): {{#if alg1}}</br>Words used to destiguish skill: <i>{{#each this.words}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}</i>{{/if}}</li>
+          <li><b>{{this.skill}}</b>{{#if this.wiki}}<a href="https://en.wikipedia.org/wiki/{{this.wiki}}"> {{else}} <a href="#"> {{/if}}(?)</a>({{this.score}}): {{#if alg1}}</br>Words used to destiguish skill: <i>{{#each this.words}}{{#if @last}}{{this}}{{else}}{{this}}, {{/if}}{{/each}}</i>{{/if}}</li>
         {{/each}}
       </ol>
     {{/if}}

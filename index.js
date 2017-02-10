@@ -27,7 +27,7 @@ app.use(require('body-parser').urlencoded({
   extended: true
 }));
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8080);
 
 // set static to /public
 app.use(express.static(__dirname + '/public'));
@@ -52,8 +52,9 @@ app.get('/', function(req, res){
  * skillMap = Map({skill, score})
  */
 function generateScore(skillMap, d, s){
+  const MAX_WIKI_VIEWS = 15;
   var sLen = s.split(" ").length;
-  return (1/d.length) * (skillMap.get(s)/sLen);
+  return (skillMap.get(s)/sLen)/ MAX_WIKI_VIEWS;
 }
 
 /*
@@ -120,7 +121,7 @@ app.post('/process', function(req, res){
     }
     else {
       console.log("Connected to DB");
-      var collection = db.collection('skills');
+      var collection = db.collection('word2Skills');
 
       // for each word in description
       async.eachSeries(jobDescription,function(w, callback) {
@@ -318,6 +319,7 @@ app.post('/process3', function(req, res){
   var skills = [];
   var words = new Set();
   var skillWordsMap = new Map();
+  var wikiMap = new Map();
   var skillList = [];
   var skillMap = new Map();
   var originalSkillMap = new Map();
@@ -341,7 +343,7 @@ app.post('/process3', function(req, res){
     }
     else {
       console.log("Connected to DB");
-      var collection = db.collection('skills');
+      var collection = db.collection('word2Skills');
 
       // for each word in description
       async.eachSeries(jobDescription,function(w, callback) {
@@ -404,12 +406,13 @@ app.post('/process3', function(req, res){
                   s = s.toLowerCase();
                   collection.findOne({skill: s}, function(err, result) {
                     if (err) {
-                      res.send(err);
+                      result.send(err);
                       callback(err);
                     }
                     else if (result !== null) {
-                      // score = (1-lambda)score * (lambda)average_views
-                      skillMap.set(result.skill, (1 - LAMBDA)* parseFloat(skillMap.get(result.skill)) * (LAMBDA * (parseFloat(result.average_views) / MAX_WIKI_VIEWS) ));
+                      wikiMap.set(s, result.wiki_page);
+                      // score = (1-lambda)score + (lambda)average_views
+                      skillMap.set(result.skill, (1 - LAMBDA)* parseFloat(skillMap.get(result.skill)) + (LAMBDA * (parseFloat(result.average_views) / MAX_WIKI_VIEWS) ));
                     }
                     callback();
                   });
@@ -420,14 +423,12 @@ app.post('/process3', function(req, res){
                     console.log("Error: ", err);
                   }
                   else {
-
-                    console.log(skillMap);
-
                     // create return list {skill:x, score:y, words:z}
                     for (var i = 0; i < skills.length; i++){
                       skillList.push({skill: originalSkillMap.get(skills[i]),
                                       score: skillMap.get(skills[i]),
-                                      words: Array.from(skillWordsMap.get(skills[i]))
+                                      words: Array.from(skillWordsMap.get(skills[i])),
+                                      wiki: wikiMap.get(skills[i])
                                     });
                     }
 
