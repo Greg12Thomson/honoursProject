@@ -58,6 +58,7 @@ app.post('/process', function(req, res){
   var skillList = [];
   var skillMap = new Map();
   var originalSkillMap = new Map();
+  var skillIdMap = new Map();
 
   // replace punctuation with space
   var originalDescription = description.replace(/['";:,.\/?\\-]/g, ' ');
@@ -120,54 +121,69 @@ app.post('/process', function(req, res){
             skillMap = generateSkillMap(skills);
             skills = Array.from(skillWordsMap.keys())
 
-            for (var i = 0; i < skills.length; i++){
-              // normilise score
-              skillMap.set(skills[i], generateScore(skillMap, jobDescription, skills[i]));
 
-              // create return list
-              skillList.push({skill: originalSkillMap.get(skills[i]),
-                              score: skillMap.get(skills[i]),
-                              words: Array.from(skillWordsMap.get(skills[i]))
-                            });
-            }
+            // get skill id
+            var collection = db.collection('skillWiki');
+            async.eachSeries(skills,function(s, callback) {
+              collection.findOne({skill: s}, function(err, result) {
+                if (result){
+                  // skill, skill_id
+                  skillIdMap.set(s, result.skill_id);
+                }
+                callback(err);
+              });
+            },function(err) {
+              for (var i = 0; i < skills.length; i++){
+                // normilise score
+                skillMap.set(skills[i], generateScore(skillMap, jobDescription, skills[i]));
 
-            // get top ten skills
-            var score = [];
-            var topTen = [];
-            skillList.forEach(function(skill) {
-              score.push(skill.score);
-            });
-
-            var max = score[0];
-            var maxIndex = 0;
-            for (var i = 0; i < 10 && i < score.length; i ++){
-              for (var j = 1; j < score.length; j++) {
-                  if (score[j] > max) {
-                      maxIndex = j;
-                      max = score[j];
-                  }
+                // create return list
+                skillList.push({skill: originalSkillMap.get(skills[i]),
+                                skill_id: skillIdMap.get(skills[i]),
+                                score: skillMap.get(skills[i]),
+                                words: Array.from(skillWordsMap.get(skills[i]))
+                              });
               }
-              topTen.push(skillList[maxIndex]);
-              // set score to min
-              score[maxIndex] = -1;
-              max = score[0];
-              maxIndex = 0;
-            }
 
-            //TODO fix textbox highlight to only show words
-            words.delete("c");
-            words = Array.from(words).sort();
+              // get top ten skills
+              var score = [];
+              var topTen = [];
+              skillList.forEach(function(skill) {
+                score.push(skill.score);
+              });
 
-            res.render('overview',{
-              "skills" : topTen,
-              "words" : words,
-              "description" : description,
-              "alg1": 1
-            });
+              var max = score[0];
+              var maxIndex = 0;
+              for (var i = 0; i < 10 && i < score.length; i ++){
+                for (var j = 1; j < score.length; j++) {
+                    if (score[j] > max) {
+                        maxIndex = j;
+                        max = score[j];
+                    }
+                }
+                topTen.push(skillList[maxIndex]);
+                // set score to min
+                score[maxIndex] = -1;
+                max = score[0];
+                maxIndex = 0;
+              }
+
+              //TODO fix textbox highlight to only show words
+              words.delete("c");
+              words.delete("f");
+              words = Array.from(words).sort();
+
+              res.render('overview',{
+                "skills" : topTen,
+                "words" : words,
+                "description" : description,
+                "alg1": 1
+              });
+            }); // async skills
           }
-      });
+      }); // async jobDescription
     }
-  });
+  }); // db.connect
 });
 
 
