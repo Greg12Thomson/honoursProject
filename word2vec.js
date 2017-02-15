@@ -12,7 +12,7 @@ var getNClosestMatches = function(n, vec, skills) {
     curentskillVec = skills[i].vector;
     curentskillVec = curentskillVec.substring(1, curentskillVec.length - 1).split(";");
     sim = getCosSim(vec, curentskillVec);
-    sims.push([skills[i].skill, sim]);
+    sims.push([skills[i].skill, sim, skills[i].skill_id]);
   }
   sims.sort(function(a, b) {
     return b[1] - a[1];

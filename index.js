@@ -32,62 +32,16 @@ app.set('port', process.env.PORT || 8080);
 // set static to /public
 app.use(express.static(__dirname + '/public'));
 
-// -----------------------------------------------------------------------------
 // database init -
 var MongoClient = require('mongodb').MongoClient;
 var string = require('string');
 const url = 'mongodb://localhost:27017/honoursProject';
 
 
-// -----------------------------------------------------------------------------
 // base directory
 app.get('/', function(req, res){
   res.render('home');
 });
-
-
-/*
- * generates word relavence score for description and normilises
- * d = job descripton, s = skill
- * skillMap = Map({skill, score})
- */
-function generateScore(skillMap, d, s){
-  const MAX_WIKI_VIEWS = 15;
-  var sLen = s.split(" ").length;
-  return (skillMap.get(s)/sLen)/ MAX_WIKI_VIEWS;
-}
-
-/*
- * generates a skill map Map({skill, score})
- * skills = Array(skill1, score1, skill2, score2, ..., skillN, scoreN)
- */
-function generateSkillMap(skills){
-  var i = 0;
-  var map = new Map();
-  while (i < skills.length){
-    if (map.has(skills[i])) {
-      map.set(skills[i], map.get(skills[i]) + parseFloat(skills[i+1]));
-    }
-    else {
-      map.set(skills[i],parseFloat(skills[i+1]));
-    }
-    i += 2;
-  }
-  return map;
-}
-
-/*
- * strips out stop words in job description
- */
-function stripStopWords(d){
-  var newDescription = [];
-  for (var i = 0; i < d.length; i ++){
-    if (stopWords.indexOf(d[i]) == -1){   // isn't a stop word
-      newDescription.push(d[i])
-    }
-  }
-  return newDescription;
-}
 
 
 /*
@@ -216,8 +170,6 @@ app.post('/process', function(req, res){
   });
 });
 
-function processFile(file, processFileCallback) {
-}
 
 /*
  * Process algorithm 2: word embedding vectors
@@ -287,9 +239,11 @@ app.post('/process2', function(req, res){
           var skills = [];
           var words = [];
           for (var j = 0; j < simSkills.length; j++){
+            console.log(simSkills[j][0] + ": " + simSkills[j][2]);
             skills.push({
               "skill": simSkills[j][0],
-              "score": simSkills[j][1]
+              "score": simSkills[j][1],
+              "skill_id": simSkills[j][2]
             });
             words.push(simSkills[j][0]);
           }
@@ -319,11 +273,12 @@ app.post('/process3', function(req, res){
   var skills = [];
   var words = new Set();
   var skillWordsMap = new Map();
+  var skillIDMap = new Map();
   var wikiMap = new Map();
   var skillList = [];
   var skillMap = new Map();
   var originalSkillMap = new Map();
-  const MAX_WIKI_VIEWS = 40175; // used to normilise wiki score
+  const MAX_WIKI_VIEWS = 34761; // used to normilise wiki score
   const LAMBDA = 0.5; // used weight scoring. >0.5 similarity is weighted more <0.5 wiki_popularity is weighted more
 
 
@@ -411,7 +366,8 @@ app.post('/process3', function(req, res){
                     }
                     else if (result !== null) {
                       wikiMap.set(s, result.wiki_page);
-                      // score = (1-lambda)score + (lambda)average_views
+                      skillIDMap.set(s, result.skill_id);
+                      // score = ((1-lambda) * score) + (lambda * (average_views/MAX_WIKI_VIEWS))
                       skillMap.set(result.skill, (1 - LAMBDA)* parseFloat(skillMap.get(result.skill)) + (LAMBDA * (parseFloat(result.average_views) / MAX_WIKI_VIEWS) ));
                     }
                     callback();
@@ -426,6 +382,7 @@ app.post('/process3', function(req, res){
                     // create return list {skill:x, score:y, words:z}
                     for (var i = 0; i < skills.length; i++){
                       skillList.push({skill: originalSkillMap.get(skills[i]),
+                                      skill_id: skillIDMap.get(skills[i]),
                                       score: skillMap.get(skills[i]),
                                       words: Array.from(skillWordsMap.get(skills[i])),
                                       wiki: wikiMap.get(skills[i])
@@ -476,6 +433,51 @@ app.post('/process3', function(req, res){
   }); // ./mongodbClient
 });
 
+//  Scoring functions ----------------------------------------------------------
+
+/*
+ * generates word relavence score for description and normilises
+ * d = job descripton, s = skill
+ * skillMap = Map({skill, score})
+ */
+function generateScore(skillMap, d, s){
+  const MAX_WIKI_VIEWS = 15;
+  var sLen = s.split(" ").length;
+  return (skillMap.get(s)/sLen)/ MAX_WIKI_VIEWS;
+}
+
+/*
+ * generates a skill map Map({skill, score})
+ * skills = Array(skill1, score1, skill2, score2, ..., skillN, scoreN)
+ */
+function generateSkillMap(skills){
+  var i = 0;
+  var map = new Map();
+  while (i < skills.length){
+    if (map.has(skills[i])) {
+      map.set(skills[i], map.get(skills[i]) + parseFloat(skills[i+1]));
+    }
+    else {
+      map.set(skills[i],parseFloat(skills[i+1]));
+    }
+    i += 2;
+  }
+  return map;
+}
+
+/*
+ * strips out stop words in job description
+ */
+function stripStopWords(d){
+  var newDescription = [];
+  for (var i = 0; i < d.length; i ++){
+    if (stopWords.indexOf(d[i]) == -1){   // isn't a stop word
+      newDescription.push(d[i])
+    }
+  }
+  return newDescription;
+}
+// -----------------------------------------------------------------------------
 
 /*
  * Algorithm for alg4
