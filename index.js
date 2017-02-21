@@ -162,6 +162,7 @@ app.post('/process', function(req, res){
                     }
                 }
                 topTen.push(skillList[maxIndex]);
+
                 // set score to min
                 score[maxIndex] = -1;
                 max = score[0];
@@ -255,7 +256,6 @@ app.post('/process2', function(req, res){
           var skills = [];
           var words = [];
           for (var j = 0; j < simSkills.length; j++){
-            console.log(simSkills[j][0] + ": " + simSkills[j][2]);
             skills.push({
               "skill": simSkills[j][0],
               "score": simSkills[j][1],
@@ -263,6 +263,7 @@ app.post('/process2', function(req, res){
             });
             words.push(simSkills[j][0]);
           }
+
           res.render('overview',{
             // Pass the returned database documents
             "skills" : skills,
@@ -295,7 +296,7 @@ app.post('/process3', function(req, res){
   var skillMap = new Map();
   var originalSkillMap = new Map();
   const MAX_WIKI_VIEWS = 34761; // used to normilise wiki score
-  const LAMBDA = 0.5; // used weight scoring. >0.5 similarity is weighted more <0.5 wiki_popularity is weighted more
+  const LAMBDA = 0.4; // used weight scoring. >0.5 similarity is weighted more <0.5 wiki_popularity is weighted more
 
 
   // replace punctuation with space
@@ -429,7 +430,7 @@ app.post('/process3', function(req, res){
                       maxIndex = 0;
                     }
 
-                    //TODO fix textbox highlight to only show words
+                    //remove c from textbox highlight
                     words.delete("c");
                     words = Array.from(words).sort();
 
@@ -457,9 +458,9 @@ app.post('/process3', function(req, res){
  * skillMap = Map({skill, score})
  */
 function generateScore(skillMap, d, s){
-  const MAX_WIKI_VIEWS = 15;
+  const MAX_SIM_SCORE = 25;
   var sLen = s.split(" ").length;
-  return (skillMap.get(s)/sLen)/ MAX_WIKI_VIEWS;
+  return (skillMap.get(s)/sLen)/MAX_SIM_SCORE;
 }
 
 /*
