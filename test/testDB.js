@@ -9,7 +9,9 @@ var server = require('../index').app;
 var MongoClient = require('../index').MongoClient;
 const url = 'mongodb://localhost:27017/honoursProject';
 const should = chai.should();
-const assert = require('assert');
+var assert = chai.assert;
+var expect = chai.expect;
+
 
 chai.use(chaiHttp);
 
@@ -61,19 +63,18 @@ describe('Database', function() {
   /*
    * tests skill collection request
    */
-  it('should find \'java\' in skill collection', function(done) {
+  it('should find \'java\' in skillWiki collection', function(done) {
     this.timeout(15000);
     MongoClient.connect(url, function(err, db) {
       if(err) {
-        console.log("Failed to connect to server: ", err)
         assert.isOk(false, 'Failed to connect to database');
       }
       else {
-        console.log("Connected to DB");
-        var collection = db.collection('skills');
-        collection.findOne({word: "java"}, function(err, result) {
+        var collection = db.collection('skillWiki');
+        collection.findOne({skill: 'java'}, function(err, result) {
           if (result){
-            should.exist(result.skills);
+            should.exist(result.skill);
+            expect(result.skill).to.equal('java');
             done();
           }
           else {

@@ -135,7 +135,7 @@ app.post('/process', function(req, res){
             },function(err) {
               for (var i = 0; i < skills.length; i++){
                 // normilise score
-                skillMap.set(skills[i], generateScore(skillMap, jobDescription, skills[i]));
+                skillMap.set(skills[i], generateScore(skillMap, skills[i]));
 
                 // create return list
                 skillList.push({skill: originalSkillMap.get(skills[i]),
@@ -362,7 +362,7 @@ app.post('/process3', function(req, res){
 
             // normilise score
             for (var i = 0; i < skills.length; i++){
-              skillMap.set(skills[i], generateScore(skillMap, jobDescription, skills[i]));
+              skillMap.set(skills[i], generateScore(skillMap, skills[i]));
             }
 
             // add wiki popularity to score to upweight more relevent skills
@@ -457,9 +457,11 @@ app.post('/process3', function(req, res){
  * d = job descripton, s = skill
  * skillMap = Map({skill, score})
  */
-function generateScore(skillMap, d, s){
+var generateScore = function(skillMap, s){
   const MAX_SIM_SCORE = 25;
   var sLen = s.split(" ").length;
+  if (!skillMap.has(s))
+    return null;
   return (skillMap.get(s)/sLen)/MAX_SIM_SCORE;
 }
 
@@ -467,7 +469,7 @@ function generateScore(skillMap, d, s){
  * generates a skill map Map({skill, score})
  * skills = Array(skill1, score1, skill2, score2, ..., skillN, scoreN)
  */
-function generateSkillMap(skills){
+var generateSkillMap = function(skills){
   var i = 0;
   var map = new Map();
   while (i < skills.length){
@@ -485,7 +487,7 @@ function generateSkillMap(skills){
 /*
  * strips out stop words in job description
  */
-function stripStopWords(d){
+var stripStopWords = function(d){
   var newDescription = [];
   for (var i = 0; i < d.length; i ++){
     if (stopWords.indexOf(d[i]) == -1){   // isn't a stop word
@@ -495,22 +497,6 @@ function stripStopWords(d){
   return newDescription;
 }
 // -----------------------------------------------------------------------------
-
-/*
- * Algorithm for alg4
- * Make use of the tree structure
- *
- */
-app.post('/process4', function(req, res){
-  var OriginalDescript = req.body.description;
-
-  res.render('overview',{
-    "skills" : [],
-    "description" : OriginalDescript,
-    "words" : [],
-    "alg4": 1
-  });
-});
 
 
 
@@ -559,5 +545,8 @@ app.listen(app.get('port'), function(){
 });
 
 module.exports = {"app": app,
-                  "MongoClient": MongoClient
+                  "MongoClient": MongoClient,
+                  "generateScore": generateScore,
+                  "generateSkillMap": generateSkillMap,
+                  "stripStopWords": stripStopWords
                   };

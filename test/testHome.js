@@ -35,7 +35,6 @@ describe('home', function() {
         res.text.should.contain('Algorithm 1');
         res.text.should.contain('Algorithm 2');
         res.text.should.contain('Algorithm 3');
-        res.text.should.contain('Algorithm 4');
         done();
       });
   });
