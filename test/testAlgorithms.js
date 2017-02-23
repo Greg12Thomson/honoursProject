@@ -18,33 +18,31 @@ var expect = chai.expect;
 chai.use(chaiHttp);
 
 describe('generateScore', function() {
+  var skillMap;
+  var skills;
+
+  before(function() {
+    skillMap = new Map();
+    skills = ['java', 'C++', 'software engineering'];
+    skillMap.set(skills[0], 0.8);
+    skillMap.set(skills[1], 0.9);
+    skillMap.set(skills[2], 0.7);
+  });
 
   /*
    * generateScore returns something sensible
    */
   it('generateScore should return score between 0 and 1', function(done) {
-    var skillMap = new Map();
-    var skills = ['java', 'C++', 'software engineering'];
-    skillMap.set(skills[0], 0.8);
-    skillMap.set(skills[1], 0.9);
-    skillMap.set(skills[2], 0.7);
-
-    var score = generateScore(skillMap, 'java');
+    var score = generateScore(skillMap, skills[0]);
     expect(score).to.be.below(1);
     expect(score).to.be.above(0);
     done();
   });
 
   /*
-   * generateScore returns something sensible
+   * generateScore returns null if not a skill
    */
   it('generateScore should return null if skill not found', function(done) {
-    var skillMap = new Map();
-    var skills = ['java', 'C++', 'software engineering'];
-    skillMap.set(skills[0], 0.8);
-    skillMap.set(skills[1], 0.9);
-    skillMap.set(skills[2], 0.7);
-
     var score = generateScore(skillMap, 'python');
     expect(score).to.be.a('null');
     done();
@@ -52,43 +50,62 @@ describe('generateScore', function() {
 
 });
 
-// describe('generateSkillMap', function() {
-//   var skillMap;
-//   var skills;
-//
-//   before(function() {
-//     skills = ["java", "0.99", "C++", "0.8", "software engineering", "0.75"]
-//     skillMap = generateSkillMap(skills, function() { done(); });
-//   });
-//
-//   /*
-//    * generateScore returns something sensible
-//    */
-//   it('generateSkillMap should return a Map', function(done) {
-//     this.timeout(5000);
-//     // skills = ["java", "0.99", "C++", "0.8", "software engineering", "0.75"]
-//     // var promise = new Promise(function(resolve, reject){
-//     //   // add promise
-//     //   skillMap = generateSkillMap(skills, function(err, res) {
-//     //     if (err){
-//     //       return done(err);
-//     //     }
-//     //     else{
-//     //       resolve(res);
-//     //     }
-//     //   });
-//     // });
-//     //
-//     // promise.then(function(map) {
-//     //   map.should.have.length(3);
-//     //   expect(map).to.have.any.keys('java', 'C++', 'software engineering');
-//     //   done();
-//     // });
-//     expect(skillMap).to.have.any.keys('java', 'C++', 'software engineering');
-//     done();
-//
-//
-//
-//   });
+describe('generateSkillMap', function() {
+  var skills = ['java', '0.98', 'C++', '0.88', 'software engineering', '0.75'];
 
-// });
+  /*
+   * generateSkillMap returns something sensible
+   */
+  it('generateSkillMap should be <skill, score> for all skills', function(done) {
+    this.timeout(15000);
+
+    var skillMap = generateSkillMap(skills);
+    var keys = Array.from(skillMap.keys());
+
+    for (var i = 0; i < skills.length; i++){
+      expect(keys).to.include(skills[i]);
+      expect(skillMap.get(skills[i])).to.equal(parseFloat(skills[++i]));
+    }
+
+    done();
+
+  });
+
+
+  /*
+   * generateSkillMap score be normalized and not string
+   */
+  it('generateSkillMap scores should be between 0 and 1', function(done) {
+    this.timeout(15000);
+
+    var skillMap = generateSkillMap(skills);
+    var values = Array.from(skillMap.values());
+
+    for (var i = 0; i < values.length; i++){
+      expect(values[i]).to.be.below(1);
+      expect(values[i]).to.be.above(0);
+      expect(values[i]).is.not.a('string');
+    }
+
+    done();
+
+  });
+
+
+  /*
+   * generateSkillMap should return empty Map if not skills passed
+   */
+  it('generateSkillMap should return {} if no skills passed in', function(done) {
+    this.timeout(15000);
+
+    var skillMap = generateSkillMap([]);
+    var keys = Array.from(skillMap.keys());
+
+    expect(keys).to.have.length(0);
+
+    done();
+
+  });
+
+
+});

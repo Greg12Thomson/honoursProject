@@ -145,29 +145,7 @@ app.post('/process', function(req, res){
                               });
               }
 
-              // get top ten skills
-              var score = [];
-              var topTen = [];
-              skillList.forEach(function(skill) {
-                score.push(skill.score);
-              });
-
-              var max = score[0];
-              var maxIndex = 0;
-              for (var i = 0; i < 10 && i < score.length; i ++){
-                for (var j = 1; j < score.length; j++) {
-                    if (score[j] > max) {
-                        maxIndex = j;
-                        max = score[j];
-                    }
-                }
-                topTen.push(skillList[maxIndex]);
-
-                // set score to min
-                score[maxIndex] = -1;
-                max = score[0];
-                maxIndex = 0;
-              }
+              var topFive = getTopScores(skillList, 5);
 
               //TODO fix textbox highlight to only show words
               words.delete("c");
@@ -175,7 +153,7 @@ app.post('/process', function(req, res){
               words = Array.from(words).sort();
 
               res.render('overview',{
-                "skills" : topTen,
+                "skills" : topFive,
                 "words" : words,
                 "description" : description,
                 "alg1": 1
@@ -251,7 +229,7 @@ app.post('/process2', function(req, res){
           res.send(err);
         } else if (result.length) {
           // get 10 closest skills vectors to description vector
-          var simSkills = word2Vec.getNClosestMatches(10, descriptVec, result);
+          var simSkills = word2Vec.getNClosestMatches(5, descriptVec, result);
           // only get skill
           var skills = [];
           var words = [];
@@ -406,36 +384,14 @@ app.post('/process3', function(req, res){
                                     });
                     }
 
-                    // get top ten skills
-                    var score = [];
-                    var topTen = [];
-                    for (var i = 0; i < skillList.length; i++){
-                      score.push(skillList[i].score);
-                    }
-
-                    var max = score[0]; //initial max
-                    var maxIndex = 0;
-                    // find max score
-                    for (var i = 0; i < 10 && i < score.length; i ++){
-                      for (var j = 1; j < score.length; j++) {
-                          if (score[j] > max) {
-                              maxIndex = j;
-                              max = score[j];
-                          }
-                      }
-                      topTen.push(skillList[maxIndex]);
-                      // set score to min
-                      score[maxIndex] = -1;
-                      max = score[0];
-                      maxIndex = 0;
-                    }
+                    var topFive = getTopScores(skillList, 5);
 
                     //remove c from textbox highlight
                     words.delete("c");
                     words = Array.from(words).sort();
 
                     res.render('overview',{
-                      "skills" : topTen,
+                      "skills" : topFive,
                       "words" : words,
                       "description" : description,
                       "alg3": 1
@@ -496,6 +452,38 @@ var stripStopWords = function(d){
   }
   return newDescription;
 }
+
+/*
+ * get the top scoring skills for return list
+ */
+var getTopScores = function(skills, N){
+  var score = [];
+  var topSkills = [];
+  skills.forEach(function(skill) {
+    score.push(skill.score);
+  });
+
+  var max = score[0];
+  var maxIndex = 0;
+  for (var i = 0; i < N && i < score.length; i ++){
+    for (var j = 1; j < score.length; j++) {
+        if (score[j] > max) {
+            maxIndex = j;
+            max = score[j];
+        }
+    }
+    topSkills.push(skills[maxIndex]);
+
+    // set score to min
+    score[maxIndex] = -1;
+    max = score[0];
+    maxIndex = 0;
+  }
+  return topSkills;
+}
+
+
+
 // -----------------------------------------------------------------------------
 
 
