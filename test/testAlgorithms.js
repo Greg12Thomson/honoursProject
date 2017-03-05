@@ -8,6 +8,8 @@ var chaiHttp = require('chai-http');
 var server = require('../index').app;
 var generateSkillMap = require('../index').generateSkillMap;
 var generateScore = require('../index').generateScore;
+var stripStopWords = require('../index').stripStopWords;
+var getTopScores = require('../index').getTopScores;
 
 
 var should = chai.should();
@@ -17,6 +19,9 @@ var expect = chai.expect;
 
 chai.use(chaiHttp);
 
+/*
+ * Test generateScore method
+ */
 describe('generateScore', function() {
   var skillMap;
   var skills;
@@ -50,6 +55,9 @@ describe('generateScore', function() {
 
 });
 
+/*
+ * Test generateSkillMap method
+ */
 describe('generateSkillMap', function() {
   var skills = ['java', '0.98', 'C++', '0.88', 'software engineering', '0.75'];
 
@@ -107,5 +115,101 @@ describe('generateSkillMap', function() {
 
   });
 
+
+});
+
+/*
+ * Test stripStopWords method
+ */
+describe('stripStopWords', function() {
+
+  /*
+   * stripStopWords should remove
+   */
+  it('stripStopWords should remove stop words from string', function(done) {
+    var words = "remove stop words from this string".split(" ");
+    var nonSplitWords = stripStopWords(words);
+
+
+    nonSplitWords.should.have.length(2);
+    nonSplitWords.should.contain('remove');
+    nonSplitWords.should.contain('string');
+    done();
+
+  });
+
+  /*
+   * stripStopWords should remove all stop words
+   */
+  it('stripStopWords should return empty array if passed stop words', function(done) {
+    var words = "a be the than but".split(" ");
+    var nonSplitWords = stripStopWords(words);
+
+
+    nonSplitWords.should.be.empty;
+    done();
+
+  });
+
+});
+
+/*
+ * getTopScores
+ */
+describe('getTopScores', function() {
+  skillList = []
+  skills = ["java", "C++", "software engineering", "managment", "problem solving", "object oriented programming"]
+  scores = [0.91, 0.9, 0.7, 0.2, 0.852, 0.82]
+
+  /*
+   * Runs before all tests in this block.
+   * Generate skill list to be sorted
+   */
+  before(function() {
+    for (var i = 0; i < skills.length; i++){
+      skillList.push({skill: skills[i],
+                      skill_id: i,
+                      score: scores[i],
+                      words: []
+                    });
+    }
+  });
+
+
+  /*
+   * getTopScores should get top n skills
+   */
+  it('getTopScores should only return n skills', function(done) {
+    var n = 5;
+    var newSkillList = getTopScores(skillList, n);
+    newSkillList.should.have.length(n);
+    done();
+  });
+
+
+  it('getTopScores should only return highest scoring n skills', function(done) {
+    var n = 5;
+    var newSkillList = getTopScores(skillList, n);
+    var skills = []
+    for (var i = 0; i < newSkillList.length; i++){
+      skills.push(newSkillList[i].skill);
+    }
+    newSkillList.should.have.length(n);
+    // should remove management as it is the lowest scoring skill
+    skills.should.contain("java");
+    skills.should.contain( "C++");
+    skills.should.contain("software engineering");
+    skills.should.contain("problem solving");
+    skills.should.contain("object oriented programming");
+    skills.should.not.contain("managment");
+    done();
+  });
+
+
+  it('getTopScores should return empty list if n is 0', function(done) {
+    var newSkillList = getTopScores(skillList, 0);
+    newSkillList.should.have.length(0);
+    done();
+  });
 
 });

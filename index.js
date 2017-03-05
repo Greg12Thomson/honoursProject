@@ -274,7 +274,7 @@ app.post('/process3', function(req, res){
   var skillMap = new Map();
   var originalSkillMap = new Map();
   const MAX_WIKI_VIEWS = 34761; // used to normilise wiki score
-  const LAMBDA = 0.4; // used weight scoring. >0.5 similarity is weighted more <0.5 wiki_popularity is weighted more
+  const LAMBDA = 0.35; // used weight scoring. >0.5 similarity is weighted more <0.5 wiki_popularity is weighted more
 
 
   // replace punctuation with space
@@ -536,5 +536,6 @@ module.exports = {"app": app,
                   "MongoClient": MongoClient,
                   "generateScore": generateScore,
                   "generateSkillMap": generateSkillMap,
-                  "stripStopWords": stripStopWords
+                  "stripStopWords": stripStopWords,
+                  "getTopScores": getTopScores
                   };
