@@ -1,0 +1,18 @@
+{
+  "name": "wordskillsimilarity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "word2vec.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Gregor Thomson - 2029108t",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "fs": "0.0.1-security",
+    "mocha": "^3.2.0",
+    "readline": "^1.3.0",
+    "string": "^3.3.3"
+  }
+}

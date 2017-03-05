@@ -1,0 +1,2225 @@
+skill,wiki_page
+General and reference,Reference
+Document types,Document_type_definition
+Surveys and overviews,Survey_methodology
+Reference works,Reference_work
+General conference proceedings,Proceedings
+Biographies,Biography
+General literature,Literature
+Computing standards RFCs and guidelines,Request_for_Comments
+Cross-computing tools and techniques,Cross-platform
+Reliability,Human_reliability
+Empirical studies,Empirical_research
+Measurement,Measurement
+Metrics,Metric_(mathematics)
+Evaluation,Evaluation
+Experimentation,Experimentation
+Estimation,Estimation
+Design,Design
+Performance,Computer_performance
+Validation,Software_verification_and_validation
+Verification,Verification_and_validation
+General skills,Skill
+Advising,Advice_(opinion)
+Advising people,Advise_and_Consent
+Analytical,Analytics
+Analyzing data,Data_analysis
+Analyzing problems,Mathematical_problem
+Artistic Skill,Art
+Sketching,Sketch_(drawing)
+Sketching charts or diagrams,Diagram
+Attention to detail,Attention
+Auditing financial data,Audit
+Brainstorming,Brainstorming
+Budgeting,Budget
+Building new business,Startup_company
+Business Storytelling,Storytelling
+Business communication skills,Communication
+Business management skills,Management
+Calculations,Calculations
+Communication,Communication
+Computer skills,Computer_literacy
+User Support,Technical_support
+Updating Files,File_system
+Construction,Construction
+Consultation,Public_consultation
+Creative Thinking,Creativity
+Critical Thinking,Critical_thinking
+Customer Service,Customer_service
+Handling Complaints,Complaint
+Serving people,Customer_service
+Decision Making,Decision-making
+Defining Problems,Problem_solving
+Demonstrations,Demonstration_(teaching)
+Designing systems,Systems_design
+Determination,Determination
+Diplomacy skills,Diplomacy
+Driving safely,Driving
+Editing,Editing
+Effective listening skills,Listening
+Effective study skills,Study_skills
+Entertainment,Entertainment
+Envisioning solutions or ideas,Divergent_thinking
+Ethics,Ethics
+Evaluating,Evaluation
+Extracting information,Information_extraction
+Financial Report Auditing,Audit
+Following instructions,Education
+Fundraising,Fundraising
+Gathering information,Intelligence_assessment
+Handling money,Automated_cash_handling
+Human Resources,Human_resources
+Identifying problems,Problem_solving
+Imagining innovative solutions,Innovation
+Information Search,Information_search_process
+Information management,Information_management
+Innovation,Innovation
+Inspecting buildings,Building_inspection
+Inspecting equipment,Inspection
+Interpreting languages,Language_interpretation
+Inventing,Inventing
+Investigating solutions,Criminal_investigation
+Investigation,Criminal_investigation
+Leadership,Leadership
+Leading teams,Leading_Teams
+Learning,Learning
+Listening,Listening
+Logical Thinking,Critical_thinking
+Maintenance,Maintenance
+Management,Management
+Conducting Meetings,Meeting
+Conducting interviews,Interview
+Conflict Resolution,Conflict_resolution
+Confronting Others,Confronted_animals
+Defining Performance Standards,Performance_management
+Developing plans for projects,Project_plan
+Development Management model,Model-driven_engineering
+Encouraging people,Encouraging_or_assisting_a_crime_in_English_law
+Enforcing rules,Enforcement
+Goal Setting,Goal_setting
+People management skills,People_skills
+Running meetings,Meeting
+Managing Finances,Finance
+Managing organizations,Management
+Managing people,Management
+Motivation,Motivation
+Multi-tasking,Computer_multitasking
+Negotiation,Negotiation
+Patience,Patience
+Planning,Planning
+Planning meetings,Meeting
+Planning organisational needs,Planning
+Prioritising,Prioritization
+Problem Solving,Problem_solving
+Reading,Reading
+Reasoning,Reason
+Sales,Sales
+Self-motivated,Motivated_tactician
+Selling ideas,Sales
+Taking decisive action,Decision-making
+Taking initiative,Initiative
+Taking personal responsibility,Moral_responsibility
+Teamwork,Teamwork
+Team building,Team_building
+Collaborating ideas,Collaboration
+Technical,Technical_analysis
+Technical Support,Technical_support
+Technical work,Technical
+Thinking logically,Logic
+Time Management,Time_management
+Toleration,Toleration
+Training,Training
+Translating words,Literal_translation
+Verbal communication skills,Communication_skill
+Working creatively,Creativity
+Writing,Writing
+Supervision,Supervision
+Supervising employees,Supervision
+Supervising operations,Supervision
+Staff responsibility,Duty
+Social Skill,Social_skills
+Service,Service
+Serving people,Customer_service
+Selling products or services,Sales
+Hardware,Computer_hardware
+Printed circuit boards,Computer_hardware
+Electromagnetic interference and compatibility,Electromagnetic_interference
+PCB design and layout,DesignSpark_PCB
+Communication hardware interfaces and storage,Computer_hardware
+Signal processing systems,Signal_processing
+Digital signal processing,Digital_signal_processing
+Beamforming,Beamforming
+Noise reduction,Noise_reduction
+Sensors and actuators,AS-Interface
+Buses and high-speed links,High-speed_rail
+Displays and imagers,Display_device
+External storage,External_storage
+Networking hardware,Networking_hardware
+Printers,Printers
+Sensor applications and deployments,Sensor
+Sensor devices and platforms,Sensor
+Sound-based input / output,Sound_reinforcement_system
+Tactile and hand-based interfaces,Interface_(computing)
+Touch screens,Touchscreen
+Haptic devices,Haptic_technology
+Scanners,Image_scanner
+Wireless devices,Wireless
+Wireless integrated network sensors,Wireless_integrated_network_sensors
+Electro-mechanical devices,Mechanical_computer
+Integrated circuits,Integrated_circuit
+3D integrated circuits,Three-dimensional_integrated_circuit
+Interconnect,Interconnection
+Input / output circuits General-purpose_input/output
+Metallic interconnect,Interconnection
+Photonic and optical interconnect,Interconnection
+Radio frequency and wireless interconnect,Interconnection
+Semiconductor memory,Semiconductor_memory
+Dynamic memory,Memory_management
+Static memory,Memory_management
+Non-volatile memory,Memory_management
+Read-only memory,Memory_management
+Digital switches,Multilayer_switch
+Transistors,Transistors
+Logic families,Logic_family
+Logic circuits,Logic_gate
+Arithmetic and datapath circuits,Electrical_network
+Asynchronous circuits,Asynchronous_circuit
+Combinational circuits,Combinational_logic
+Design modules and hierarchy,Software_design
+Finite state machines,Finite-state_machine
+Sequential circuits,Sequential_Circuits
+Reconfigurable logic and FPGAs,Reconfigurable_computing
+Hardware accelerators,Hardware_acceleration
+High-speed input / output,Input/output
+Programmable logic elements,Programmable_logic_controller
+Programmable interconnect,Field-programmable_gate_array
+Reconfigurable logic applications,Reconfigurable_computing
+Very large scale integration design,Very-large-scale_integration
+3D integrated circuits,Three-dimensional_integrated_circuit
+Analog and mixed-signal circuits,Mixed-signal_integrated_circuit
+Data conversion,Data_conversion
+Clock generation and timing,Clock_generator
+Analog and mixed-signal circuit optimization,OrCAD
+Radio frequency and wireless circuits,Radio-frequency_engineering
+Wireline communication,Wired_communication
+Analog and mixed-signal circuit synthesis,Mixed-signal_integrated_circuit
+Application-specific VLSI designs,Application-specific_integrated_circuit
+Application specific integrated circuits,Application-specific_integrated_circuit
+Application specific instruction set processors,Application-specific_instruction_set_processor
+Application specific processors,Application-specific_instruction_set_processor
+Design reuse and communication-based design,Model-based_design
+Network on chip,Network_on_a_chip
+System on a chip,System_on_a_chip
+Platform-based design,Platform-based_design
+Hard and soft IP,Soft_intellectual_property
+Design rules,Design_rule_checking
+Economics of chip design and manufacturing,Processor_design
+Full-custom circuits,Full_custom
+VLSI design manufacturing considerations,Design_for_manufacturability
+On-chip resource management,Symmetric_multiprocessing
+On-chip sensors,Lab-on-a-chip
+Standard cell libraries,Standard_cell
+VLSI packaging,Integrated_circuit_packaging
+Die and wafer stacking,Three-dimensional_integrated_circuit
+Input / output styles,Procedural_programming
+Multi-chip modules,Multi-chip_module
+Package-level interconnect,Wafer-level_packaging
+VLSI system specification and constraints,Design_closure
+Power and energy,Power_(physics)
+Thermal issues,Thermal_management_(electronics)
+Temperature monitoring,Temperature_data_logger
+Temperature simulation and estimation,Run-time_estimation_of_system_and_sub-system_level_power_consumption
+Temperature control,Temperature_control
+Temperature optimization,Polymerase_chain_reaction_optimization
+Energy generation and storage,Grid_energy_storage
+Batteries,Battery_(electricity)
+Fuel-based energy,Carbon-based_fuel
+Renewable energy,Renewable_energy
+Reusable energy storage,Energy_storage
+Energy distribution,Electric_power_distribution
+Energy metering,Electricity_meter
+Power conversion,Electric_power_conversion
+Power networks,UK_Power_Networks
+Smart grid,Smart_grid
+Impact on the environment,Human_impact_on_the_environment
+Power estimation and optimization,Power_optimization_(EDA)
+Switching devices power issues,Power_semiconductor_device
+Interconnect power issues,Electrical_grid
+Circuits power issues,Power_factor
+Chip-level power issues,Power_optimization_(EDA)
+Platform power issues,Power_Management_Unit
+Enterprise level and data centers power issues,Data_center
+Electronic design automation,Electronic_design_automation
+High-level and register-transfer level synthesis,High-level_synthesis
+Datapath optimization,Data_conditioning
+Hardware-software codesign,Device_driver_synthesis_and_verification
+Resource binding and sharing,WebDAV
+Operations scheduling,Scheduling_(production_processes)
+Hardware description languages and compilation,Hardware_description_language
+Logic synthesis,Logic_synthesis
+Combinational synthesis,Combinatorial_chemistry
+Circuit optimization,Logic_optimization
+Sequential synthesis,One-pot_synthesis
+Technology-mapping,Technology_roadmap
+Transistor-level synthesis,Register-transfer_level
+Modeling and parameter extraction,Semiconductor_device_modeling
+Physical design,Physical_design_(electronics)
+Clock-network synthesis,Clock_signal
+Packaging,Packaging_and_labeling
+Partitioning and floorplanning,Floorplan_(microelectronics)
+Placement,Placement
+Physical synthesis,Physical_design_(electronics)
+Power grid design,Electrical_grid
+Wire routing,Wire_transfer
+Timing analysis,Static_timing_analysis
+Electrical-level simulation,System-level_simulation
+Model-order reduction,Model_order_reduction
+Compact delay models,Delay_(audio_effect)
+Static timing analysis,Static_timing_analysis
+Statistical timing analysis,Statistical_static_timing_analysis
+Transition-based timing analysis,Static_timing_analysis
+Methodologies for EDA,Power_optimization_(EDA)
+Best practices for EDA,Design_for_manufacturability
+Design databases for EDA,EDA_database
+Software tools for EDA,EDA_database
+Hardware validation,Engineering_validation_test
+Functional verification,Functional_verification
+Model checking,Model_checking
+Coverage metrics,Code_coverage
+Equivalence checking,Formal_equivalence_checking
+Semi-formal verification,Formal_verification
+Simulation and emulation,Emulator
+Transaction-level verification,Transaction-level_modeling
+Theorem proving and SAT solving,Boolean_satisfiability_problem
+Assertion checking,Assertion_(software_development)
+Physical verification,Physical_verification
+Design rule checking,Design_rule_checking
+Layout-versus-schematics,Layout_Versus_Schematic
+Power and thermal analysis,Thermal_analysis
+Timing analysis and sign-off,Signoff_(electronic_design_automation)
+Post-manufacture validation and debug,Post-silicon_validation
+Bug detection localization and diagnosis,Computer-aided_diagnosis
+Bug fixing,Software_bug
+Design for debug,Design_for_testing
+Hardware test,Category:Hardware_testing
+Analog mixed-signal and radio frequency test,Mixed-signal_integrated_circuit
+Board- and system-level test,Test_engineer
+Defect-based test,Results_based_testing
+Design for testability,Design_for_testing
+Built-in self-test,Built-in_self-test
+Online test and diagnostics,Electronic_assessment
+Test data compression,Data_compression
+Fault models and test metrics,Automatic_test_pattern_generation
+Memory test and repair,Built-in_self-test
+Hardware reliability screening,Environmental_stress_screening
+Test-pattern generation and fault simulation,Automatic_test_pattern_generation
+Testing with distributed and parallel systems,Testing_high-performance_computing_applications
+Robustness,Robustness_(computer_science)
+Fault tolerance,Fault_tolerance
+Error detection and error correction,Error_detection_and_correction
+Failure prediction,Material_failure_theory
+Failure recovery maintenance and self-repair,Maintenance_philosophy
+Redundancy,Redundancy_(engineering)
+Self-checking mechanisms,Built-in_self-test
+System-level fault tolerance,Fault_tolerance
+Design for manufacturability,Design_for_manufacturability
+Process variations,Process_variation_(semiconductor)
+Yield and cost modeling,Growth_and_yield_modelling
+Yield and cost optimization,Yield_management
+Hardware reliability,Reliability_engineering
+Aging of circuits and systems,Worst-case_circuit_analysis
+Circuit hardening,Radiation_hardening
+Early-life failures and infant mortality,Infant_mortality
+Process voltage and temperature variations,Process_corners
+Signal integrity and noise analysis,Signal_integrity
+Transient errors and upsets,Single_event_upset
+Safety critical systems,Transient errors and upsets
+Emerging technologies,Emerging_technologies
+Analysis and design of emerging devices and systems,Emerging_technologies
+Emerging architectures,Emergent_Design
+Emerging languages and compilers,PL/I
+Emerging simulation,Modeling_and_simulation
+Emerging tools and methodologies,Emerging_technologies
+Biology-related information processing,Information_processing
+Bio-embedded electronics,Embedded_intelligence
+Neural systems,Computation_and_Neural_Systems
+Circuit substrates,Printed_circuit_board
+III-V compounds,Category:III-V_compounds
+Carbon based electronics,Organic_electronics
+Cellular neural networks,Cellular_neural_network
+Flexible and printable circuits,Flexible_circuit
+Superconducting circuits,Superconducting_quantum_computing
+Electromechanical systems,Electromechanics
+Microelectromechanical systems,Microelectromechanical_systems
+Nanoelectromechanical systems,Nanoelectromechanical_systems
+Emerging interfaces,Emerging_technologies
+Memory and dense storage,Areal_density_(computer_storage)
+Emerging optical and photonic technologies,Photonics
+Reversible logic,Reversible_computing
+Plasmonics,Plasmon
+Quantum technologies,Quantum_technology
+Single electron devices,Coulomb_blockade
+Tunneling devices,Tunnel_diode
+Quantum computation,Quantum_computing
+Quantum communication and cryptography,Quantum_cryptography
+Quantum error correction and fault tolerance,Quantum_error_correction
+Quantum dots and cellular automata,Quantum_dot_cellular_automaton
+Spintronics and magnetic technologies,Spintronics
+Computer systems organization,Computer_architecture
+Architectures,Architecture
+Serial architectures,Bit-serial_architecture
+Reduced instruction set computing,Reduced_instruction_set_computing
+Complex instruction set computing,Complex_instruction_set_computing
+Superscalar architectures,Superscalar_processor
+Pipeline computing,Pipeline_(computing)
+Stack machines,Stack_machine
+Parallel architectures,Parallel_computing
+Very long instruction word,Very_long_instruction_word
+Interconnection architectures,Interconnection
+Multiple instruction multiple data,MIMD
+Cellular architectures,Cellular_architecture
+Multiple instruction single data,MISD
+Single instruction multiple data,SIMD
+Systolic arrays,Systolic_array
+Multicore architectures,Multi-core_processor
+Distributed architectures,Distributed_computing
+Client-server architectures,Client–server_model
+n-tier architectures,Multitier_architecture
+Peer-to-peer architectures,Peer-to-peer
+Grid computing,Grid_computing
+Other architectures,Architecture
+Neural networks,Biological_neural_network
+Reconfigurable computing,Reconfigurable_computing
+Analog computers,Analog_computer
+Data flow architectures,Dataflow_architecture
+Heterogeneous (hybrid) systems,Heterogeneous_computing
+Self-organizing autonomic computing,Autonomic_computing
+Optical computing,Optical_computing
+Quantum computing,Quantum_computing
+Molecular computing,DNA_computing
+High-level language architectures,High-level_language_computer_architecture
+Special purpose systems,Category:Free_special-purpose_file_systems
+Embedded and cyber-physical systems,Cyber-physical_system
+Sensor networks,Wireless_sensor_network
+Robotics,Outline_of_robotics
+Robotic components,Robotics
+Robotic control,Robot_control
+Robotic autonomy,Autonomous_robot
+External interfaces for robotics,Robotics_suite
+Sensors and actuators,Actuator
+System on a chip,System_on_a_chip
+Embedded systems,Embedded_system
+Firmware,Firmware
+Embedded hardware,Embedded_system
+Embedded software,Embedded_software
+Real-time systems,Real-time_computing
+Real-time operating systems,Real-time_operating_system
+Real-time languages,Real-time_Programming_Language
+Real-time system specification,Real_time_Java
+Real-time system architecture,Real-time_operating_system
+Dependable and fault-tolerant systems and networks,Fault-tolerant_computer_system
+Reliability,Reliability_(statistics)
+Availability,Availability
+Maintainability and maintenance,Maintainability
+Processors and memory architectures,Harvard_architecture
+Secondary storage organization,Auxiliary_memory
+Redundancy,Redundancy_(engineering)
+Fault-tolerant network topologies,Network_topology
+Networks,Computer_network
+Network architectures,Network_architecture
+Network design principles,Network_planning_and_design
+Layering,Network_layer
+Naming and addressing,Domain_name
+Programming interfaces,Application_programming_interface
+Network protocols,Lists_of_network_protocols
+Network protocol design,Communications_protocol
+Protocol correctness,Concurrency_control
+Protocol testing and verification,Verification_and_validation
+Formal specifications,Formal_specification
+Link-layer protocols,Link_layer
+Network layer protocols,Transport_layer
+Routing protocols,Routing_protocol
+Signaling protocols,Signaling_protocol
+Transport protocols,Transport_layer
+Session protocols,Session_layer
+Presentation protocols,Presentation_layer
+Application layer protocols,Application_layer
+Peer-to-peer protocols,Peer-to-Peer_Protocol_(P2PP)
+OAM protocols,IEEE_802.1ag
+Time synchronization protocols,Network_Time_Protocol
+Network policy,Network_Policy_Server
+Cross-layer protocols,Cross-layer_optimization
+Network File System (NFS) protocol,Network_File_System
+Network components,Networking_hardware
+Intermediate nodes,Node_(networking)
+Routers,Router_(computing)
+Bridges and switches,Bridging_(networking)
+Physical links,Physical_layer
+Repeaters,Repeater
+Middle boxes / network appliances,Middlebox
+End nodes,End_node_problem
+Network adapters,Network_interface_controller
+Network servers,Server_(computing)
+Wireless access points base stations and infrastructure,Wireless_access_point
+Cognitive radios,Cognitive_radio
+Logical nodes,IEC_61850
+Network domains,Network_domain
+Web server,Web_server
+Network algorithms,Category:Networking_algorithms
+Data path algorithms,Shortest_path_problem
+Packet classification,Traffic_classification
+Deep packet inspection,Deep_packet_inspection
+Packet scheduling,Network_scheduler
+Control path algorithms,Control_flow
+Network resources allocation,Resource_allocation_(computer)
+Network control algorithms,Network_congestion
+Traffic engineering algorithms,Traffic_optimization
+Network design and planning algorithms,Pathfinding
+Network economics,Network_economics
+Network performance evaluation,Network_performance
+Network performance modeling,Network_performance
+Network simulations,Network_simulation
+Network experimentation,Small-world_experiment
+Network performance analysis,Network_performance
+Network measurement,Network_traffic_measurement
+Network properties,Network_science
+Network security,Network_security
+Security protocols,Cryptographic_protocol
+Web protocol security,Internet_security
+Mobile and wireless security,Wireless_security
+Denial-of-service attacks,Denial-of-service_attack
+Firewalls,Firewall_(computing)
+Network range,Private_network
+Short-range networks,Dedicated_short-range_communications
+Local area networks,Local_area_network
+Metropolitan area networks,Metropolitan_area_network
+Wide area networks,Wide_area_network
+Very long-range networks,Long-range_Wi-Fi
+Network structure,Network_model
+Topology analysis and generation,Mesh_generation
+Physical topologies,Network_topology
+Logical / virtual topologies,Logical_topology
+Network topology types,Network_topology
+Point-to-point networks,Point-to-point_(telecommunications)
+Bus networks,Bus_network
+Star networks,Star_network
+Ring networks,Ring_network
+Token ring networks,Token_ring
+Fiber distributed data interface,Fiber_Distributed_Data_Interface
+Mesh networks,Wireless_mesh_network
+Wireless mesh networks,Wireless_mesh_network
+Hybrid networks,Network_topology
+Network dynamics,Network_dynamics
+Network reliability,Reliability_(computer_networking)
+Error detection and error correction,Error_detection_and_correction
+Network mobility,Mobile_IP
+Network manageability,Network_management
+Network privacy and anonymity,Tor_(anonymity_network)
+Network services,Network_service
+Naming and addressing,Domain_name
+Cloud computing,Cloud_computing
+Location based services,Location-based_service
+Programmable networks,Software-defined_networking
+In-network processing,Wireless_sensor_network
+Network management,Network_management
+Network monitoring,Network_monitoring
+Network types,Computer_network
+Network on chip,Network_on_a_chip
+Home networks,Home_network
+Storage area networks,Storage_area_network
+Data center networks,Data_center_network_architectures
+Wired access networks,Open-access_network
+Cyber-physical networks,Cyber-physical_system
+Sensor networks,Wireless_sensor_network
+Mobile networks,Cellular_network
+Overlay and other logical network structures,Overlay_network
+Peer-to-peer networks,Peer-to-peer
+World Wide Web,World_Wide_Web
+Social media networks,Social_networking_service
+Online social networks,List_of_social_networking_websites
+Wireless access networks,Wireless_network
+Wireless local area networks,Wireless_LAN
+Wireless personal area networks,Personal_area_network
+Ad hoc networks,Wireless_ad_hoc_network
+Mobile ad hoc networks,Mobile_ad_hoc_network
+Public Internet,Internet
+Packet-switching networks,Packet_switching
+Software and its engineering,Software_engineering
+Software development,Software_development
+Software organization and properties,Property_management
+Contextual software domains,Domain-driven_design
+E-commerce infrastructure,Center_for_E-Commerce_Infrastructure_Development
+Software infrastructure,Software-defined_infrastructure
+Interpreters,Interpreter_(computing)
+Middleware,Middleware_(distributed_applications)
+Message oriented middleware,Message-oriented_middleware
+Reflective middleware,Distributed_operating_system
+Embedded middleware,Middleware_(distributed_applications)
+Virtual machines,Virtual_machine
+Operating systems,Operating_system
+File systems management,File_system
+Memory management,Memory_management
+Virtual memory,Virtual_memory
+Main memory,Computer_data_storage
+Allocation / deallocation strategies,Memory_management
+Garbage collection,Garbage_collection_(computer_science)
+Distributed memory,Distributed_memory
+Secondary storage,Auxiliary_memory
+Process management,Process_management
+Scheduling,Scheduling_(production_processes)
+Deadlocks,Deadlock
+Multithreading,Multithreading_(computer_architecture)
+Multiprocessing / multiprogramming / multitasking,Computer_multitasking
+Monitors,Computer_monitor
+Mutual exclusion,Mutual_exclusion
+Concurrency control,Concurrency_control
+Power management,Power_management
+Process synchronization,Synchronization_(computer_science)
+Communications management,Communications_management
+Buffering,Buffering_agent
+Input / output,Input/output
+Message passing,Message_passing
+Virtual worlds software,Virtual_world
+Interactive games,List_of_Paradox_Interactive_games
+Virtual worlds training simulations,Corporate_use_of_Second_Life
+Software system structures,Software_architecture
+Embedded software,Embedded_software
+Software architectures,Software_architecture
+n-tier architectures,Multitier_architecture
+Peer-to-peer architectures,Peer-to-peer
+Data flow architectures,Dataflow_architecture
+Cooperating communicating processes,Communicating_sequential_processes
+Layered systems,Layered_system
+Publish-subscribe / event-based architectures,Publish–subscribe_pattern
+Electronic blackboards,Interactive_whiteboard
+Simulator / interpreter,Emulator
+Object oriented architectures,Object-oriented_analysis_and_design
+Tightly coupled architectures,Loose_coupling
+Space-based architectures,Space-based_architecture
+3-tier architectures,Multitier_architecture
+Software system models,Systems_modeling
+Petri nets,Petri_net
+State systems,State_variable
+Entity relationship modeling,Entity–relationship_model
+Model-driven software engineering,Model-driven_engineering
+Feature interaction,Feature_interaction_problem
+Massively parallel systems,Massively_parallel_(computing)
+Ultra-large-scale systems,Ultra-large-scale_systems
+Distributed systems,Distributed_computing
+Distributed systems organizing principles,Distributed_operating_system
+Cloud computing,Cloud_computing_architecture
+Client-server architectures,Client–server_model
+Grid computing,Grid_computing
+Organizing principles for web applications,Web_application_development
+Real-time systems software,Real-time_computing
+Abstraction modeling and modularity,Software_design
+Software functional properties,Non-functional_requirement
+Correctness,Correctness
+Synchronization,Synchronization
+Functionality,Functional_requirement
+Real-time schedulability,Scheduling_analysis_real-time_systems
+Consistency,Consistency
+Completeness,Completeness
+Access protection,Network_Access_Protection
+Formal methods,Formal_methods
+Model checking,Model_checking
+Software verification,Software_verification
+Automated static analysis,Static_program_analysis
+Dynamic analysis,Dynamic_program_analysis
+Extra-functional properties,Non-functional_requirement
+Interoperability,Interoperability
+Software performance,Software_performance_testing
+Software reliability,Software_reliability_testing
+Software fault tolerance,Software_fault_tolerance
+Checkpoint / restart,Application_checkpointing
+Software safety,Software_system_safety
+Software usability,Usability
+Software notations and tools,Comparison_of_Business_Process_Modeling_Notation_tools
+General programming languages,General-purpose_programming_language
+Language types,List_of_programming_languages_by_type
+Parallel programming languages,List_of_concurrent_and_parallel_programming_languages
+Distributed programming languages,List_of_concurrent_and_parallel_programming_languages
+Imperative languages,Imperative_programming
+Object oriented languages,Object-oriented_programming
+Functional languages,Functional_programming
+Concurrent programming languages,List_of_concurrent_and_parallel_programming_languages
+Constraint and logic languages,Constraint_logic_programming
+Data flow languages,Dataflow_programming
+Extensible languages,Extensible_programming
+Assembly languages,Assembly_language
+Multiparadigm languages,Programming_paradigm
+Very high level languages,Very_high-level_programming_language
+Language features,Language
+Abstract data types,Abstract_data_type
+Polymorphism,Polymorphism_(computer_science)
+Inheritance,Inheritance_(object-oriented_programming)
+Control structures,Control_flow
+Data types and structures,List_of_data_structures
+Classes and objects,Class_(computer_programming)
+Modules / packages,Environment_Modules_(software)
+Constraints,Constraint_(mathematics)
+Recursion,Recursion
+Concurrent programming structures,Concurrent_data_structure
+Procedures functions and subroutines,Subroutine
+Patterns,Pattern
+Coroutines,Coroutine
+Frameworks,Software_framework
+Formal language definitions,Formal_language
+Syntax,Syntax
+Semantics,Semantics
+Compilers,Compiler
+Interpreters,Interpreter_(computing)
+Incremental compilers,Incremental_compiler
+Retargetable compilers,Retargeting
+Just-in-time compilers,Just-in-time_compilation
+Dynamic compilers,Dynamic_compilation
+Translator writing systems and compiler generators,XPL
+Source code generation,Code_generation_(compiler)
+Runtime environments,Runtime_system
+Preprocessors,Preprocessor
+Parsers,Parsing
+Context specific languages,Context-sensitive_language
+Markup languages,List_of_document_markup_languages
+Extensible Markup Language,XML
+Hypertext languages,HTML
+Scripting languages,Scripting_language
+Domain specific languages,Domain-specific_language
+Specialized application languages,Domain-specific_language
+API languages,Application_programming_interface
+Graphical user interface languages,User_interface_markup_language
+Window managers,Window_manager
+Command and control languages,IBM_i_Control_Language
+Macro languages,Macro_(computer_science)
+Programming by example,Programming_by_example
+State based definitions,State_(polity)
+Visual languages,Visual_programming_language
+Interface definition languages,Interface_description_language
+System description languages,Specification_and_Description_Language
+Design languages,Design_language
+Unified Modeling Language,Unified_Modeling_Language
+Architecture description languages,Architecture_description_language
+System modeling languages,Systems_Modeling_Language
+Orchestration languages,Orchestration_(computing)
+Integration frameworks,Enterprise_application_integration
+Specification languages,Specification_language
+Development frameworks and environments,Software_framework
+Object oriented frameworks,Software_framework
+Software as a service orchestration systems,Orchestration_(computing)
+Integrated and visual development environments,Integrated_development_environment
+Application specific development environments,Integrated_development_environment
+Software configuration management and version control systems,List_of_version_control_software
+Software libraries and repositories,Institutional_repository
+Software maintenance tools,Software_maintenance
+Software creation and management,Software_project_management
+Designing software,Software_design
+Requirements analysis,Requirements_analysis
+Designing software,Software_design
+Requirements analysis,Requirements_analysis
+Software design engineering,Software_design
+Software design tradeoffs,Trade-off
+Software implementation planning,Product_software_implementation_method
+Software design techniques,Software_development_process
+Software development process management,Software_development_process
+Software development methods,List_of_software_development_philosophies
+Rapid application development,Rapid_application_development
+Agile software development,Agile_software_development
+Capability Maturity Model,Capability_Maturity_Model_Integration
+Waterfall model,Waterfall_model
+Spiral model,Spiral_model
+V-model,V-Model_(software_development)
+Design patterns,Software_design_pattern
+Risk management,Risk_management
+Software development techniques,Software_development_process
+Software prototyping,Software_prototyping
+Object oriented development,Object-oriented_programming
+Flowcharts,Flowchart
+Reusability,Reusability
+Software product lines,Software_product_line
+Error handling and recovery,Error_recovery_control
+Software verification and validation,Software_verification_and_validation
+Software prototyping,Software_prototyping
+Operational analysis,Performance_operational_analysis
+Software defect analysis,Software_testing
+Software testing and debugging,Debugging
+Fault tree analysis,Fault_tree_analysis
+Process validation,Process_validation
+Walkthroughs,Walkthrough
+Pair programming,Pair_programming
+Use cases,Use_case
+Acceptance testing,Acceptance_testing
+Traceability,Requirements_traceability
+Formal software verification,Formal_verification
+Empirical software validation,Empirical_process_(process_control_model)
+Software post-development issues,Software_maintenance
+Software reverse engineering,Reverse_engineering
+Documentation,Documentation
+Backup procedures,Backup
+Software evolution,Software_evolution
+Software version control,Version_control
+Maintaining software,Software_maintenance
+System administration,System_administrator
+Collaboration in software development,Collaborative_software_development_model
+Open source model,Open-source_model
+Programming teams,Programming_team
+Theory of computation,Theory_of_computation
+Models of computation,Model_of_computation
+Computability,Computability
+Lambda calculus,Lambda_calculus
+Turing machines,Turing_machine
+Recursive functions,Recursive_function
+Probabilistic computation,Probabilistic_Turing_machine
+Quantum computation theory,Quantum_computing
+Quantum complexity theory,Quantum_complexity_theory
+Quantum communication complexity,Communication_complexity
+Quantum query complexity,Quantum_complexity_theory
+Quantum information theory,Quantum_information
+Interactive computation,Interactive_computation
+Streaming models,Streaming_algorithm
+Concurrency,Concurrency_(computer_science)
+Parallel computing models,Parallel_programming_model
+Distributed computing models,Distributed_computing
+Process calculi,Process_calculus
+Timed and hybrid models,Hybrid_system
+Abstract machines,Abstract_machine
+Formal languages and automata theory,Automata_theory
+Formalisms,Formalism
+Algebraic language theory,Formal_language
+Rewrite systems,Rewriting
+Automata over infinite objects,Rabin_automaton
+Grammars and context-free languages,Context-free_grammar
+Tree languages,Regular_tree_grammar
+Automata extensions,Automata_theory
+Transducers,Category:Transducers
+Quantitative automata,Computational_sociology
+Regular languages,Regular_language
+Computational complexity and cryptography,Computational_complexity_theory
+Complexity classes,Complexity_class
+Problems reductions and completeness,Polynomial-time_reduction
+Communication complexity,Communication_complexity
+Circuit complexity,Circuit_complexity
+Oracles and decision trees,Decision_tree_model
+Algebraic complexity theory,Geometric_complexity_theory
+Quantum complexity theory,Quantum_complexity_theory
+Proof complexity,Proof_complexity
+Interactive proof systems,Interactive_proof_system
+Complexity theory and logic,Descriptive_complexity_theory
+Cryptographic primitives,Cryptographic_primitive
+Cryptographic protocols,Cryptographic_protocol
+Logic,Logic
+Logic and verification,Language,_Truth,_and_Logic
+Proof theory,Proof_theory
+Modal and temporal logics,Temporal_logic
+Automated reasoning,Automated_reasoning
+Constraint and logic programming,Constraint_logic_programming
+Constructive mathematics,Constructivism_(mathematics)
+Description logics,Description_logic
+Equational logic and rewriting,Maude_system
+Finite Model Theory,Finite_model_theory
+Higher order logic,Higher-order_logic
+Linear logic,Linear_logic
+Programming logic,Logic_programming
+Abstraction,Abstraction
+Verification by model checking,Model_checking
+Type theory,Type_theory
+Hoare logic,Hoare_logic
+Separation logic,Separation_logic
+Design and analysis of algorithms,Analysis_of_algorithms
+Graph algorithms analysis,Graph_theory
+Network flows,Flow_network
+Sparsification and spanners,Exponential_time_hypothesis
+Shortest paths,Shortest_path_problem
+Dynamic graph algorithms,Dynamic_problem_(algorithms)
+Approximation algorithms analysis,Approximation_algorithm
+Scheduling algorithms,Scheduling_(computing)
+Packing and covering problems,Covering_problems
+Routing and network design problems,Network_planning_and_design
+Facility location and clustering,Facility_location_problem
+Rounding techniques,Rounding
+Stochastic approximation,Stochastic_approximation
+Numeric approximation algorithms,Numerical_analysis
+Mathematical optimization,Mathematical_optimization
+Discrete optimization,Discrete_optimization
+Network optimization,Network_theory
+Continuous optimization,Continuous_optimization
+Linear programming,Linear_programming
+Semidefinite programming,Semidefinite_programming
+Convex optimization,Convex_optimization
+Quasiconvex programming and unimodality,Quasiconvex_function
+Stochastic control and optimization,Stochastic_optimization
+Quadratic programming,Quadratic_programming
+Nonconvex optimization,Convex_optimization
+Mixed discrete-continuous optimization,List_of_optimization_software
+Submodular optimization and polymatroids,Polymatroid
+Integer programming,Integer_programming
+Data structures design and analysis,Data_structure
+Data compression,Data_compression
+Pattern matching,Pattern_matching
+Sorting and searching,Search_algorithm
+Predecessor queries,X-fast_trie
+Cell probe models and lower bounds,Cell-probe_model
+Online algorithms,Online_algorithm
+Online learning algorithms,Online_machine_learning
+Scheduling algorithms,Scheduling_(computing)
+Caching and paging algorithms,Page_replacement_algorithm
+K-server algorithms,K-server_problem
+Adversary models,Adversary_model
+Parameterized complexity and exact algorithms,Parameterized_complexity
+Fixed parameter tractability,Parameterized_complexity
+W hierarchy,Parameterized_complexity
+Streaming sublinear and near linear time algorithms,Selection_algorithm
+Bloom filters and hashing,Bloom_filter
+Sketching and sampling,Streaming_algorithm
+Lower bounds and information complexity,Circuit_complexity
+Random order and robust communication complexity,Complex_network
+Nearest neighbor algorithms,Nearest_neighbour_algorithm
+Parallel algorithms,Parallel_algorithm
+MapReduce algorithms,MapReduce
+Self-organization,Self-organization
+Shared memory algorithms,Parallel_algorithm
+Vector / streaming algorithms,Streaming_algorithm
+Massively parallel algorithms,Massively_parallel_(computing)
+Distributed algorithms,Distributed_algorithm
+MapReduce algorithms,MapReduce
+Self-organization,Self-organization
+Algorithm design techniques,Algorithm_design
+Backtracking,Backtracking
+Branch-and-bound,Branch_and_bound
+Divide and conquer,Divide_and_conquer_algorithm
+Dynamic programming,Dynamic_programming
+Preconditioning,Preconditioner
+Concurrent algorithms,Concurrent_algorithm
+Randomness geometry and discrete structures,ACM_Computing_Classification_System
+Pseudorandomness and derandomization,Pseudorandom_generator
+Computational geometry,Computational_geometry
+Generating random combinatorial structures,Combinatorial_class
+Random walks and Markov chains,Random_walk
+Expander graphs and randomness extractors,Salil_Vadhan
+Error-correcting codes,Error_detection_and_correction
+Random projections and metric embeddings,Johnson–Lindenstrauss_lemma
+Random network models,Random_graph
+Theory and algorithms for application domains,ACM_Computing_Classification_System
+Machine learning theory,Computational_learning_theory
+Sample complexity and generalization bounds,Generalization_error
+Boolean function learning,Boolean_algebra
+Unsupervised learning and clustering,Unsupervised_learning
+Kernel methods,Kernel_method
+Support vector machines,Support_vector_machine
+Gaussian processes,Gaussian_process
+Boosting,Boosting_(machine_learning)
+Bayesian analysis,Robust_Bayesian_analysis
+Inductive inference,Inductive_reasoning
+Online learning theory,E-learning_(theory)
+Multi-agent learning,Multi-agent_system
+Models of learning,Learning_styles
+Query learning,Active_learning_(machine_learning)
+Structured prediction,Structured_prediction
+Reinforcement learning,Reinforcement_learning
+Sequential decision making,Sequential_analysis
+Inverse reinforcement learning,Apprenticeship_learning
+Apprenticeship learning,Apprenticeship_learning
+Multi-agent reinforcement learning,Multi-agent_system
+Adversarial learning,Adversarial_machine_learning
+Active learning,Active_learning
+Semi-supervised learning,Semi-supervised_learning
+Markov decision processes,Markov_decision_process
+Regret bounds,Regret_(decision_theory)
+Algorithmic game theory and mechanism design,Algorithmic_mechanism_design
+Social networks,Social_networking_service
+Algorithmic game theory,Algorithmic_game_theory
+Algorithmic mechanism design,Algorithmic_mechanism_design
+Solution concepts in game theory,Solution_concept
+Exact and approximate computation of equilibria,Epsilon-equilibrium
+Quality of equilibria,Thermodynamic_equilibrium
+Convergence and learning in games,Fictitious_play
+Market equilibria,Economic_equilibrium
+Computational pricing and auctions,Combinatorial_auction
+Representations of games and their complexity,Succinct_game
+Network games,Game_Network
+Network formation,Network_formation
+Computational advertising theory,Computational_complexity_theory
+Database theory,Database_theory
+Data exchange,Data_exchange
+Data provenance,Provenance
+Data modeling,Logical_data_model
+Database query languages,Query_language
+Database constraints theory,Dependency_theory_(database_theory)
+Database interoperability,Interoperability
+Data structures and algorithms for data management,Data_structure
+Database query processing and optimization,Query_optimization
+Data integration,Oracle_Data_Integrator
+Logic and databases,Logical_data_model
+Theory of database privacy and security,Database_security
+Incomplete inconsistent, and uncertain databases,Rough_set
+Semantics and reasoning,Semantic_reasoner
+Program constructs,Category:Programming_constructs
+Control primitives,Primitive_data_type
+Functional constructs,Functional_programming
+Object oriented constructs,Object-oriented_programming
+Program schemes,List_of_government_schemes_in_India
+Type structures,Structural_type_system
+Program semantics,Semantics_(computer_science)
+Algebraic semantics,Algebraic_semantics
+Denotational semantics,Denotational_semantics
+Operational semantics,Operational_semantics
+Axiomatic semantics,Axiomatic_semantics
+Action semantics,Action_semantics
+Categorical semantics,Categorical_logic
+Program reasoning,Automated_reasoning
+Invariants,Invariant_(mathematics)
+Program specifications,Formal_specification
+Pre- and post-conditions,Postcondition
+Program verification,Formal_verification
+Program analysis,Program_analysis
+Assertions,Management_assertions
+Parsing,Parsing
+Abstraction,Abstraction
+Mathematics of computing,Category:Mathematics_of_computing
+Discrete mathematics,Discrete_mathematics
+Combinatorics,Outline_of_combinatorics
+Combinatoric problems,Combinatorial_optimization
+Permutations and combinations,Permutation
+Combinatorial algorithms,Category:Combinatorial_algorithms
+Generating functions,Generating_function
+Combinatorial optimization,Combinatorial_optimization
+Combinatorics on words,Combinatorics_on_words
+Enumeration,Enumeration
+Graph theory,Graph_theory
+Trees,Tree
+Hypergraphs,Hypergraph
+Random graphs,Random_graph
+Graph coloring,Graph_coloring
+Paths and connectivity problems,Connectivity_(graph_theory)
+Graph enumeration,Graph_enumeration
+Matchings and factors,Graph_factorization
+Graphs and surfaces,Graph_embedding
+Network flows,Flow_network
+Spectra of graphs,Spectral_graph_theory
+Extremal graph theory,Extremal_graph_theory
+Matroids and greedoids,Greedoid
+Graph algorithms,Category:Graph_algorithms
+Approximation algorithms,Approximation_algorithm
+Probability and statistics,Probability_and_statistics
+Probabilistic representations,Robotic_mapping
+Bayesian networks,Bayesian_network
+Markov networks,Markov_random_field
+Factor graphs,Factor_graph
+Decision diagrams,Binary_decision_diagram
+Equational models,Structural_equation_modeling
+Causal networks,Bayesian_network
+Stochastic differential equations,Stochastic_differential_equation
+Nonparametric representations,Parametric_equation
+Kernel density estimators,Kernel_density_estimation
+Spline models,Spline_(mathematics)
+Bayesian nonparametric models,Nonparametric_statistics
+Probabilistic inference problems,Bayesian_inference
+Maximum likelihood estimation,Maximum_likelihood_estimation
+Bayesian computation,Approximate_Bayesian_computation
+Computing most probable explanation,Belief_propagation
+Hypothesis testing and confidence interval computation,Confidence_interval
+Density estimation,Density_estimation
+Quantile regression,Quantile_regression
+Max marginal computation,Marginal_likelihood
+Probabilistic reasoning algorithms,Probabilistic_logic
+Variable elimination,Variable_elimination
+Loopy belief propagation,Belief_propagation
+Variational methods,Variational_Bayesian_methods
+Expectation maximization,Expectation–maximization_algorithm
+Markov-chain Monte Carlo methods,Metropolis-Hastings_algorithm
+Gibbs sampling,Gibbs_sampling
+Metropolis-Hastings algorithm,Metropolis-Hastings_algorithm
+Simulated annealing,Simulated_annealing
+Markov-chain Monte Carlo convergence measures,Monte_Carlo_method
+Sequential Monte Carlo methods,Particle_filter
+Kalman filters and hidden Markov models,Kalman_filter
+Resampling methods,Resampling_(statistics)
+Bootstrapping,Bootstrapping_(statistics)
+Jackknifing,Jackknife_resampling
+Random number generation,Random_number_generation
+Probabilistic algorithms,Randomized_algorithm
+Statistical paradigms,Foundations_of_statistics
+Queueing theory,Queueing_theory
+Contingency table analysis,Contingency_table
+Regression analysis,Regression_analysis
+Robust regression,Robust_regression
+Time series analysis,Time_series
+Survival analysis,Survival_analysis
+Renewal theory,Renewal_theory
+Dimensionality reduction,Dimensionality_reduction
+Cluster analysis,Cluster_analysis
+Statistical graphics,Statistical_graphics
+Exploratory data analysis,Exploratory_data_analysis
+Stochastic processes,Stochastic_process
+Markov processes,Markov_chain
+Nonparametric statistics,Nonparametric_statistics
+Distribution functions,Cumulative_distribution_function
+Multivariate statistics,Multivariate_statistics
+Mathematical software,Mathematical_software
+Solvers,Solver
+Statistical software,List_of_statistical_packages
+Mathematical software performance,List_of_numerical_analysis_software
+Information theory,Information_theory
+Coding theory,Coding_theory
+Mathematical analysis,Mathematical_analysis
+Numerical analysis,Numerical_analysis
+Computation of transforms,Fast_Fourier_transform
+Computations in finite fields,Finite_field_arithmetic
+Computations on matrices,Matrix_(mathematics)
+Computations on polynomials,Polynomial
+Gröbner bases and other special bases,Gröbner_basis
+Number-theoretic computations,Computational_number_theory
+Interpolation,Interpolation
+Numerical differentiation,Numerical_differentiation
+Interval arithmetic,Interval_arithmetic
+Arbitrary-precision arithmetic,Arbitrary-precision_arithmetic
+Automatic differentiation,Automatic_differentiation
+Mesh generation,Mesh_generation
+Discretization,Discretization
+Mathematical optimization,Mathematical_optimization
+Discrete optimization,Discrete_optimization
+Network optimization,Network_theory
+Continuous optimization,Continuous_optimization
+Linear programming,Linear_programming
+Semidefinite programming,Semidefinite_programming
+Convex optimization,Convex_optimization
+Quasiconvex programming and unimodality,Quasiconvex_function
+Stochastic control and optimization,Stochastic_optimization
+Quadratic programming,Quadratic_programming
+Nonconvex optimization,Convex_optimization
+Mixed discrete-continuous optimization,List_of_optimization_software
+Submodular optimization and polymatroids,Polymatroid
+Integer programming,Integer_programming
+Differential equations,Differential_equation
+Ordinary differential equations,Differential_equation
+Partial differential equations,Partial_differential_equation
+Differential algebraic equations,Partial_differential_algebraic_equation
+Differential variational inequalities,Differential_variational_inequality
+Calculus,Calculus
+Lambda calculus,Lambda_calculus
+Differential calculus,Differential_calculus
+Integral calculus,Integral
+Functional analysis,Functional_analysis
+Approximation,Approximation
+Integral equations,Integral_equation
+Nonlinear equations,Nonlinear_system
+Quadrature,In-phase_and_quadrature_components
+Continuous mathematics,Continuous_function
+Calculus,Calculus
+Lambda calculus,Lambda_calculus
+Differential calculus,Differential_calculus
+Integral calculus,Integral
+Topology,Network_topology
+Point-set topology,General_topology
+Algebraic topology,Algebraic_topology
+Geometric topology,Geometric_topology
+Continuous functions,Continuous_function
+Information systems,Information_system
+Data management systems,Category:Database_management_systems
+Database design and models,Database_design
+Relational database model,Relational_model
+Entity relationship models,Entity–relationship_model
+Graph-based database models,Graph_database
+Hierarchical data models,Hierarchical_database_model
+Network data models,Network_model
+Physical data models,Physical_data_model
+Data model extensions,Hierarchical_Data_Format
+Semi-structured data,Semi-structured_data
+Data streams,Data_stream
+Data provenance,Provenance
+Incomplete data,Missing_data
+Temporal data,Temporal_database
+Uncertainty,Measurement_uncertainty
+Inconsistent data,Data_consistency
+Data structures,Data_structure
+Data access methods,Data_access
+Multidimensional range search,K-d_tree
+Data scans,Image_scanner
+Point lookups,Lookup_table
+Unidimensional range search,Range_tree
+Proximity search,Proximity_search_(text)
+Data layout,Column-oriented_DBMS
+Data compression,Data_compression
+Data encryption,Encryption
+Record and block layout,Fixed-block_architecture
+Database management system engines,Database_engine
+DBMS engine architectures,Relational_database_management_system
+Database query processing,Query_optimization
+Query optimization,Query_optimization
+Query operators,Language_Integrated_Query
+Query planning,Query_plan
+Join algorithms,Category:Join_algorithms
+Database transaction processing,Transaction_processing
+Data locking,Lock_(database)
+Transaction logging,Transaction_log
+Database recovery,Data_recovery
+Record and buffer management,Circular_buffer
+Parallel and distributed DBMSs,Distributed_database
+Key-value stores,Key-value_database
+MapReduce-based systems,MapReduce
+Relational parallel and distributed DBMSs,Distributed_database
+Triggers and rules,Event_condition_action
+Database views,View_(SQL)
+Integrity checking,Data_integrity
+Distributed database transactions,Distributed_transaction
+Distributed data locking,Two-phase_locking
+Deadlocks,Deadlock
+Distributed database recovery,Two-phase_commit_protocol
+Main memory engines,In-memory_database
+Online analytical processing engines,Online_analytical_processing
+Stream management,Data_stream_management_system
+Query languages,Query_language
+Relational database query languages,Query_language
+Structured Query Language,SQL
+XML,XML
+XPath,XPath
+XQuery,XQuery
+Query languages for non-relational engines,NoSQL
+MapReduce languages,MapReduce
+Call level interfaces,Call_Level_Interface
+Database administration,Database_administration_and_automation
+Database utilities and tools,Comparison_of_database_tools
+Database performance evaluation,Standard_Performance_Evaluation_Corporation
+Autonomous database administration,Distributed_database
+Data dictionaries,Data_dictionary
+Information integration,Information_integration
+Deduplication,Data_deduplication
+Extraction, transformation and loading,Extract,_transform,_load
+Data exchange,Data_exchange
+Data cleaning,Data_cleansing
+Wrappers,Wrapper_function
+Mediators and data integration,Data_integration
+Entity resolution,Record_linkage
+Data warehouses,Data_warehouse
+Federated databases,Federated_database_system
+Middleware for databases,Middleware_(distributed_applications)
+Database web servers,Web_server
+Application servers,Application_server
+Object-relational mapping facilities,List_of_object-relational_mapping_software
+Data federation tools,Data_virtualization
+Data replication tools,Replication_(computing)
+Distributed transaction monitors,Tuxedo_(software)
+Message queues,Message_queue
+Service buses,Enterprise_service_bus
+Enterprise application integration tools,Enterprise_application_integration
+Middleware business process managers,Business_process_management
+Information storage systems,Computer_data_storage
+Information storage technologies,Computer_data_storage
+Magnetic disks,Magnetic_storage
+Magnetic tapes,Magnetic_tape
+Optical / magneto-optical disks,Magneto-optical_drive
+Storage class memory,Software-defined_memory
+Flash memory,Flash_memory
+Phase change memory,Phase-change_memory
+Disk arrays,Disk_array
+Tape libraries,Tape_library
+Record storage systems,Records_management
+Record storage alternatives,List_of_file_systems
+Heap,Heap_(data_structure)
+Hashed file organization,Hash_function
+Indexed file organization,Indexed_file
+Linked lists,Linked_list
+Directory structures,Directory_structure
+B-trees,B-tree
+Vnodes,Virtual_file_system
+Inodes,Inode
+Extent-based file structures,Extent_(file_systems)
+Block / page strategies,Strategic_block_investing
+Slotted pages,Slotted_nut
+Intrapage space management,IntraLinks
+Interpage free-space management,Web_page
+Record layout alternatives,MARC_standards
+Fixed length attributes,Field_(computer_science)
+Variable length attributes,Field_(computer_science)
+Null values in records,Null_(SQL)
+Relational storage,Relational_database
+Horizontal partitioning,Partition_(database)
+Vertical partitioning,Partition_(database)
+Column based storage,Column-oriented_DBMS
+Hybrid storage layouts,Hybrid_vehicle_drivetrain
+Compression strategies,Strategy_dynamics
+Storage replication,Replication_(computing)
+Mirroring,Mirroring_(psychology)
+RAID,RAID
+Point-in-time copies,FlashCopy
+Remote replication,Replication_(computing)
+Storage recovery strategies,Seven_tiers_of_disaster_recovery
+Storage architectures,Serial_Storage_Architecture
+Cloud based storage,Cloud_storage
+Storage network architectures,Storage_area_network
+Storage area networks,Storage_area_network
+Direct attached storage,Direct-attached_storage
+Network attached storage,Network-attached_storage
+Distributed storage,Distributed_data_store
+Storage management,Hierarchical_storage_management
+Hierarchical storage management,Hierarchical_storage_management
+Storage virtualization,Storage_virtualization
+Information lifecycle management,Information_lifecycle_management
+Version management,Version_control
+Storage power management,Grid_energy_storage
+Thin provisioning,Thin_provisioning
+Information systems applications,Information_system
+Enterprise information systems,Enterprise_information_system
+Intranets,Intranet
+Extranets,Extranet
+Enterprise resource planning,Enterprise_resource_planning
+Enterprise applications,Enterprise_software
+Data centers,Data_center
+Collaborative and social computing systems and tools,Social_computing
+Blogs,Blog
+Wikis,Wiki
+Reputation systems,Reputation_system
+Open source software,Open-source_software
+Social networking sites,List_of_social_networking_websites
+Social tagging systems,Social_bookmarking
+Synchronous editors,Collaborative_editing
+Asynchronous editors,Collaborative_editing
+Spatial-temporal systems,Spatiotemporal_database
+Location based services,Location-based_advertising
+Geographic information systems,Geographic_information_system
+Sensor networks,Wireless_sensor_network
+Data streaming,Data_stream
+Global positioning systems,Global_Positioning_System
+Decision support systems,Decision_support_system
+Data warehouses,Data_warehouse
+Expert systems,Expert_system
+Data analytics,Data_analysis
+Online analytical processing,Online_analytical_processing
+Mobile information processing systems,Information_processor
+Process control systems,Process_control
+Multimedia information systems,Multimedia
+Multimedia databases,Multimedia_database
+Multimedia streaming,Streaming_media
+Multimedia content creation,Content_creation
+Massively multiplayer online games,Massively_multiplayer_online_game
+Data mining,Data_mining
+Data cleaning,Data_cleansing
+Collaborative filtering,Collaborative_filtering
+Association rules,Association_rule_learning
+Clustering,Cluster_analysis
+Nearest-neighbor search,Nearest_neighbor_search
+Data stream mining,Data_stream_mining
+Digital libraries and archives,Digital_library
+Computational advertising,Andrei_Broder
+Computing platforms,Computing_platform
+World Wide Web,World_Wide_Web
+Web searching and information discovery,Social_search
+Web search engines,Web_search_engine
+Web crawling,Web_crawler
+Web indexing,Web_indexing
+Page and site ranking,PageRank
+Spam detection,Anti-spam_techniques
+Content ranking,Television_content_rating_systems
+Collaborative filtering,Collaborative_filtering
+Social recommendation,Recommender_system
+Personalization,Personalization
+Social tagging,Social_bookmarking
+Online advertising,Online_advertising
+Sponsored search advertising,Search_advertising
+Content match advertising,Contextual_advertising
+Display advertising,Display_advertising
+Social advertising,Social_advertising_(social_relationships)
+Web mining,Web_mining
+Site wrapping,Job_wrapping
+Data extraction and integration,Data_integration
+Deep web,Deep_web
+Surfacing,Surfacing_(novel)
+Search results deduplication,Data_deduplication
+Web log analysis,Web_log_analysis_software
+Traffic analysis,Traffic_analysis
+Web applications,Web_application
+Internet communications tools,Collaboration_tool
+Email,Email
+Blogs,Blog
+Texting,Text_messaging
+Chat,Online_chat
+Web conferencing,Web_conferencing
+Social networks,Social_networking_service
+Crowdsourcing,Crowdsourcing
+Answer ranking,Mean_reciprocal_rank
+Trust,Trust_(emotion)
+Incentive schemes,Incentive_program
+Reputation systems,Reputation_system
+Electronic commerce,B2B_e-commerce
+Digital cash,Electronic_money
+E-commerce infrastructure,Center_for_E-Commerce_Infrastructure_Development
+Electronic data interchange,Electronic_data_interchange
+Electronic funds transfer,Electronic_funds_transfer
+Online shopping,Online_shopping
+Online banking,Online_banking
+Secure online transactions,3-D_Secure
+Online auctions,Online_auction
+Web interfaces,User_interface
+Wikis,Wiki_markup
+Browsers,Web_browser
+Mashups,Mashup_(web_application_hybrid)
+Web services,Web_service
+Simple Object Access Protocol,SOAP
+RESTful web services,Java_API_for_RESTful_Web_Services
+Web Services Description Language,Web_Services_Description_Language
+Universal Description Discovery and Integration,Web_Services_Discovery
+Service discovery and interfaces,Web_Services_Discovery
+Web data description languages,Web_Services_Description_Language
+Semantic web description languages,Web_Ontology_Language
+Resource Description Framework,Resource_Description_Framework
+Web Ontology Language,Web_Ontology_Language
+Markup languages,List_of_document_markup_languages
+Extensible Markup Language,XML
+Hypertext languages,HTML
+Information retrieval,Information_retrieval
+Document representation,Vector_space_model
+Document structure,Document_Structure_Description
+Document topic models,Topic_model
+Content analysis and feature selection,Feature_selection
+Data encoding and canonicalization,Canonicalization
+Document collection models,Vector_space_model
+Ontologies,Ontology_(information_science)
+Dictionaries,Dictionary
+Thesauri,Thesaurus
+Information retrieval query processing,Information_retrieval
+Query representation,Query_optimization
+Query intent,User_intent
+Query log analysis,Web_search_query
+Query suggestion,Search_suggest_drop-down_list
+Query reformulation,Query_expansion
+Users and interactive retrieval,Human-computer_information_retrieval
+Personalization,Personalization
+Task models,ConcurTaskTrees
+Search interfaces,Faceted_search
+Collaborative search,Collaborative_search_engine
+Retrieval models and ranking,Ranking_(information_retrieval)
+Rank aggregation,Kemeny-Young_method
+Probabilistic retrieval models,Probabilistic_relevance_model
+Language models,Language_model
+Similarity measures,Similarity_measure
+Learning to rank,Learning_to_rank
+Combination, fusion and federated search,Metasearch_engine
+Information retrieval diversity,Information_retrieval
+Top-k retrieval in databases,Information_retrieval
+Novelty in information retrieval,Relevance_(information_retrieval)
+Retrieval tasks and goals,Information_retrieval
+Question answering,Question_answering
+Document filtering,Information_filtering_system
+Recommender systems,Recommender_system
+Information extraction,Information_extraction
+Sentiment analysis,Sentiment_analysis
+Expert search,Expert
+Near-duplicate and plagiarism detection,Plagiarism_detection
+Clustering and classification,Cluster_analysis
+Summarization,Automatic_summarization
+Business intelligence,Business_intelligence
+Evaluation of retrieval results,Evaluation_measures_(information_retrieval)
+Test collections,Test_suite
+Relevance assessment,Relevance_(information_retrieval)
+Retrieval effectiveness,Information_retrieval
+Retrieval efficiency,Information_retrieval
+Presentation of retrieval results,Information_retrieval
+Search engine architectures and scalability,Scalability
+Search engine indexing,Search_engine_indexing
+Search index compression,Search_engine_indexing
+Distributed retrieval,Distributed_practice
+Peer-to-peer retrieval,Social_peer-to-peer_processes
+Retrieval on mobile devices,Mobile_device_forensics
+Adversarial retrieval,Adversarial_information_retrieval
+Link and co-citation analysis,Co-citation
+Searching with auxiliary databases,B-tree
+Specialized information retrieval,Semantic_network
+Structure and multilingual text search,Search_engine_indexing
+Structured text search,Structured_text
+Mathematics retrieval,Information_retrieval
+Chemical and biochemical retrieval,Cheminformatics
+Multilingual and cross-lingual retrieval,Cross-language_information_retrieval
+Multimedia and multimodal retrieval,Multimedia_information_retrieval
+Image search,Image_meta_search
+Video search,Video_search_engine
+Speech / audio search,Audio_search_engine
+Music retrieval,Music_information_retrieval
+Environment-specific retrieval,Context-dependent_memory
+Enterprise search,Enterprise_search
+Desktop search,Desktop_search
+Web and social media search,Social_search
+Security and privacy,Information_privacy
+Cryptography,Cryptography
+Key management,Key_management
+Public key (asymmetric) techniques,Public-key_cryptography
+Digital signatures,Digital_signature
+Public key encryption,Public-key_cryptography
+Symmetric cryptography and hash functions,Cryptographic_hash_function
+Block and stream ciphers,Stream_cipher
+Hash functions and message authentication codes,Hash-based_message_authentication_code
+Cryptanalysis and other attacks,Cryptanalysis
+Information-theoretic techniques,Information_theory
+Mathematical foundations of cryptography,Cryptography
+Formal methods and theory of security,Formal_methods
+Trust frameworks,Open_Identity_Exchange
+Security requirements,Cyber_security_standards
+Formal security models,Computer_security_model
+Logic and verification,Language,_Truth,_and_Logic
+Security services,UK_security_services
+Authentication,Multi-factor_authentication
+Biometrics,Biometrics
+Graphical / visual passwords,Graphical_identification_and_authentication
+Multi-factor authentication,Multi-factor_authentication
+Access control,Access_control
+Pseudonymity, anonymity and untraceability,Pseudonymous_remailer
+Privacy-preserving protocols,Secure_multi-party_computation
+Digital rights management,Digital_rights_management
+Authorization,Authorization
+Intrusion/anomaly detection and malware mitigation,Intrusion_detection_system
+Malware and its mitigation,Computer_worm
+Intrusion detection systems,Intrusion_detection_system
+Social engineering attacks,Social_engineering_(security)
+Spoofing attacks,Spoofing_attack
+Phishing,Phishing
+Security in hardware,Hardware_security_module
+Tamper-proof and tamper-resistant designs,Tamper_resistance
+Embedded systems security,Embedded_system
+Hardware security implementation,Hardware_security_module
+Hardware-based security protocols,Hardware_security_module
+Hardware attacks and countermeasures,Side-channel_attack
+Malicious design modifications,Hardware_Trojan
+Side-channel analysis and countermeasures,Side-channel_attack
+Hardware reverse engineering,Reverse_engineering
+Systems security,Computer_security
+Operating systems security,Category:Operating_system_security
+Mobile platform security,Mobile_security
+Trusted computing,Trusted_Computing
+Virtualization and security,Virtual_security_appliance
+Browser security,Browser_security
+Distributed systems security,Distributed_System_Security_Architecture
+Information flow control,Information_flow_(information_theory)
+Denial-of-service attacks,Denial-of-service_attack
+Firewalls,Firewall_(computing)
+Vulnerability management,Vulnerability_management
+Penetration testing,Penetration_test
+Vulnerability scanners,Vulnerability_scanner
+File system security,File_system
+Network security,Network_security
+Security protocols,Cryptographic_protocol
+Web protocol security,Internet_security
+Mobile and wireless security,Wireless_security
+Denial-of-service attacks,Denial-of-service_attack
+Database and storage security,Database_security
+Data anonymization and sanitization,Data_anonymization
+Management and querying of encrypted data,Transbase
+Information accountability and usage control,Information_governance
+Database activity monitoring,Database_activity_monitoring
+Software and application security,Application_security
+Software security engineering,Security_engineering
+Web application security,Web_application_security
+Social network security and privacy,Privacy_concerns_with_social_networking_services
+Domain-specific security and privacy architectures,Domain_Based_Security
+Software reverse engineering,Reverse_engineering
+Human and societal aspects of security and privacy,Human_security
+Economics of security and privacy,Economics_of_security
+Social aspects of security and privacy,Privacy_concerns_with_social_networking_services
+Privacy protections,Information_privacy
+Usability in security and privacy,Human-computer_interaction_(security)
+Human-centered computing,Human-centered_computing
+Human computer interaction,Human-computer_interaction
+HCI design and evaluation methods,Heuristic_evaluation
+User models,User_modeling
+User studies,Template:User_Studies_at_balshaws
+Usability testing,Usability_testing
+Heuristic evaluations,Heuristic_evaluation
+Walkthrough evaluations,Cognitive_walkthrough
+Laboratory experiments,Field_experiment
+Field studies,Field_Studies
+Interaction paradigms,Human-computer_interaction
+Hypertext / hypermedia,Hypermedia
+Mixed / augmented reality,Mixed_reality
+Command line interfaces,Command-line_interface
+Graphical user interfaces,Graphical_user_interface
+Virtual reality,Virtual_reality
+Web-based interaction,Virtual_community
+Natural language interfaces,Natural_language_user_interface
+Collaborative interaction,Collaborative_learning
+Interaction devices,3D_interaction
+Graphics input devices,Input_device
+Displays and imagers,Stereoscopy
+Sound-based input / output,Audio_Stream_Input/Output
+Keyboards,Computer_keyboard
+Pointing devices,Pointing_device
+Touch screens,Touchscreen
+Haptic devices,Haptic_technology
+HCI theory, concepts and models,Conceptual_model
+Interaction techniques,Interaction_technique
+Auditory feedback,Auditory_feedback
+Text input,Text_box
+Pointing,Repointing
+Gestural input,Gesture_recognition
+Interactive systems and tools,Interactive_Systems_Corporation
+User interface management systems,User_interface_management_systems
+User interface programming,Graphical_user_interface
+User interface toolkits,User_Interface_Toolkit
+Empirical studies in HCI,IFIP_WG_13.6_-_Human_Work_Interaction_Design
+Interaction design,Interactive_design
+Interaction design process and methods,Interaction_design
+User interface design,User_interface_design
+User centered design,User-centered_design
+Activity centered design,Activity-centered_design
+Scenario-based design,Scenario_(computing)
+Participatory design,Participatory_design
+Contextual design,Contextual_design
+Interface design prototyping,User_interface_design
+Interaction design theory, concepts and paradigms,Interaction_design
+Empirical studies in interaction design,IFIP_WG_13.6_-_Human_Work_Interaction_Design
+Systems and tools for interaction design,Interaction_design
+Wireframes,Website_wireframe
+Collaborative and social computing,Social_computing
+Collaborative and social computing theory, concepts and paradigms,Social_computing
+Social content sharing,Social_media
+Collaborative content creation,Collaboration
+Collaborative filtering,Collaborative_filtering
+Social recommendation,Recommender_system
+Social networks,Social_networking_service
+Social tagging,Social_bookmarking
+Computer supported cooperative work,Computer-supported_cooperative_work
+Social engineering,Social_engineering_(security)
+Social navigation,Social_navigation
+Social media,Social_media
+Collaborative and social computing design and evaluation methods,Social_computing
+Social network analysis,Social_network_analysis
+Ethnographic studies,Ethnography
+Collaborative and social computing systems and tools,Social_computing
+Blogs,Blog
+Wikis,Wiki_markup
+Reputation systems,Reputation_system
+Open source software,Open-source_software
+Social networking sites,List_of_social_networking_websites
+Social tagging systems,Social_bookmarking
+Synchronous editors,Collaborative_editing
+Asynchronous editors,Collaborative_editing
+Empirical studies in collaborative and social computing,Computational_sociology
+Collaborative and social computing devices,Social_computing
+Ubiquitous and mobile computing,Ubiquitous_computing
+Ubiquitous and mobile computing theory, concepts and paradigms,Ubiquitous_computing
+Ubiquitous computing,Ubiquitous_computing
+Mobile computing,Mobile_computing
+Ambient intelligence,Ambient_intelligence
+Ubiquitous and mobile computing systems and tools,Ubiquitous_computing
+Ubiquitous and mobile devices,Ubiquitous_computing
+Smartphones,Smartphone
+Interactive whiteboards,Interactive_whiteboard
+Mobile phones,Mobile_phone
+Mobile devices,Mobile_device
+Portable media players,Portable_media_player
+Personal digital assistants,Personal_digital_assistant
+Handheld game consoles,Handheld_game_console
+E-book readers,Comparison_of_e-book_readers
+Tablet computers,Tablet_computer
+Ubiquitous and mobile computing design and evaluation methods,Ubiquitous_computing
+Empirical studies in ubiquitous and mobile computing,Computational_lexicology
+Visualization,Visualization_(graphics)
+Visualization techniques,Data_visualization
+Treemaps,Treemapping
+Hyperbolic trees,Hyperbolic_tree
+Heat maps,Heat_map
+Graph drawings,Graph_drawing
+Dendrograms,Dendrogram
+Cladograms,Cladogram
+Visualization application domains,Geovisualization
+Scientific visualization,Scientific_visualization
+Visual analytics,Visual_analytics
+Geographic visualization,Geovisualization
+Information visualization,Information_visualization
+Visualization systems and tools,Software_visualization
+Visualization toolkits,Category:JavaScript_visualization_toolkits
+Visualization theory, concepts and paradigms,Paradigm_shift
+Empirical studies in visualization,Scientific_modelling
+Visualization design and evaluation methods,Visual_analytics
+Accessibility,Accessibility
+Accessibility theory, concepts and paradigms,Universal_design
+Empirical studies in accessibility,Disability_studies
+Accessibility design and evaluation methods,Usability_engineering
+Accessibility technologies,Accessibility
+Accessibility systems and tools,Accessibility
+Computing methodologies,Computational_science
+Symbolic and algebraic manipulation,Symbolic_computation
+Symbolic and algebraic algorithms,Symbolic_computation
+Combinatorial algorithms,Category:Combinatorial_algorithms
+Algebraic algorithms,Algebraic-group_factorisation_algorithm
+Nonalgebraic algorithms,Transcendental_number
+Symbolic calculus algorithms,Symbolic_computation
+Exact arithmetic algorithms,Arbitrary-precision_arithmetic
+Hybrid symbolic-numeric methods,Symbolic-numeric_computation
+Discrete calculus algorithms,Index_calculus_algorithm
+Number theory algorithms,Computational_number_theory
+Equation and inequality solving algorithms,Equation_solving
+Linear algebra algorithms,Numerical_linear_algebra
+Theorem proving algorithms,Automated_theorem_proving
+Boolean algebra algorithms,Category:Boolean_algebra
+Optimization algorithms,Category:Optimization_algorithms_and_methods
+Computer algebra systems,Computer_algebra_system
+Special-purpose algebraic systems,Computer_algebra_system
+Representation of mathematical objects,Representation_(mathematics)
+Representation of exact numbers,Approximate_number_system
+Representation of mathematical functions,Function_(mathematics)
+Representation of Boolean functions,Boolean_function
+Representation of polynomials,Polynomial_representations_of_cyclic_redundancy_checks
+Parallel computing methodologies,Parallel_computing
+Parallel algorithms,Parallel_algorithm
+MapReduce algorithms,MapReduce
+Self-organization,Self-organization
+Shared memory algorithms,Parallel_algorithm
+Vector / streaming algorithms,Streaming_algorithm
+Massively parallel algorithms,Massively_parallel_(computing)
+Parallel programming languages,List_of_concurrent_and_parallel_programming_languages
+Artificial intelligence,Artificial_intelligence
+Natural language processing,Natural_language_processing
+Information extraction,Information_extraction
+Machine translation,Machine_translation
+Discourse, dialogue and pragmatics,Constructed_action_and_dialogue
+Natural language generation,Natural_language_generation
+Speech recognition,Speech_recognition
+Lexical semantics,Lexical_semantics
+Phonology / morphology,Theoretical_linguistics
+Language resources,International_Conference_on_Language_Resources_and_Evaluation
+Knowledge representation and reasoning,Knowledge_representation_and_reasoning
+Description logics,Description_logic
+Semantic networks,Semantic_network
+Nonmonotonic, default reasoning and belief revision,Belief_revision
+Probabilistic reasoning,Probabilistic_logic
+Vagueness and fuzzy logic,Vagueness
+Causal reasoning and diagnostics,Causal_reasoning
+Temporal reasoning,Spatial–temporal_reasoning
+Cognitive robotics,Cognitive_robotics
+Ontology engineering,Ontology_engineering
+Logic programming and answer set programming,Answer_set_programming
+Spatial and physical reasoning,Spatial–temporal_reasoning
+Reasoning about belief and knowledge,Belief_revision
+Planning and scheduling,Advanced_planning_and_scheduling
+Planning for deterministic actions,Automated_planning_and_scheduling
+Planning under uncertainty,Uncertainty
+Multi-agent planning,Multi-agent_planning
+Planning with abstraction and generalization,Inventor's_paradox
+Robotic planning,Motion_planning
+Search methodologies,Methodology
+Heuristic function construction,Admissible_heuristic
+Discrete space search,Discrete_space
+Continuous space search,State_space
+Randomized search,Random_search
+Game tree search,Game_tree
+Abstraction and micro-operators,Psi-theory
+Search with partial observations,Observed_information
+Control methods,Comparison_of_birth_control_methods
+Robotic planning,Motion_planning
+Computational control theory,Control_theory
+Motion path planning,Motion_planning
+Philosophical/theoretical foundations of artificial intelligence,Philosophy_of_artificial_intelligence
+Cognitive science,Cognitive_science
+Theory of mind,Theory_of_mind
+Distributed artificial intelligence,Distributed_artificial_intelligence
+Multi-agent systems,Multi-agent_system
+Intelligent agents,Intelligent_agent
+Mobile agents,Mobile_agent
+Cooperation and coordination,Turkish_International_Cooperation_and_Development_Agency
+Computer vision,Computer_vision
+Computer vision tasks,Computer_vision
+Biometrics,Biometrics
+Scene understanding,Computer_vision
+Activity recognition and understanding,Activity_recognition
+Video summarization,Video_synopsis
+Visual content-based indexing and retrieval,Content-based_image_retrieval
+Visual inspection,Visual_inspection
+Vision for robotics,Vision_Guided_Robotic_Systems
+Scene anomaly detection,Hyperspectral_imaging
+Image and video acquisition,Video_capture
+Camera calibration,Camera_resectioning
+Epipolar geometry,Epipolar_geometry
+Computational photography,Computational_photography
+Hyperspectral imaging,Hyperspectral_imaging
+Motion capture,Motion_capture
+3D imaging,Category:3D_imaging
+Active vision,Active_vision
+Computer vision representations,Feature_(computer_vision)
+Image representations,Pyramid_(image_processing)
+Shape representations,Shape_analysis_(digital_geometry)
+Appearance and texture representations,Bidirectional_texture_function
+Hierarchical representations,Hierarchy
+Computer vision problems,Computer_vision
+Interest point and salient region detections,Kadir–Brady_saliency_detector
+Image segmentation,Image_segmentation
+Video segmentation,Image_segmentation
+Shape inference,Statistical_inference
+Object detection,Object_detection
+Object recognition,Cognitive_neuroscience_of_visual_object_recognition
+Object identification,Object_identifier
+Tracking,Tracking
+Reconstruction,Bibliography_of_the_Reconstruction_Era
+Matching,Matching
+Machine learning,Machine_learning
+Learning paradigms,Implicit_learning
+Supervised learning,Supervised_learning
+Ranking,Ranking
+Learning to rank,Learning_to_rank
+Supervised learning by classification,Supervised_learning
+Supervised learning by regression,Supervised_learning
+Structured outputs,Structured_prediction
+Cost-sensitive learning,Proactive_learning
+Unsupervised learning,Unsupervised_learning
+Cluster analysis,Cluster_analysis
+Anomaly detection,Anomaly_detection
+Mixture modeling,Mixture_model
+Topic modeling,Topic_model
+Source separation,Blind_signal_separation
+Motif discovery,Sequence_motif
+Dimensionality reduction and manifold learning,Nonlinear_dimensionality_reduction
+Reinforcement learning,Reinforcement_learning
+Sequential decision making,Sequential_analysis
+Inverse reinforcement learning,Apprenticeship_learning
+Apprenticeship learning,Apprenticeship_learning
+Multi-agent reinforcement learning,Multi-agent_system
+Adversarial learning,Adversarial_machine_learning
+Multi-task learning,Multi-task_learning
+Transfer learning,Inductive_transfer
+Lifelong machine learning,Robot_learning
+Learning under covariate shift,Domain_adaptation
+Learning settings,Learning_space
+Batch learning,Online_machine_learning
+Online learning settings,E-learning_(theory)
+Learning from demonstrations,Demonstration_(teaching)
+Learning from critiques,Learning_styles
+Learning from implicit feedback,Implicit_learning
+Active learning settings,Active_learning
+Semi-supervised learning settings,Semi-supervised_learning
+Machine learning approaches,Machine_learning
+Classification and regression trees,Decision_tree_learning
+Kernel methods,Kernel_method
+Support vector machines,Least_squares_support_vector_machine
+Gaussian processes,Gaussian_process
+Neural networks,Biological_neural_network
+Logical and relational learning,Statistical_relational_learning
+Inductive logic learning,Inductive_logic_programming
+Statistical relational learning,Statistical_relational_learning
+Learning in probabilistic graphical models,Graphical_model
+Maximum likelihood modeling,Maximum_likelihood_estimation
+Maximum entropy modeling,Principle_of_maximum_entropy
+Maximum a posteriori modeling,Maximum_a_posteriori_estimation
+Mixture models,Mixture_model
+Latent variable models,Latent_variable_model
+Bayesian network models,Bayesian_network
+Learning linear models,Linear_classifier
+Perceptron algorithm,Perceptron
+Factorization methods,Factorization
+Non-negative matrix factorization,Non-negative_matrix_factorization
+Factor analysis,Factor_analysis
+Principal component analysis,Principal_component_analysis
+Canonical correlation analysis,Canonical_correlation
+Latent Dirichlet allocation,Latent_Dirichlet_allocation
+Rule learning,Association_rule_learning
+Instance-based learning,Instance-based_learning
+Markov decision processes,Markov_decision_process
+Partially-observable Markov decision processes,Partially_observable_Markov_decision_process
+Stochastic games,Stochastic_game
+Learning latent representations,Latent_variable
+Deep belief networks,Deep_belief_network
+Machine learning algorithms,List_of_machine_learning_concepts
+Dynamic programming for Markov decision processes,Markov_decision_process
+Value iteration,Markov_decision_process
+Q-learning,Q-learning
+Policy iteration,Markov_decision_process
+Temporal difference learning,Temporal_difference_learning
+Approximate dynamic programming methods,Dynamic_programming
+Ensemble methods,Ensemble_learning
+Boosting,Boosting_(machine_learning)
+Bagging,Bootstrap_aggregating
+Spectral methods,Spectral_method
+Feature selection,Regularization_(mathematics)
+Regularization,Regularization_(mathematics)
+Cross-validation,Cross-validation_(statistics)
+Modeling and simulation,Modeling_and_simulation
+Model development and analysis,ADDIE_Model
+Modeling methodologies,Data_modeling
+Model verification and validation,Verification_and_validation_of_computer_simulation_mo
+Uncertainty quantification,Uncertainty_quantification
+Simulation theory,Simulated_reality
+Systems theory,Category:Systems_theory
+Network science,Network_science
+Simulation types and techniques,Simulation
+Uncertainty quantification,Uncertainty_quantification
+Quantum mechanic simulation,Quantum_simulator
+Molecular simulation,Molecular_modelling
+Rare-event simulation,Rare_Event_Sampling
+Discrete-event simulation,Discrete_event_simulation
+Agent / discrete models,Agent-based_model
+Distributed simulation,Distributed_Interactive_Simulation
+Continuous simulation,Continuous_simulation
+Continuous models,Continuous_modelling
+Real-time simulation,Real-time_simulation
+Interactive simulation,Distributed_Interactive_Simulation
+Multiscale systems,Multiscale_modeling
+Massively parallel and high-performance simulations,Supercomputer
+Data assimilation,Data_assimilation
+Scientific visualization,Scientific_visualization
+Visual analytics,Visual_analytics
+Simulation by animation,Computer_simulation
+Simulation support systems,Modeling_and_simulation
+Simulation environments,Computer_simulation
+Simulation languages,Simulation_language
+Simulation tools,List_of_computer_simulation_software
+Simulation evaluation,Simulation
+Computer graphics,Computer_graphics_(computer_science)
+Animation,Animation
+Motion capture,Motion_capture
+Procedural animation,Procedural_animation
+Physical simulation,Simulation
+Motion processing,Motion_perception
+Collision detection,Collision_detection
+Rendering,Rendering_(computer_graphics)
+Rasterization,Rasterisation
+Ray tracing,Ray_tracing_(graphics)
+Non-photorealistic rendering,Non-photorealistic_rendering
+Reflectance modeling,Phong_reflection_model
+Visibility,Visibility
+Image manipulation,Photo_manipulation
+Computational photography,Computational_photography
+Image processing,Image_processing
+Texturing,Texture_mapping
+Image-based rendering,Image-based_modeling_and_rendering
+Antialiasing,Spatial_anti-aliasing
+Graphics systems and interfaces,Graphical_user_interface
+Graphics processors,Graphics_processing_unit
+Graphics input devices,Input_device
+Mixed / augmented reality,Mixed_reality
+Perception,Perception
+Graphics file formats,Image_file_formats
+Virtual reality,Virtual_reality
+Image compression,Image_compression
+Shape modeling,Active_shape_model
+Mesh models,Polygon_mesh
+Mesh geometry models,Polygon_mesh
+Parametric curve and surface models,Parametric_equation
+Point-based models,Agent-based_model
+Volumetric models,3D_modeling
+Shape analysis,Shape_analysis
+Distributed computing methodologies,Distributed_computing
+Distributed algorithms,Distributed_algorithm
+MapReduce algorithms,MapReduce
+Self-organization,Self-organization
+Distributed programming languages,List_of_concurrent_and_parallel_programming_languages
+Concurrent computing methodologies,Parallel_computing
+Concurrent programming languages,List_of_concurrent_and_parallel_programming_languages
+Concurrent algorithms,Concurrent_algorithm
+Applied computing,Symposium_on_Applied_Computing
+Electronic commerce,B2B_e-commerce
+Digital cash,Electronic_money
+E-commerce infrastructure,Center_for_E-Commerce_Infrastructure_Development
+Electronic data interchange,Electronic_data_interchange
+Electronic funds transfer,Electronic_funds_transfer
+Online shopping,Online_shopping
+Online banking,Online_banking
+Secure online transactions,3-D_Secure
+Online auctions,Online_auction
+Enterprise computing,Enterprise_software
+Enterprise information systems,Enterprise_information_system
+Intranets,Intranets
+Extranets,Extranets
+Enterprise resource planning,Enterprise_resource_planning
+Enterprise applications,Enterprise_software
+Data centers,Data_center
+Business process management,Business_process_management
+Business process modeling,Business_process_modeling
+Business process management systems,Business_process_management
+Business process monitoring,Business_activity_monitoring
+Cross-organizational business processes,Business_process
+Business intelligence,Business_intelligence
+Enterprise architectures,Enterprise_architecture
+Enterprise architecture management,Enterprise_architecture_management
+Enterprise architecture frameworks,Enterprise_architecture_framework
+Enterprise architecture modeling,Enterprise_architecture
+Service-oriented architectures,Service-oriented_architecture
+Event-driven architectures,Event-driven_architecture
+Business rules,Business_rule
+Enterprise modeling,Enterprise_modelling
+Enterprise ontologies taxonomies and vocabularies,Ontology_(information_science)
+Enterprise data management,Enterprise_data_management
+Reference models,Reference_model
+Business-IT alignment,Business-IT_alignment
+IT architectures,Information_technology_architecture
+IT governance,Corporate_governance_of_information_technology
+Enterprise computing infrastructures,Cloud_computing
+Enterprise interoperability,Enterprise_interoperability
+Enterprise application integration,Enterprise_application_integration
+Information integration and interoperability,Governance_Interoperability_Framework
+Physical sciences and engineering,Engineering_and_Physical_Sciences
+Aerospace,Aerospace
+Avionics,Avionics
+Archaeology,Archaeology
+Astronomy,Astronomy
+Chemistry,Chemistry
+Earth and atmospheric sciences,Atmospheric_sciences
+Environmental sciences,Environmental_science
+Engineering,Mechanical_engineering
+Computer-aided design,Computer-aided_design
+Physics,Physics
+Mathematics and statistics,Mathematical_statistics
+Electronics,Electronics
+Avionics,Avionics
+Telecommunications,Telecommunications
+Internet telephony,Internet_telephony_service_provider
+Life and medical sciences,List_of_life_sciences
+Computational biology,Computational_biology
+Molecular sequence analysis,Sequence_analysis
+Recognition of genes and regulatory elements,B_recognition_element
+Molecular evolution,Molecular_evolution
+Computational transcriptomics,Transcriptome
+Biological networks,Biological_network
+Sequencing and genotyping technologies,SNP_genotyping
+Imaging,Imaging
+Computational proteomics,Proteomics
+Molecular structural biology,Structural_biology
+Computational genomics,Computational_genomics
+Genomics,Genomics
+Computational genomics,Computational_genomics
+Systems biology,Systems_biology
+Consumer health,Consumer_health_informatics
+Health care information systems,Hospital_information_system
+Health informatics,Health_informatics
+Bioinformatics,Bioinformatics
+Metabolomics / metabonomics,Metabolomics
+Genetics,Genetics
+Population genetics,Population_genetics
+Proteomics,Proteomics
+Computational proteomics,Proteomics
+Transcriptomics,Transcriptome
+Law social and behavioral sciences,ACM_Computing_Classification_System
+Anthropology,Anthropology
+Ethnography,Ethnography
+Law,Law
+Psychology,Psychology
+Economics,Economics
+Sociology,Sociology
+Computer forensics,Computer_forensics
+Surveillance mechanisms,MRNA_surveillance
+Investigation techniques,Criminal_investigation
+Evidence collection storage and analysis,Evidence_management
+Network forensics,Network_forensics
+System forensics,Computer_forensics
+Data recovery,Data_recovery
+Arts and humanities,Arts_and_Humanities_Citation_Index
+Fine arts,Fine_art
+Performing arts,Performing_arts
+Architecture,Architecture
+Computer-aided design,Computer-aided_design
+Language translation,Translation
+Media arts,New_media_art
+Sound and music computing,Sound_and_music_computing
+Computers in other domains,Windows_domain
+Digital libraries and archives,Digital_library
+Publishing,Publishing
+Military,Military
+Cyberwarfare,Cyberwarfare
+Cartography,Cartography
+Agriculture,Agriculture
+Computing in government,Computer_and_network_surveillance
+Voting / election technologies,Electronic_voting
+E-government,E-governance
+Personal computers and PC applications,Personal_computer
+Word processors,List_of_word_processors
+Spreadsheets,Spreadsheet
+Computer games,PC_game
+Microcomputers,Microcomputer
+Operations research,Category:Operations_research
+Consumer products,Fast-moving_consumer_goods
+Industry and manufacturing,Manufacturing
+Supply chain management,Supply_chain_management
+Command and control,Command_and_control
+Computer-aided manufacturing,Computer-aided_manufacturing
+Decision analysis,Decision_analysis
+Transportation,Transport
+Forecasting,Forecasting
+Marketing,Marketing
+Education,Education
+Digital libraries and archives,Digital_library
+Computer-assisted instruction,Intelligent_computer-assisted_language_instruction
+Interactive learning environments,Interactive_Learning
+Collaborative learning,Computer-supported_collaborative_learning
+Learning management systems,Learning_management_system
+Distance learning,Distance_education
+E-learning,E-learning_(theory)
+Computer-managed instruction,History_of_virtual_learning_environments
+Document management and text processing,Document_management_system
+Document searching,Full-text_search
+Document management,Document_management_system
+Text editing,Text_editor
+Version control,Version_control
+Document metadata,Metadata
+Document capture,Document_capture_software
+Document analysis,Document_layout_analysis
+Document scanning,Image_scanner
+Graphics recognition and interpretation,Outline_of_object_recognition
+Optical character recognition,Optical_character_recognition
+Online handwriting recognition,Handwriting_recognition
+Document preparation,Word_processor
+Markup languages,Markup_language
+Extensible Markup Language,XML
+Hypertext languages,Hypertext
+Annotation,Annotation
+Format and notation,Notation
+Multi / mixed media creation,Multimedia
+Image composition,Composition_(visual_arts)
+Hypertext / hypermedia creation,Hypertext
+Document scripting languages,Scripting_language
+Proper nouns: People technologies and companies,Proper_noun
+Technologies,Technology
+ActionScript,ActionScript
+ActiveX,ActiveX
+Ada language,Ada_(programming_language)
+AngularJS,AngularJS
+ANSI C,ANSI_C
+Ajax,Ajax_(programming)
+AppleScript,AppleScript
+AutoCAD,AutoCAD
+BASIC,BASIC
+Bluetooth,Bluetooth
+Business Process Execution Language,Business_Process_Execution_Language
+C,C_(programming_language)
+C#,C_Sharp_(programming_language)
+C++,C%2B%2B
+CDMA systems,Code_division_multiple_access
+Cell Broadband Engine,Cell_(microprocessor)
+CMOS,CMOS
+CORBA,Common_Object_Request_Broker_Architecture
+CSS,Cascading_Style_Sheets
+Datalog,Datalog
+DB2,IBM_DB2
+Delphi,Delphi_(programming_language)
+DNS,Domain_Name_System
+DOS,DOS
+Dreamweaver,Adobe_Dreamweaver
+DSL,Digital_subscriber_line
+DSM,Delta-sigma_modulation
+DVDs,DVD
+Eclipse,Eclipse_(software)
+Ethernet,Ethernet
+Excel,Microsoft_Excel
+CD-ROMs,CD-ROM
+Facebook,Facebook
+Internet Explorer,Internet_Explorer
+Chrome,Google_Chrome
+Firefox,Firefox
+Flickr,Flickr
+Fortran,Fortran
+FreeBSD,FreeBSD
+Gmail,Gmail
+Go,Go_(programming_language)
+Google Earth,Google_Earth
+Google,Google
+Google Maps,Google_Maps
+Google Scholar,Google_Scholar
+GSM,GSM
+Haskell,Haskell_(programming_language)
+HDTV,High-definition_television
+HP-UX,HP-UX
+InfiniBand,InfiniBand
+IP Multimedia Subsystem,IP_Multimedia_Subsystem
+iPad,IPad
+iPhone,IPhone
+iPod,IPod
+IPTV,IPTV
+IPv6,IPv6
+Java,Java_(programming_language)
+JAVA ME,Java_(programming_language)
+JavaScript,JavaScript
+JPEG,JPEG
+JQuery,JQuery
+JSP,Jackson_structured_programming
+LAPACK,LAPACK
+Lotus Notes,IBM_Notes
+lua,Lua_(programming_language)
+Macintosh OS,Macintosh_operating_systems
+Macintosh,Macintosh
+Mathematica,Wolfram_Mathematica
+MATLAB,MATLAB
+MIMO Systems,MIMO
+Microsoft Office,Microsoft_Office
+Microsoft Access,Microsoft_Access
+Microsoft Excel,Microsoft_Excel
+Microsoft OneNote,Microsoft_OneNote
+Microsoft Outlook,Microsoft_Outlook
+Microsoft PowerPoint,Microsoft_PowerPoint
+Microsoft Project,Microsoft_Project
+Microsoft Publisher,Microsoft_Publisher
+Microsoft Visio,Microsoft_Visio
+Microsoft Word,Microsoft_Word
+Mobile IP,Mobile_IP
+WiMAX,WiMAX
+MODIS,Moderate-resolution_imaging_spectroradiometer
+MP3,MP3
+MS-DOS,MS-DOS
+MSN,MSN
+Myspace,Myspace
+MySQL,MySQL
+NetWare,NetWare
+Objective-C,Objective-C
+OFDM System,Orthogonal_frequency-division_multiplexing
+Office,Office
+OpenMP,OpenMP
+Oracle Database,Oracle_Database
+Outlook,Microsoft_Outlook
+PDF,Portable_Document_Format
+Pentium,Pentium
+Perl,Perl
+Photoshop,Adobe_Photoshop
+PHP,PHP
+PlanetLab,PlanetLab
+Pocket PC,Pocket_PC
+PowerPC,PowerPC
+Prolog,Prolog
+Python,Python_(programming_language)
+QuarkXPress,QuarkXPress
+QuickBooks,QuickBooks
+Quicken,Quicken
+QuickTime,QuickTime
+R,R_(programming_language)
+Ruby,Ruby_(programming_language)
+Ruby on Rails,Ruby_on_Rails
+Rust,Rust_(programming_language)
+RISC processors,Reduced_instruction_set_computing
+Samba,Samba_(software)
+Scala,Scala_(programming_language)
+SELinux,Security-Enhanced_Linux
+SharePoint,SharePoint
+SIMD architectures,SIMD
+Simulink,Simulink
+Smalltalk,Smalltalk
+Short Message Service,Short_Message_Service
+SNMP,Simple_Network_Management_Protocol
+Solaris,Solaris_(operating_system)
+SONET,Synchronous_optical_networking
+SPARC,SPARC
+SQL Server,Microsoft_SQL_Server
+SQL,SQL
+Secure Sockets Layer,Transport_Layer_Security
+Skype,Skype
+Swift,Swift_(programming_language)
+TMS320C,Texas_Instruments_TMS320
+Transport Layer Security,Transport_Layer_Security
+TREC,Text_Retrieval_Conference
+Twitter,Twitter
+UMTS,UMTS_(telecommunication)
+Unicode,Unicode
+Usenet,Usenet
+UWB,UWB
+VBA,Visual_Basic_for_Applications
+VHDL,VHDL
+Visual,Visual_system
+Visual Basic,Visual_Basic
+VMware,VMware
+VoiceXML,VoiceXML
+VRML,VRML
+Wifi,Wi-Fi
+Wikipedia,Wikipedia
+Windows environment,Environment_variable
+WordNet,WordNet
+X-Window,X_Window_System
+X3D,X3D
+XILINX,Xilinx
+Yahoo!,Yahoo!
+YouTube,YouTube
+ZigBee,ZigBee
+Operating Systems,Operating_system
+Apple Operating System,Macintosh_operating_systems
+IBM Operating System,OS/2
+Linux,Linux
+Windows Operating System,Microsoft_Windows
+UNIX operating system,Unix

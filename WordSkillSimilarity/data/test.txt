@@ -1,0 +1,31 @@
+C
+C#
+C++
+CDMA systems
+Cell Broadband Engine
+CMOS
+CORBA
+CSS
+Datalog
+DB2
+Delphi
+DNS
+DOS
+Dreamweaver
+DSL
+DSM
+Eclipse
+Excel
+Fortran
+FreeBSD
+Go
+GSM
+Haskell
+HP-UX
+InfiniBand
+IP Multimedia Subsystem
+IPTV
+Java
+JavaScript
+JQuery
+JSP
