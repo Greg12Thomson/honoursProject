@@ -13,18 +13,18 @@ var should = chai.should();
 /*
  * test getCosSim function
  */
-// describe('getCosSim', function() {
-//   var vec1 = wordVecs["java"];
-//   var vec2 = wordVecs["technology"];
-//
-//   it('getCosSim should return something sensible', function(done) {
-//     var val = getCosSim(vec1, vec2);
-//     val.should.be.below(1);
-//     val.should.be.above(0);
-//     done();
-//   });
-//
-// });
+describe('getCosSim', function() {
+  var vec1 = wordVecs["java"];
+  var vec2 = wordVecs["technology"];
+
+  it('getCosSim should return something sensible', function(done) {
+    var val = getCosSim(vec1, vec2);
+    val.should.be.below(1);
+    val.should.be.above(0);
+    done();
+  });
+
+});
 
 describe('mag', function() {
   var vec1 = wordVecs["java"];

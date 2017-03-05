@@ -31,13 +31,44 @@ describe('findSimilarWords', function() {
   });
 
   it('findSimilarWords should return array is order of similarity', function(done) {
-    var words = findSimilarWords(0, "java");
+    var words = findSimilarWords(5, "java");
 
-    words.should.equal(1);
-    // words[1].should.equal(1);
-    // words[2].should.equal(1);
-    // words[3].should.equal(1);
-    // words[4].should.equal(1);
+    var max = words[0][1];
+    for (var i = 1; i < words.length; i ++){
+      max.should.be.above(words[i][1])
+    }
+    done();
+  });
+
+});
+
+/*
+ * test findSimilarWords function
+ */
+describe('getNClosestMatches', function() {
+  var vec = wordVecs["java"];
+
+  it('getNClosestMatches should return n number of similar words', function(done) {
+    var words = getNClosestMatches(5, vec);
+
+    words.should.have.length(5);
+    done();
+  });
+
+  it('getNClosestMatches should return empty array if n is 0', function(done) {
+    var words = getNClosestMatches(0, vec);
+
+    words.should.have.length(0);
+    done();
+  });
+
+  it('getNClosestMatches should return array is order of similarity', function(done) {
+    var words = getNClosestMatches(5, vec);
+
+    var max = words[0][1];
+    for (var i = 1; i < words.length; i ++){
+      max.should.be.above(words[i][1])
+    }
     done();
   });
 
