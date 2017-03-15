@@ -1,7 +1,7 @@
 from lxml import html
 import requests
 
-with open('data/test.txt') as f:
+with open('data/skills.txt') as f:
     content = f.readlines()
 
 content = [x.strip() for x in content]
