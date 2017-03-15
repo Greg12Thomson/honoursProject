@@ -18,7 +18,9 @@ This is a collaborative project with Amazon Development Centre to investigating 
 
 
 **Running the Programs**
+
 _JobTagger_
+
 An example of running from the command line is as follows:
 ```sh
 $ mongod
@@ -31,23 +33,27 @@ $ node index.js
 Goto http://localhost:8080/ and it will take you to the index page of the website.
 
 _SkillVectorGenerator_
+
 Run the following in the command line:
 ```sh
 $ npm install
 $ node skillVector.js
 ```
 _WikipediaPopularity_
+
 Run the following in the command line:
 ```sh
 $ npm install
 $ node popularWiki.js
 ```
 _WikiScrape_
+
 Run the following in the command line:
 ```sh
 $ python scrapeWiki.py
 ```
 _WordSkillSimilarity_
+
 Run the following in the command line:
 ```sh
 $ npm install
