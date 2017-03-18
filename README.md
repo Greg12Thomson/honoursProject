@@ -16,6 +16,7 @@ This is a collaborative project with Amazon Development Centre to investigating 
 **WordSkillSimilarity** - Finds words similar for each skill using Word2Vec word embeddings
 
 
+=======
 
 **Running the Programs**
 
